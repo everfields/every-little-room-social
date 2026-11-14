@@ -16,7 +16,7 @@
       },
       "prompts": {
         "voice": "af_heart",
-        "speed": 1.08,
+        "speed": 1.1,
         "spec": {
           "tag": "Dollhouse guide",
           "scenes": [
@@ -25,7 +25,7 @@
               "kicker": "Parents and grandparents",
               "title": "Which Gabby's Dollhouse should you buy?",
               "sub": "There are three. Stores mix up the names.",
-              "say": "Which Gabby's Dollhouse should you buy? There are three big ones, and stores mix up the names."
+              "say": "Which Gabby's Dollhouse should you buy? There are three, and stores mix up the names."
             },
             {
               "type": "compare",
@@ -37,7 +37,7 @@
                   "line": "The newest, from the 2025 movie line",
                   "sound": "Start here if you have none",
                   "tone": "green",
-                  "say": "The Meow-mazing is the newest. About fifty dollars. Start here."
+                  "say": "Meow-mazing: the newest, about fifty. Start here."
                 },
                 {
                   "price": "$70",
@@ -45,44 +45,26 @@
                   "line": "The original, with an elevator and sounds",
                   "sound": "Regular price at Kohl's",
                   "tone": "yellow",
-                  "say": "The Purrfect is the original. About seventy, regular price."
+                  "say": "Purrfect: the original, about seventy."
                 },
                 {
                   "price": "Varies",
                   "name": "Celebration",
                   "line": "A rainbow take on the Purrfect",
-                  "sound": "Price varies by store",
+                  "sound": "Same size, rainbow themed",
                   "tone": "purple",
-                  "say": "The Celebration is a rainbow Purrfect."
+                  "say": "Celebration: a rainbow Purrfect."
                 }
               ],
               "note": "One at home already? Skip the second house.",
-              "outro": "Already have one? Skip the second house, and spend it on rooms and figures."
-            },
-            {
-              "type": "facts",
-              "title": "Before you order",
-              "items": [
-                {
-                  "k": "Height",
-                  "v": "Listed at about 2 feet. Measure the shelf.",
-                  "tone": "yellow",
-                  "say": "Each is listed at about two feet tall, so measure the shelf."
-                },
-                {
-                  "k": "Old Deluxe Rooms",
-                  "v": "We couldn't confirm they fit the Meow-mazing.",
-                  "tone": "red",
-                  "say": "And we couldn't confirm the old Deluxe Rooms fit the Meow-mazing."
-                }
-              ]
+              "outro": "One at home already? Skip the second house."
             },
             {
               "type": "end",
-              "title": "All three side by side, and what we couldn't confirm.",
+              "title": "Sizes, add-ons, and what we couldn't confirm.",
               "cta": "everylittleroom.com",
               "site": "Guide: which dollhouse to buy",
-              "say": "The full comparison is on every little room dot com."
+              "say": "Sizes, add-ons and what we couldn't confirm: every little room dot com."
             }
           ]
         }
@@ -103,7 +85,7 @@
       },
       "prompts": {
         "voice": "af_heart",
-        "speed": 1.08,
+        "speed": 1.1,
         "spec": {
           "tag": "Christmas guide",
           "scenes": [
@@ -112,7 +94,7 @@
               "kicker": "Grandparents, aunts and uncles",
               "title": "A Gabby's Dollhouse gift for Christmas. What do I get?",
               "sub": "One pick at each budget.",
-              "say": "Buying a Gabby's Dollhouse fan a Christmas present? Here's one pick at each budget."
+              "say": "A Gabby's Dollhouse gift for Christmas? One pick at each budget."
             },
             {
               "type": "compare",
@@ -124,7 +106,7 @@
                   "line": "More than 500 pieces",
                   "sound": "A gift from an aunt or uncle",
                   "tone": "green",
-                  "say": "About fifteen: the activity set, more than five hundred pieces."
+                  "say": "About fifteen dollars: the activity set. Over five hundred pieces."
                 },
                 {
                   "price": "$30",
@@ -132,7 +114,7 @@
                   "line": "The main Fairylandia playset",
                   "sound": "When there's a dollhouse already",
                   "tone": "yellow",
-                  "say": "About thirty: the Fairylandia playset, if there's a dollhouse already."
+                  "say": "Thirty: the Fairylandia playset, if there's a dollhouse already."
                 },
                 {
                   "price": "$50",
@@ -140,18 +122,18 @@
                   "line": "The flagship, listed at about 2 feet tall",
                   "sound": "When there's no dollhouse yet",
                   "tone": "purple",
-                  "say": "About fifty: the Meow-mazing dollhouse, if there isn't one yet."
+                  "say": "Fifty: the Meow-mazing dollhouse, if there isn't."
                 }
               ],
               "note": "Prices move a lot before Christmas.",
-              "outro": "Prices move a lot before Christmas, so check the store on the day."
+              "outro": "Prices move a lot before Christmas."
             },
             {
               "type": "end",
               "title": "Stocking stuffers under $10, and the dates to mail by.",
               "cta": "everylittleroom.com",
               "site": "Guide: Christmas gifts",
-              "say": "Stocking stuffers and the dates to mail by are on every little room dot com."
+              "say": "Stocking stuffers and the dates to mail by: every little room dot com."
             }
           ]
         }
@@ -172,7 +154,7 @@
       },
       "prompts": {
         "voice": "af_heart",
-        "speed": 1.08,
+        "speed": 1.1,
         "spec": {
           "tag": "Gift checklist",
           "scenes": [
