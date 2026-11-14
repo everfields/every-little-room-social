@@ -1,0 +1,30 @@
+{
+  "name": "Every Little Room",
+  "accent_part": "Room",
+  "site": "everylittleroom.com",
+  "cta": "The list: everylittleroom.com",
+  "locale": "en-US",
+  "currency": "USD",
+  "units": "imperial",
+  "motif": "bar",
+  "voice": "af_heart",
+  "speed": 1.05,
+  "fine": "For parents and relatives. Prices are typical US store prices from our dated checks, not a store's price today. Independent site, not affiliated with the show or its makers. Synthetic voice. As an Amazon Associate we earn from qualifying purchases.",
+  "colors": {
+    "bg": "#1f1a47",
+    "panel": "#2b2455",
+    "panel2": "#3b3173",
+    "line": "#4a4185",
+    "text": "#fbf4e6",
+    "muted": "#c9bedf",
+    "accent": "#ffc964",
+    "on-accent": "#2c2140",
+    "purple": "#a98be0",
+    "green": "#6cc5ae",
+    "yellow": "#f6c65b",
+    "red": "#e8637f",
+    "room": "#15112f",
+    "photo": "#fbf4e6"
+  },
+  "source": "src/app/globals.css (--paper, --ink, --dusk, --glow, --rose, --mint, --cream) and src/app/pin/[slug]/route.tsx (night sky #1F1A47, band colours) in everfields/every-little-room"
+}

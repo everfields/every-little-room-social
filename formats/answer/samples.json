@@ -1,0 +1,223 @@
+{
+  "week": "samples-answer",
+  "posts": [
+    {
+      "id": "sample-answer-which-dollhouse",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Which Gabby's Dollhouse should you buy? The three, side by side",
+      "caption": "Which Gabby's Dollhouse to buy: Meow-mazing (about $50), Purrfect (about $70 regular) or Celebration, and what we couldn't confirm. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "ai": {
+        "generated": false,
+        "realistic": false
+      },
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Dollhouse guide",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Parents and grandparents",
+              "title": "Which Gabby's Dollhouse should you buy?",
+              "sub": "There are three. Stores mix up the names.",
+              "say": "Which Gabby's Dollhouse should you buy? There are three big ones, and stores mix up the names."
+            },
+            {
+              "type": "compare",
+              "title": "The three big houses",
+              "items": [
+                {
+                  "price": "$50",
+                  "name": "Meow-mazing",
+                  "line": "The newest, from the 2025 movie line",
+                  "sound": "Start here if you have none",
+                  "tone": "green",
+                  "say": "The Meow-mazing is the newest. About fifty dollars. Start here."
+                },
+                {
+                  "price": "$70",
+                  "name": "Purrfect",
+                  "line": "The original, with an elevator and sounds",
+                  "sound": "Regular price at Kohl's",
+                  "tone": "yellow",
+                  "say": "The Purrfect is the original. About seventy, regular price."
+                },
+                {
+                  "price": "Varies",
+                  "name": "Celebration",
+                  "line": "A rainbow take on the Purrfect",
+                  "sound": "Price varies by store",
+                  "tone": "purple",
+                  "say": "The Celebration is a rainbow Purrfect."
+                }
+              ],
+              "note": "One at home already? Skip the second house.",
+              "outro": "Already have one? Skip the second house, and spend it on rooms and figures."
+            },
+            {
+              "type": "facts",
+              "title": "Before you order",
+              "items": [
+                {
+                  "k": "Height",
+                  "v": "Listed at about 2 feet. Measure the shelf.",
+                  "tone": "yellow",
+                  "say": "Each is listed at about two feet tall, so measure the shelf."
+                },
+                {
+                  "k": "Old Deluxe Rooms",
+                  "v": "We couldn't confirm they fit the Meow-mazing.",
+                  "tone": "red",
+                  "say": "And we couldn't confirm the old Deluxe Rooms fit the Meow-mazing."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "All three side by side, and what we couldn't confirm.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: which dollhouse to buy",
+              "say": "The full comparison is on every little room dot com."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-answer-christmas-budget",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Gabby's Dollhouse Christmas gift: one pick at $15, $30 and $50",
+      "caption": "A Gabby's Dollhouse Christmas present at about $15, $30 or $50, for grandparents, aunts and uncles. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "ai": {
+        "generated": false,
+        "realistic": false
+      },
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Christmas guide",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Grandparents, aunts and uncles",
+              "title": "A Gabby's Dollhouse gift for Christmas. What do I get?",
+              "sub": "One pick at each budget.",
+              "say": "Buying a Gabby's Dollhouse fan a Christmas present? Here's one pick at each budget."
+            },
+            {
+              "type": "compare",
+              "title": "About $15, $30 or $50",
+              "items": [
+                {
+                  "price": "$15",
+                  "name": "Deluxe Creative Activity Set",
+                  "line": "More than 500 pieces",
+                  "sound": "A gift from an aunt or uncle",
+                  "tone": "green",
+                  "say": "About fifteen: the activity set, more than five hundred pieces."
+                },
+                {
+                  "price": "$30",
+                  "name": "Flutter Magic Fairy Playset",
+                  "line": "The main Fairylandia playset",
+                  "sound": "When there's a dollhouse already",
+                  "tone": "yellow",
+                  "say": "About thirty: the Fairylandia playset, if there's a dollhouse already."
+                },
+                {
+                  "price": "$50",
+                  "name": "Meow-mazing Dollhouse",
+                  "line": "The flagship, listed at about 2 feet tall",
+                  "sound": "When there's no dollhouse yet",
+                  "tone": "purple",
+                  "say": "About fifty: the Meow-mazing dollhouse, if there isn't one yet."
+                }
+              ],
+              "note": "Prices move a lot before Christmas.",
+              "outro": "Prices move a lot before Christmas, so check the store on the day."
+            },
+            {
+              "type": "end",
+              "title": "Stocking stuffers under $10, and the dates to mail by.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: Christmas gifts",
+              "say": "Stocking stuffers and the dates to mail by are on every little room dot com."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "sample-answer-already-have",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Buying a Gabby's Dollhouse gift? Ask this first",
+      "caption": "Before you buy a Gabby's Dollhouse gift: ask the parents what's already at home. What relatives most often buy twice, and the one link that shows it. https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "ai": {
+        "generated": false,
+        "realistic": false
+      },
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.08,
+        "spec": {
+          "tag": "Gift checklist",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Grandparents, read this first",
+              "title": "What do they already have?",
+              "sub": "Ask before you buy a Gabby's Dollhouse gift.",
+              "say": "Buying a Gabby's Dollhouse gift? First, ask what they already have."
+            },
+            {
+              "type": "facts",
+              "title": "What relatives buy twice",
+              "items": [
+                {
+                  "k": "Figures and room sets",
+                  "v": "What two relatives most often buy twice.",
+                  "tone": "red",
+                  "say": "Figures and room sets are what two relatives most often buy twice."
+                },
+                {
+                  "k": "The dollhouse",
+                  "v": "One is plenty. The LEGO house is a different toy.",
+                  "tone": "yellow",
+                  "say": "One dollhouse is plenty."
+                },
+                {
+                  "k": "Lights or music",
+                  "v": "Needs batteries. Check the box before you wrap it.",
+                  "tone": "green",
+                  "say": "And anything that lights up needs batteries."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Ask the parents for their list.",
+              "sub": "They mark what's at home and text you one link.",
+              "cta": "everylittleroom.com",
+              "site": "Free, no account",
+              "say": "Parents mark what's at home and text you one link. Free, no account, at every little room dot com."
+            }
+          ]
+        }
+      }
+    }
+  ]
+}
