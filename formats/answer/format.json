@@ -6,6 +6,6 @@
     "ecommerce"
   ],
   "first_approved": "everfields/roomracer#40 (2026-11-13)",
-  "approved": null,
-  "gate": "this company's own gate: owner/repo#N. Batches with this format are refused until it is set"
+  "approved": "everfields/every-little-room#96 (Carlos, /approve, 2026-11-14)",
+  "gate": "everfields/every-little-room#96"
 }
