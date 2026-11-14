@@ -61,10 +61,10 @@
             },
             {
               "type": "end",
-              "title": "Sizes, add-ons, and what we couldn't confirm.",
+              "title": "Sizes, extra rooms, and what we couldn't confirm.",
               "cta": "everylittleroom.com",
               "site": "Guide: which dollhouse to buy",
-              "say": "Sizes, add-ons and what we couldn't confirm: every little room dot com."
+              "say": "Sizes, extra rooms and what we couldn't confirm: every little room dot com."
             }
           ]
         }
@@ -106,7 +106,7 @@
                   "line": "More than 500 pieces",
                   "sound": "A gift from an aunt or uncle",
                   "tone": "green",
-                  "say": "About fifteen dollars: the activity set. Over five hundred pieces."
+                  "say": "About fifteen dollars: the activity set."
                 },
                 {
                   "price": "$30",
