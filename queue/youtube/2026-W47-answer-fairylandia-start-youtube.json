@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-fairylandia-start-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-fairylandia-start.mp4",
+    "sha256": "f2509b3091eaab294f6cfcd9b23aaaa059e2c76ad67fe8450c4cabd0e19c6e76",
+    "kind": "video"
+  },
+  "caption": "Fairylandia is the fairy world from season 13 of Gabby's Dollhouse. The main playset, the cheapest way to add figures, one small room set, and what we couldn't confirm. https://everylittleroom.com/guides/what-is-fairylandia?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Fairylandia toys: where to start with Gabby's Dollhouse fairies",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

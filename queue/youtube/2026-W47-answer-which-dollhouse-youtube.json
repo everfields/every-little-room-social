@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-which-dollhouse-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-which-dollhouse.mp4",
+    "sha256": "4ff8893c5d71b1170232efea1cf39a1cc170971978b4fd52cbe4e0ca2b3f5f64",
+    "kind": "video"
+  },
+  "caption": "Which Gabby's Dollhouse to buy: Meow-mazing (about $50), Purrfect (about $70 regular) or Celebration, and what we couldn't confirm. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Which Gabby's Dollhouse should you buy? The three, side by side",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

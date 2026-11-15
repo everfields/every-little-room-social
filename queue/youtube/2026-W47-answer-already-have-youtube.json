@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-already-have-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-already-have.mp4",
+    "sha256": "9e6512bfc6d7f9ab554648b317eb582e2afa04c34fa2767fe1008b28f64cc64c",
+    "kind": "video"
+  },
+  "caption": "Before you buy a Gabby's Dollhouse gift, ask the parents what's already at home. What relatives most often buy twice, and the one link that shows it. https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Buying a Gabby's Dollhouse gift? Ask this first",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

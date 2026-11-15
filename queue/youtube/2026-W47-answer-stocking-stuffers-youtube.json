@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-stocking-stuffers-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-stocking-stuffers.mp4",
+    "sha256": "7419d7f39ba1e97d7698b483f2e8babd7131a14290823e29634dec767baa7d69",
+    "kind": "video"
+  },
+  "caption": "Five Gabby's Dollhouse stocking stuffers, each under $10: a first reader, a puzzle, a coloring book, a sticker book and the movie on DVD. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Gabby's Dollhouse stocking stuffers under $10",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-birthday-party-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-birthday-party.mp4",
+    "sha256": "d1d01d76d36363773afc75c5780cb2aaecb33e89d9d2d65a299becb31ce490a4",
+    "kind": "video"
+  },
+  "caption": "A Gabby's Dollhouse birthday for 3 to 6 year olds: when to call the bakery, one craft set for the whole group, a favor that gets used, and what it comes to. https://everylittleroom.com/guides/gabbys-dollhouse-birthday-party?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Planning a Gabby's Dollhouse birthday party: what to order, and when",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

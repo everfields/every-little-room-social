@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-mail-by-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-mail-by.mp4",
+    "sha256": "68976146ddf4d1a56038b7d27a211b30ae4c7ba7dbfef7dcc37a33be13a35974",
+    "kind": "video"
+  },
+  "caption": "Mailing a wrapped Gabby's Dollhouse gift yourself? USPS's recommended last days to send for delivery by December 25 in the lower 48 states, and why we don't quote store cut-offs. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Mailing a Gabby's Dollhouse gift for Christmas? The last days to send",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-purrfect-or-meowmazing-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-purrfect-or-meowmazing.mp4",
+    "sha256": "8502672c707bfdead8d107151d379e5da6760c5ba7259246679d3d3cd80e702e",
+    "kind": "video"
+  },
+  "caption": "Purrfect or Meow-mazing? How to tell the two big Gabby's Dollhouse houses apart, what each costs, and the add-on question we couldn't settle. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Purrfect or Meow-mazing: which Gabby's Dollhouse?",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

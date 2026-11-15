@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-christmas-budget-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-christmas-budget.mp4",
+    "sha256": "c178fbefa365df65d3cf4faeb6f788933ef41b0630d95e9fac73a416381fb978",
+    "kind": "video"
+  },
+  "caption": "Grandparents, aunts and uncles: one Gabby's Dollhouse Christmas pick at about $15, $30, $50 and $80, and why one house is plenty. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Gabby's Dollhouse Christmas gift: one pick at $15, $30, $50 and $80",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}

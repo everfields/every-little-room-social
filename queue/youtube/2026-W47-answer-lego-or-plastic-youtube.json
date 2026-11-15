@@ -1,0 +1,21 @@
+{
+  "id": "2026-W47-answer-lego-or-plastic-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W47",
+  "media": {
+    "file": "2026-W47-answer-lego-or-plastic.mp4",
+    "sha256": "8be65cefe7c685ff5e8801bdaadbbbcae382764d11c2ba3be3b92e61764ec9b0",
+    "kind": "video"
+  },
+  "caption": "The LEGO Gabby's Dollhouse (10788) and the plastic Meow-mazing are different toys at different scales: what each costs, the ages they're listed for, and why one house is plenty. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "LEGO Gabby's Dollhouse or the plastic one?",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-16T00:00:00Z"
+}
