@@ -1,0 +1,703 @@
+{
+  "week": "2026-W47",
+  "posts": [
+    {
+      "id": "2026-W47-answer-which-dollhouse",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Which Gabby's Dollhouse should you buy? The three, side by side",
+      "caption": "Which Gabby's Dollhouse to buy: Meow-mazing (about $50), Purrfect (about $70 regular) or Celebration, and what we couldn't confirm. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "Which Gabby's Dollhouse should you buy? There are three, and stores mix up the names. / Meow-mazing: the newest, about fifty. Start here. / Purrfect: the original, about seventy. / Celebration: a rainbow Purrfect. / One at home already? Skip the second house. / Sizes, extra rooms and what we couldn't confirm: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Dollhouse guide",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Parents and grandparents",
+              "title": "Which Gabby's Dollhouse should you buy?",
+              "sub": "There are three. Stores mix up the names.",
+              "say": "Which Gabby's Dollhouse should you buy? There are three, and stores mix up the names."
+            },
+            {
+              "type": "compare",
+              "title": "The three big houses",
+              "items": [
+                {
+                  "price": "$50",
+                  "name": "Meow-mazing",
+                  "line": "The newest, from the 2025 movie line",
+                  "sound": "Start here if you have none",
+                  "tone": "green",
+                  "say": "Meow-mazing: the newest, about fifty. Start here."
+                },
+                {
+                  "price": "$70",
+                  "name": "Purrfect",
+                  "line": "The original, with an elevator and sounds",
+                  "sound": "Regular price at Kohl's",
+                  "tone": "yellow",
+                  "say": "Purrfect: the original, about seventy."
+                },
+                {
+                  "price": "Varies",
+                  "name": "Celebration",
+                  "line": "A rainbow take on the Purrfect",
+                  "sound": "Same size, rainbow themed",
+                  "tone": "purple",
+                  "say": "Celebration: a rainbow Purrfect."
+                }
+              ],
+              "note": "One at home already? Skip the second house.",
+              "outro": "One at home already? Skip the second house."
+            },
+            {
+              "type": "end",
+              "title": "Sizes, extra rooms, and what we couldn't confirm.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: which dollhouse to buy",
+              "say": "Sizes, extra rooms and what we couldn't confirm: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-christmas-budget",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Gabby's Dollhouse Christmas gift: one pick at $15, $30, $50 and $80",
+      "caption": "Grandparents, aunts and uncles: one Gabby's Dollhouse Christmas pick at about $15, $30, $50 and $80, and why one house is plenty. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "A Gabby's Dollhouse gift for Christmas? One pick at each budget. / About fifteen: the activity set. / Thirty: the Fairylandia playset. / Fifty: the Meow-mazing dollhouse. / Eighty: the LEGO house, for a builder of four or more. / One house is plenty. Their rooms don't mix. / And prices move a lot before Christmas. / Stocking stuffers and mail-by dates: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Christmas guide",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Grandparents, aunts and uncles",
+              "title": "A Gabby's Dollhouse gift for Christmas. What do I get?",
+              "sub": "One pick at each budget.",
+              "say": "A Gabby's Dollhouse gift for Christmas? One pick at each budget."
+            },
+            {
+              "type": "compare",
+              "title": "About $15, $30, $50 or $80",
+              "items": [
+                {
+                  "price": "$15",
+                  "name": "Deluxe Creative Activity Set",
+                  "line": "More than 500 pieces",
+                  "sound": "From an aunt or uncle",
+                  "tone": "green",
+                  "say": "About fifteen: the activity set."
+                },
+                {
+                  "price": "$30",
+                  "name": "Flutter Magic Fairy Playset",
+                  "line": "The main Fairylandia playset",
+                  "sound": "When there's a dollhouse already",
+                  "tone": "yellow",
+                  "say": "Thirty: the Fairylandia playset."
+                },
+                {
+                  "price": "$50",
+                  "name": "Meow-mazing Dollhouse",
+                  "line": "Listed at about 2 feet tall",
+                  "sound": "When there's no dollhouse yet",
+                  "tone": "purple",
+                  "say": "Fifty: the Meow-mazing dollhouse."
+                },
+                {
+                  "price": "$80",
+                  "name": "LEGO Gabby's Dollhouse",
+                  "line": "498 pieces, ages 4 and up",
+                  "sound": "One two relatives can split",
+                  "tone": "red",
+                  "say": "Eighty: the LEGO house, for a builder of four or more."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Before you order",
+              "items": [
+                {
+                  "k": "One house is plenty",
+                  "v": "The plastic and LEGO houses don't share rooms.",
+                  "tone": "yellow",
+                  "say": "One house is plenty. Their rooms don't mix."
+                },
+                {
+                  "k": "Prices move",
+                  "v": "The store's price on the day is the one that counts.",
+                  "tone": "green",
+                  "say": "And prices move a lot before Christmas."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Stocking stuffers, and the dates to mail by.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: Christmas gifts",
+              "say": "Stocking stuffers and mail-by dates: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-already-have",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Buying a Gabby's Dollhouse gift? Ask this first",
+      "caption": "Before you buy a Gabby's Dollhouse gift, ask the parents what's already at home. What relatives most often buy twice, and the one link that shows it. https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "Buying a Gabby's Dollhouse gift? First, ask what they already have. / Figures and room sets are what two relatives most often buy twice. / One dollhouse is plenty. / And anything that lights up needs batteries. / Parents mark what's at home and text you one link. Free, no account, at every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gift checklist",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Grandparents, read this first",
+              "title": "What do they already have?",
+              "sub": "Ask before you buy a Gabby's Dollhouse gift.",
+              "say": "Buying a Gabby's Dollhouse gift? First, ask what they already have."
+            },
+            {
+              "type": "facts",
+              "title": "What relatives buy twice",
+              "items": [
+                {
+                  "k": "Figures and room sets",
+                  "v": "What two relatives most often buy twice.",
+                  "tone": "red",
+                  "say": "Figures and room sets are what two relatives most often buy twice."
+                },
+                {
+                  "k": "The dollhouse",
+                  "v": "One is plenty. The LEGO house is a different toy.",
+                  "tone": "yellow",
+                  "say": "One dollhouse is plenty."
+                },
+                {
+                  "k": "Lights or music",
+                  "v": "Needs batteries. Check the box before you wrap it.",
+                  "tone": "green",
+                  "say": "And anything that lights up needs batteries."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Ask the parents for their list.",
+              "sub": "They mark what's at home and text you one link.",
+              "cta": "everylittleroom.com",
+              "site": "Free, no account",
+              "say": "Parents mark what's at home and text you one link. Free, no account, at every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-purrfect-or-meowmazing",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Purrfect or Meow-mazing: which Gabby's Dollhouse?",
+      "caption": "Purrfect or Meow-mazing? How to tell the two big Gabby's Dollhouse houses apart, what each costs, and the add-on question we couldn't settle. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "Purrfect or Meow-mazing? Stores use the names loosely. / Meow-mazing is from the 2025 movie line, listed with seven themed rooms. / Purrfect is the original, listed with an elevator and sounds. / Meow-mazing: about fifty at Walmart. / Purrfect: seventy regular at Kohl's, sometimes on sale. / Do the Purrfect's Deluxe Rooms fit the Meow-mazing? We couldn't confirm it. / What's in each box: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Dollhouse guide",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Parents and grandparents",
+              "title": "Purrfect or Meow-mazing?",
+              "sub": "Stores use the names loosely.",
+              "say": "Purrfect or Meow-mazing? Stores use the names loosely."
+            },
+            {
+              "type": "facts",
+              "title": "How to tell them apart",
+              "items": [
+                {
+                  "k": "Meow-mazing",
+                  "v": "From the 2025 movie line. Listed with seven themed rooms.",
+                  "tone": "green",
+                  "say": "Meow-mazing is from the 2025 movie line, listed with seven themed rooms."
+                },
+                {
+                  "k": "Purrfect",
+                  "v": "The original show house. Listed with an elevator and sounds.",
+                  "tone": "yellow",
+                  "say": "Purrfect is the original, listed with an elevator and sounds."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "What each costs",
+              "items": [
+                {
+                  "price": "$50",
+                  "name": "Meow-mazing",
+                  "line": "About $50 at Walmart",
+                  "sound": "Start here if you have none",
+                  "tone": "green",
+                  "say": "Meow-mazing: about fifty at Walmart."
+                },
+                {
+                  "price": "$70",
+                  "name": "Purrfect",
+                  "line": "Regular price at Kohl's, sometimes on sale",
+                  "sound": "Have one already? Skip a second house",
+                  "tone": "yellow",
+                  "say": "Purrfect: seventy regular at Kohl's, sometimes on sale."
+                }
+              ],
+              "note": "Do Purrfect Deluxe Rooms fit the Meow-mazing? We couldn't confirm.",
+              "outro": "Do the Purrfect's Deluxe Rooms fit the Meow-mazing? We couldn't confirm it."
+            },
+            {
+              "type": "end",
+              "title": "What's in each box, side by side.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: which dollhouse to buy",
+              "say": "What's in each box: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-stocking-stuffers",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Gabby's Dollhouse stocking stuffers under $10",
+      "caption": "Five Gabby's Dollhouse stocking stuffers, each under $10: a first reader, a puzzle, a coloring book, a sticker book and the movie on DVD. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "Gabby's Dollhouse stocking stuffers under ten dollars? Here are five. / A first reader, about five dollars. / A puzzle, about six. / A coloring book, about six. / A sticker book, about seven. / And the movie on DVD, under eight. / All five, about thirty-one dollars. / And the one gift that has to be there by December first: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Stocking stuffers",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Filling a stocking",
+              "title": "Gabby's Dollhouse stocking stuffers under $10?",
+              "sub": "Five small ones.",
+              "say": "Gabby's Dollhouse stocking stuffers under ten dollars? Here are five."
+            },
+            {
+              "type": "list",
+              "title": "Each one under $10",
+              "totalLabel": "All five, about",
+              "items": [
+                {
+                  "label": "Scholastic first reader",
+                  "name": "Kitty School, Level 1 Reader",
+                  "price": 4.79,
+                  "say": "A first reader, about five dollars."
+                },
+                {
+                  "label": "Listed for ages 4 and up",
+                  "name": "48-Piece Puzzle",
+                  "price": 5.97,
+                  "say": "A puzzle, about six."
+                },
+                {
+                  "label": "144 pages",
+                  "name": "5-in-1 Coloring Book",
+                  "price": 6.16,
+                  "say": "A coloring book, about six."
+                },
+                {
+                  "label": "Stickers",
+                  "name": "Party in the Dollhouse Sticker Book",
+                  "price": 6.91,
+                  "say": "A sticker book, about seven."
+                },
+                {
+                  "label": "For the whole family",
+                  "name": "The Movie on DVD",
+                  "price": 7.5,
+                  "say": "And the movie on DVD, under eight."
+                }
+              ],
+              "note": "A duplicate costs little. Still, ask the parents first.",
+              "outro": "All five, about thirty-one dollars."
+            },
+            {
+              "type": "end",
+              "title": "And the one gift that must arrive by December 1.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: Christmas gifts",
+              "say": "And the one gift that has to be there by December first: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-mail-by",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Mailing a Gabby's Dollhouse gift for Christmas? The last days to send",
+      "caption": "Mailing a wrapped Gabby's Dollhouse gift yourself? USPS's recommended last days to send for delivery by December 25 in the lower 48 states, and why we don't quote store cut-offs. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "Mailing a Christmas gift? Here are the last days to send. / Ground Advantage and First-Class: December seventeenth. / Priority Mail: the eighteenth. / Priority Mail Express: the nineteenth. / Ordering from a store? We haven't confirmed their cut-offs, so check the date at checkout. / One pick at each budget: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Mail-by dates",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Grandparents mailing a gift",
+              "title": "Mailing it for Christmas? The last days to send.",
+              "sub": "USPS, lower 48 states.",
+              "say": "Mailing a Christmas gift? Here are the last days to send."
+            },
+            {
+              "type": "compare",
+              "title": "USPS says send by",
+              "items": [
+                {
+                  "price": "Dec 17",
+                  "name": "Ground Advantage",
+                  "line": "First-Class Mail too",
+                  "sound": "Recommended last day",
+                  "tone": "green",
+                  "say": "Ground Advantage and First-Class: December seventeenth."
+                },
+                {
+                  "price": "Dec 18",
+                  "name": "Priority Mail",
+                  "line": "Recommended last day",
+                  "sound": "Lower 48 states",
+                  "tone": "yellow",
+                  "say": "Priority Mail: the eighteenth."
+                },
+                {
+                  "price": "Dec 19",
+                  "name": "Priority Mail Express",
+                  "line": "Recommended last day",
+                  "sound": "USPS says delivery may vary",
+                  "tone": "red",
+                  "say": "Priority Mail Express: the nineteenth."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Ordering from a store?",
+              "items": [
+                {
+                  "k": "Store cut-offs",
+                  "v": "We haven't confirmed any. Check the delivery date at checkout.",
+                  "tone": "red",
+                  "say": "Ordering from a store? We haven't confirmed their cut-offs, so check the date at checkout."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "One pick at each budget, ready to send.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: Christmas gifts",
+              "say": "One pick at each budget: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-fairylandia-start",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Fairylandia toys: where to start with Gabby's Dollhouse fairies",
+      "caption": "Fairylandia is the fairy world from season 13 of Gabby's Dollhouse. The main playset, the cheapest way to add figures, one small room set, and what we couldn't confirm. https://everylittleroom.com/guides/what-is-fairylandia?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/what-is-fairylandia?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "Fairylandia toys on the list? Here's where to start. / The Flutter Magic playset, about thirty. / Six friends in one box, about twenty. / One small room set, about sixteen. / All three, about sixty-six dollars. / We couldn't confirm the fairy sets attach to the big dollhouses. Treat them as stand-alone. / The rest of the line: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Fairylandia guide",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Parents",
+              "title": "Fairylandia toys: where do I start?",
+              "sub": "The fairy world from season 13.",
+              "say": "Fairylandia toys on the list? Here's where to start."
+            },
+            {
+              "type": "list",
+              "title": "A first Fairylandia shelf",
+              "totalLabel": "All three, about",
+              "items": [
+                {
+                  "label": "The main playset",
+                  "name": "Flutter Magic Fairy Playset",
+                  "price": 29.97,
+                  "say": "The Flutter Magic playset, about thirty."
+                },
+                {
+                  "label": "Six figures, about $3.30 each",
+                  "name": "Fairy-riffic Friends 6-pack",
+                  "price": 19.97,
+                  "say": "Six friends in one box, about twenty."
+                },
+                {
+                  "label": "A 10-piece room set",
+                  "name": "Cakey Cat's Fairy Kitchen",
+                  "price": 15.99,
+                  "say": "One small room set, about sixteen."
+                }
+              ],
+              "outro": "All three, about sixty-six dollars."
+            },
+            {
+              "type": "facts",
+              "title": "What we couldn't confirm",
+              "items": [
+                {
+                  "k": "Do they attach to a big dollhouse?",
+                  "v": "Not confirmed. Treat them as stand-alone sets unless the box says so.",
+                  "tone": "red",
+                  "say": "We couldn't confirm the fairy sets attach to the big dollhouses. Treat them as stand-alone."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "The rest of the line, and the advent calendar.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: what is Fairylandia",
+              "say": "The rest of the line: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-lego-or-plastic",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "LEGO Gabby's Dollhouse or the plastic one?",
+      "caption": "The LEGO Gabby's Dollhouse (10788) and the plastic Meow-mazing are different toys at different scales: what each costs, the ages they're listed for, and why one house is plenty. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "The LEGO Gabby's Dollhouse, or the plastic one? They're different toys. / The plastic Meow-mazing: about fifty, listed for ages three. / The LEGO house: about eighty, 498 pieces, ages four and up. / Their rooms don't mix, so one house is plenty. / What suits a four, five or six year old: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Gifts by age",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you pick a house",
+              "title": "The LEGO Gabby's Dollhouse, or the plastic one?",
+              "say": "The LEGO Gabby's Dollhouse, or the plastic one? They're different toys."
+            },
+            {
+              "type": "compare",
+              "title": "Two different toys",
+              "items": [
+                {
+                  "price": "$50",
+                  "name": "Meow-mazing Dollhouse",
+                  "line": "Plastic, listed about 2 feet tall",
+                  "sound": "Walmart's listing says Ages 3",
+                  "tone": "green",
+                  "say": "The plastic Meow-mazing: about fifty, listed for ages three."
+                },
+                {
+                  "price": "$80",
+                  "name": "LEGO Gabby's Dollhouse (10788)",
+                  "line": "498 pieces, built from bricks",
+                  "sound": "LEGO lists it for ages 4 and up",
+                  "tone": "purple",
+                  "say": "The LEGO house: about eighty, 498 pieces, ages four and up."
+                }
+              ],
+              "note": "Their rooms don't mix. One house is plenty.",
+              "outro": "Their rooms don't mix, so one house is plenty."
+            },
+            {
+              "type": "end",
+              "title": "What suits a 4, 5 or 6 year old.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: gifts by age",
+              "say": "What suits a four, five or six year old: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W47-answer-birthday-party",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "title": "Planning a Gabby's Dollhouse birthday party: what to order, and when",
+      "caption": "A Gabby's Dollhouse birthday for 3 to 6 year olds: when to call the bakery, one craft set for the whole group, a favor that gets used, and what it comes to. https://everylittleroom.com/guides/gabbys-dollhouse-birthday-party?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/gabbys-dollhouse-birthday-party?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+      "earliest": "2026-11-16T00:00:00Z",
+      "script": "Planning a Gabby's Dollhouse birthday? What to order, and when. / Two weeks before, call your Walmart bakery about the cake. / One week before, buy one big craft set for the group. / On the day, ninety minutes is plenty. / The sheet cake, about twenty-five. / The activity set, about fifteen. / And a sticker book per guest, about seven each. / Cake, craft and one favor: about forty-seven dollars. / The whole plan: every little room dot com.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1.1,
+        "spec": {
+          "tag": "Party plan",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Planning a party",
+              "title": "A Gabby's Dollhouse birthday. What do I order, and when?",
+              "sub": "For 3 to 6 year olds.",
+              "say": "Planning a Gabby's Dollhouse birthday? What to order, and when."
+            },
+            {
+              "type": "facts",
+              "title": "When",
+              "items": [
+                {
+                  "k": "Two weeks before",
+                  "v": "Call your Walmart bakery about the licensed cake.",
+                  "tone": "red",
+                  "say": "Two weeks before, call your Walmart bakery about the cake."
+                },
+                {
+                  "k": "One week before",
+                  "v": "One big craft set, shared by the group.",
+                  "tone": "yellow",
+                  "say": "One week before, buy one big craft set for the group."
+                },
+                {
+                  "k": "On the day",
+                  "v": "Ninety minutes is plenty.",
+                  "tone": "green",
+                  "say": "On the day, ninety minutes is plenty."
+                }
+              ]
+            },
+            {
+              "type": "list",
+              "title": "The order",
+              "totalLabel": "Cake, craft and one favor",
+              "items": [
+                {
+                  "label": "Prices differ by store",
+                  "name": "Bakery Sheet Cake",
+                  "price": 24.96,
+                  "say": "The sheet cake, about twenty-five."
+                },
+                {
+                  "label": "More than 500 pieces",
+                  "name": "Deluxe Creative Activity Set",
+                  "price": 14.99,
+                  "say": "The activity set, about fifteen."
+                },
+                {
+                  "label": "One per guest",
+                  "name": "Party in the Dollhouse Sticker Book",
+                  "price": 6.91,
+                  "say": "And a sticker book per guest, about seven each."
+                }
+              ],
+              "outro": "Cake, craft and one favor: about forty-seven dollars."
+            },
+            {
+              "type": "end",
+              "title": "The party plan, and a gift list for guests.",
+              "cta": "everylittleroom.com",
+              "site": "Guide: birthday party",
+              "say": "The whole plan: every little room dot com."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    }
+  ]
+}
