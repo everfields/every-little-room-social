@@ -1,0 +1,458 @@
+{
+ "week": "2026-W48",
+ "posts": [
+  {
+   "id": "2026-W48-answer-age-range",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "What age are Gabby's Dollhouse toys for? 3, 4 and 6 and up",
+   "caption": "What age are Gabby's Dollhouse toys for? Most listings say 3 and up; the LEGO house is 4 and up, one LEGO set 6 and up. Ages are the makers' and stores' guidance, not ours. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-23T00:00:00Z",
+   "script": "What age is Gabby's Dollhouse for? / Most listings: three and up. / LEGO house: four and up. / LEGO Cat Friends: six and up. / The bumper car: eighteen months to four. / Every age by toy: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Age range",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Before you buy for a 4, 5 or 6 year old",
+       "title": "What age is Gabby's Dollhouse for?",
+       "sub": "It depends on the toy.",
+       "say": "What age is Gabby's Dollhouse for? It depends on the toy."
+      },
+      {
+       "type": "facts",
+       "title": "The age on the listing",
+       "items": [
+        {
+         "k": "Most of the line",
+         "v": "Listed for 3 and up.",
+         "tone": "green",
+         "say": "Most of the line is listed for three and up."
+        },
+        {
+         "k": "The LEGO house",
+         "v": "498 pieces, listed for 4 and up.",
+         "tone": "yellow",
+         "say": "The LEGO house is listed for four and up."
+        },
+        {
+         "k": "LEGO Brick-Built Cat Friends",
+         "v": "Listed for 6 and up.",
+         "tone": "purple",
+         "say": "The LEGO Cat Friends set is six and up."
+        },
+        {
+         "k": "The bumper car",
+         "v": "About 18 months to 4 years.",
+         "tone": "red",
+         "say": "And the bumper car is for about eighteen months to four years."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Every toy, grouped by the age on the box.",
+       "cta": "everylittleroom.com",
+       "site": "Guide: age range",
+       "say": "Every toy by the age on the box: every little room dot com.",
+       "sub": "Those ages are the makers' and stores', not ours."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
+  },
+  {
+   "id": "2026-W48-answer-about-15-gift",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "A Gabby's Dollhouse gift for about $15 from an aunt or uncle",
+   "caption": "Three Gabby's Dollhouse gifts at about $15 for an aunt, an uncle or a family friend, and what they overlap with. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-budget?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-budget?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-24T00:00:00Z",
+   "script": "Aunt or uncle, about fifteen dollars? / The cat-ear headband with music. / The activity set, over five hundred pieces. / A small room set. / Skip a coloring book on top of the activity set. / Every budget: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "About $15",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Aunts, uncles and family friends",
+       "title": "A gift for about $15?",
+       "sub": "Three that fit the budget.",
+       "say": "Aunt or uncle, about fifteen dollars? Three that fit."
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$15",
+         "name": "Musical Ears",
+         "line": "The cat-ear headband, with music",
+         "sound": "Ages 3 and up, batteries included",
+         "tone": "green",
+         "say": "The cat-ear headband with music."
+        },
+        {
+         "price": "$15",
+         "name": "Activity set",
+         "line": "More than 500 pieces",
+         "sound": "Coloring and crafts",
+         "tone": "yellow",
+         "say": "The activity set, over five hundred pieces."
+        },
+        {
+         "price": "$16",
+         "name": "Room set",
+         "line": "Cakey Cat's Fairy Kitchen, 10 pieces",
+         "sound": "A small way to add a room",
+         "tone": "purple",
+         "say": "Or a small room set."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "Before you wrap it",
+       "items": [
+        {
+         "k": "Coloring books",
+         "v": "The activity set already covers coloring.",
+         "tone": "yellow",
+         "say": "The activity set already covers coloring, so skip a coloring book on top."
+        },
+        {
+         "k": "Room sets",
+         "v": "The one two relatives most often buy twice.",
+         "tone": "red",
+         "say": "Room sets are what two relatives most often buy twice."
+        },
+        {
+         "k": "Batteries",
+         "v": "Check the box so it works on the day.",
+         "tone": "green",
+         "say": "And check for batteries."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "One pick at each budget.",
+       "cta": "everylittleroom.com",
+       "site": "Guide: gifts by budget",
+       "say": "One pick at each budget: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
+  },
+  {
+   "id": "2026-W48-answer-deluxe-rooms-fit",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "Do Purrfect Deluxe Rooms fit the Meow-mazing dollhouse?",
+   "caption": "Will the Deluxe Rooms made for the Purrfect Dollhouse fit the Meow-mazing? We looked, and the listings don't say. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-25T00:00:00Z",
+   "script": "Will Purrfect Deluxe Rooms fit the Meow-mazing? / The Deluxe Rooms slide into the Purrfect's side. / Whether they fit the Meow-mazing: we couldn't confirm it. / Ask the seller first: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Does it fit?",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Already own Deluxe Rooms?",
+       "title": "Will Purrfect Deluxe Rooms fit the Meow-mazing?",
+       "sub": "We looked.",
+       "say": "Will your Purrfect Deluxe Rooms fit the Meow-mazing? We looked."
+      },
+      {
+       "type": "facts",
+       "title": "What we found",
+       "items": [
+        {
+         "k": "Purrfect",
+         "v": "Listed: Deluxe Rooms slide into its side. Sold separately.",
+         "tone": "green",
+         "say": "The Purrfect's listing says Deluxe Rooms slide into its side."
+        },
+        {
+         "k": "Meow-mazing",
+         "v": "Listings don't say. Not confirmed.",
+         "tone": "red",
+         "say": "For the Meow-mazing, the listings don't say, so we couldn't confirm it."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "If you're counting on reusing rooms, ask the seller first.",
+       "cta": "everylittleroom.com",
+       "site": "Guide: which dollhouse to buy",
+       "say": "The full comparison, and what we couldn't confirm: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
+  },
+  {
+   "id": "2026-W48-answer-black-friday-prices",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "Waiting for Black Friday? Typical Gabby's Dollhouse prices to compare",
+   "caption": "Waiting for Black Friday? We can't promise a sale. Here are typical US store prices from our Nov 15 check, so you can compare the price you see. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-26T00:00:00Z",
+   "script": "Waiting for Black Friday? We can't promise a sale. / Here is what three things cost in our November fifteenth check. / The dollhouse, about fifty. / The Fairylandia playset, about thirty. / The cat ears, about fifteen. / The store's price on the day is the one that counts.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Black Friday",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Before you click buy",
+       "title": "Waiting for Black Friday?",
+       "sub": "We can't promise a sale.",
+       "say": "Waiting for Black Friday? We can't promise a sale."
+      },
+      {
+       "type": "list",
+       "title": "About what they cost on Nov 15",
+       "totalLabel": "All three, about",
+       "items": [
+        {
+         "label": "The big present",
+         "name": "Meow-mazing Dollhouse",
+         "price": 49.97,
+         "say": "The dollhouse, about fifty."
+        },
+        {
+         "label": "The newest line",
+         "name": "Flutter Magic Fairy Playset",
+         "price": 29.97,
+         "say": "The Fairylandia playset, about thirty."
+        },
+        {
+         "label": "A small gift",
+         "name": "Musical Ears",
+         "price": 14.97,
+         "say": "The cat ears, about fifteen."
+        }
+       ],
+       "outro": "All three, about ninety-five dollars."
+      },
+      {
+       "type": "facts",
+       "title": "How to use these",
+       "items": [
+        {
+         "k": "Typical, not today's",
+         "v": "From our dated check on Nov 15.",
+         "tone": "yellow",
+         "say": "These are typical prices from our check on November fifteenth."
+        },
+        {
+         "k": "The store's price",
+         "v": "The one it shows on the day is the one that counts.",
+         "tone": "green",
+         "say": "The price the store shows on the day is the one that counts."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Picks at every budget, checked and dated.",
+       "cta": "everylittleroom.com",
+       "site": "Guide: Christmas gifts",
+       "say": "Picks at every budget: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
+  },
+  {
+   "id": "2026-W48-answer-where-to-watch",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "Where to watch Gabby's Dollhouse in the US, and the movie",
+   "caption": "Where to watch Gabby's Dollhouse in the US: the series on Netflix, and why the movie's streaming home is unclear. https://everylittleroom.com/guides/where-to-watch-gabbys-dollhouse?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/where-to-watch-gabbys-dollhouse?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-27T00:00:00Z",
+   "script": "Where can you watch Gabby's Dollhouse? / The series: Netflix, every season. / The movie: Peacock says it's exclusive. JustWatch says Netflix. / Check both apps first, or own it: DVD about eight dollars. / Every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Where to watch",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "A movie night",
+       "title": "Where can you watch Gabby's Dollhouse?",
+       "sub": "The series and the movie.",
+       "say": "Where can you watch Gabby's Dollhouse?"
+      },
+      {
+       "type": "facts",
+       "title": "Streaming in the US",
+       "items": [
+        {
+         "k": "The series",
+         "v": "On Netflix, all seasons, including season 13.",
+         "tone": "green",
+         "say": "The series is on Netflix, every season."
+        },
+        {
+         "k": "The movie",
+         "v": "Peacock says exclusive. JustWatch lists Netflix.",
+         "tone": "red",
+         "say": "The movie is unclear: Peacock says it's exclusive, and JustWatch lists Netflix."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "Or own it, about",
+       "items": [
+        {
+         "price": "$8",
+         "name": "DVD",
+         "line": "No subscription needed",
+         "sound": "About $7.50 at Walmart",
+         "tone": "green",
+         "say": "Or own it: the DVD, about eight."
+        },
+        {
+         "price": "$10",
+         "name": "Blu-ray",
+         "line": "Includes a digital copy",
+         "sound": "About $10 at Walmart",
+         "tone": "yellow",
+         "say": "The Blu-ray, about ten, with a digital copy."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Check both apps before you pay for anything.",
+       "cta": "everylittleroom.com",
+       "site": "Guide: where to watch",
+       "say": "Where to watch it: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
+  },
+  {
+   "id": "2026-W48-answer-makers-and-bakers",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "Gabby's Dollhouse Makers and Bakers on Netflix: any toys tied to it?",
+   "caption": "Netflix says Gabby's Dollhouse: Makers and Bakers starts December 9. Are there toys tied to it? We found none, so nothing here is a tie-in. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-budget?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-budget?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-28T00:00:00Z",
+   "script": "Makers and Bakers starts December ninth on Netflix. Toys tied to it? We found none. / If a baker is on your list, a small one: the activity set and a bakery cake. / Every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "New episodes",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "On Netflix December 9",
+       "title": "Makers and Bakers: any toys tied to it?",
+       "sub": "Four holiday episodes.",
+       "say": "Makers and Bakers starts December ninth on Netflix, with four holiday episodes. Any toys tied to it?"
+      },
+      {
+       "type": "facts",
+       "title": "What we found",
+       "items": [
+        {
+         "k": "Tie-in toys",
+         "v": "We found none listed. Nothing here is a tie-in.",
+         "tone": "red",
+         "say": "We found no toys listed as tied to it."
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "title": "If a little baker is on your list, about",
+       "totalLabel": "Both, about",
+       "items": [
+        {
+         "label": "More than 500 pieces",
+         "name": "Deluxe Creative Activity Set",
+         "price": 14.99,
+         "say": "A craft set, about fifteen."
+        },
+        {
+         "label": "Ordered at Walmart's bakery",
+         "name": "Bakery Cupcakes",
+         "price": 4.48,
+         "say": "Or cupcakes from the bakery, about four fifty."
+        }
+       ],
+       "outro": "Both, about twenty dollars."
+      },
+      {
+       "type": "end",
+       "title": "Gifts at every budget, and what we couldn't confirm.",
+       "cta": "everylittleroom.com",
+       "site": "Guide: gifts by budget",
+       "say": "Gifts at every budget: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
+  }
+ ]
+}
