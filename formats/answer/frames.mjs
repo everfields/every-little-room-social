@@ -25,10 +25,30 @@ fs.writeFileSync(page, html);
 const spec = JSON.parse(fs.readFileSync(args.spec, 'utf8'));
 
 const profile = fs.mkdtempSync(path.join(os.tmpdir(), 'rr-answer-'));
-const chrome = spawn(CHROME, ['--headless=new', '--remote-debugging-port=0', `--user-data-dir=${profile}`, '--window-size=540,960',
+const chromeArgs = ['--headless=new', '--remote-debugging-port=0', `--user-data-dir=${profile}`, '--window-size=540,960',
   '--hide-scrollbars', '--mute-audio', '--no-first-run', '--no-default-browser-check', '--allow-file-access-from-files',
-  // GitHub's Ubuntu runners block the user namespaces Chrome's sandbox needs; the page is our own file and loads nothing else
-  ...(process.platform === 'linux' ? ['--no-sandbox'] : []), 'about:blank'], { stdio: 'ignore' });
+  // GitHub's Ubuntu runners block the user namespaces Chrome's sandbox needs; the page is our own file and loads nothing else.
+  // /dev/shm is small on runners and there is no GPU: both are common reasons headless Chrome dies at start.
+  ...(process.platform === 'linux' ? ['--no-sandbox', '--disable-dev-shm-usage', '--disable-gpu'] : []), 'about:blank'];
+let chrome, chromeErr = '', chromeExit = null;
+function startChrome() {
+  chromeErr = ''; chromeExit = null;
+  chrome = spawn(CHROME, chromeArgs, { stdio: ['ignore', 'ignore', 'pipe'] });
+  chrome.stderr.on('data', (d) => { chromeErr = (chromeErr + d).slice(-2000); });
+  chrome.on('exit', (code, sig) => { chromeExit = sig || code; });
+  chrome.on('error', (e) => { chromeExit = e.message; });
+}
+// Waits up to 60 s for Chrome to write its port; says why when it does not (exit code and Chrome's own stderr)
+async function waitForPort(portFile) {
+  for (let i = 0; i < 600 && !fs.existsSync(portFile); i++) {
+    if (chromeExit !== null) break;
+    await sleep(100);
+  }
+  if (fs.existsSync(portFile)) return fs.readFileSync(portFile, 'utf8').split('\n')[0].trim();
+  throw new Error(`Chrome wrote no DevToolsActivePort (${chromeExit !== null ? `exited: ${chromeExit}` : 'still running after 60 s'}). `
+    + `Chrome stderr: ${chromeErr.trim().slice(-800) || '(empty)'}`);
+}
+startChrome();
 
 let ws, id = 0;
 const pending = new Map();
@@ -45,8 +65,14 @@ const evaluate = async (expression) => {
 
 async function main() {
   const portFile = path.join(profile, 'DevToolsActivePort');
-  for (let i = 0; i < 100 && !fs.existsSync(portFile); i++) await sleep(100);
-  const port = fs.readFileSync(portFile, 'utf8').split('\n')[0].trim();
+  let port;
+  try { port = await waitForPort(portFile); } catch (e) {
+    console.error(`frames: first start failed, retrying once: ${e.message}`);
+    chrome.kill();
+    await sleep(1000);
+    startChrome();
+    port = await waitForPort(portFile);
+  }
   let target;
   for (let i = 0; i < 50 && !target; i++) {
     target = (await (await fetch(`http://127.0.0.1:${port}/json/list`)).json()).find((t) => t.type === 'page');
