@@ -1,0 +1,20 @@
+{
+  "alarms": {
+    "heartbeat": {
+      "cleared": false,
+      "sent_at": "2026-11-17T09:36:07Z",
+      "title": "the PC sent no heartbeat"
+    },
+    "runway-youtube": {
+      "cleared": false,
+      "sent_at": "2026-11-17T09:36:07Z",
+      "title": "youtube: 4.5 days of posts left"
+    }
+  },
+  "brake_reason": {},
+  "brake_until": {},
+  "failures": {},
+  "first_post": {},
+  "seen": {},
+  "stopped": {}
+}
