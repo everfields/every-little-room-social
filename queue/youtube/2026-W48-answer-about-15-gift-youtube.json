@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-about-15-gift-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-about-15-gift.mp4",
+    "sha256": "0fa33bf52aab28a24264dac9902031712e39f63dc97ce7a11ce760654e897a73",
+    "kind": "video"
+  },
+  "caption": "Three Gabby's Dollhouse gifts at about $15 for an aunt, an uncle or a family friend, and what they overlap with. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-budget?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "A Gabby's Dollhouse gift for about $15 from an aunt or uncle",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-24T00:00:00Z"
+}

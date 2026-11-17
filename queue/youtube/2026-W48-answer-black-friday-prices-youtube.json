@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-black-friday-prices-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-black-friday-prices.mp4",
+    "sha256": "0c133e5b8f247235f98f9a9bbe7cd8ae1e4110e0b710241c6d716626b3df8c12",
+    "kind": "video"
+  },
+  "caption": "Waiting for Black Friday? We can't promise a sale. Here are typical US store prices from our Nov 15 check, so you can compare the price you see. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Waiting for Black Friday? Typical Gabby's Dollhouse prices to compare",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-26T00:00:00Z"
+}

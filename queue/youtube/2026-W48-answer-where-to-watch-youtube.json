@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-where-to-watch-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-where-to-watch.mp4",
+    "sha256": "56ec9a79eca8a2b72638c604e6edca03ce36f02a8d00a6886de2b7f8750e891c",
+    "kind": "video"
+  },
+  "caption": "Where to watch Gabby's Dollhouse in the US: the series on Netflix, and why the movie's streaming home is unclear. https://everylittleroom.com/guides/where-to-watch-gabbys-dollhouse?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Where to watch Gabby's Dollhouse in the US, and the movie",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-27T00:00:00Z"
+}

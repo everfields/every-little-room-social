@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-makers-and-bakers-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-makers-and-bakers.mp4",
+    "sha256": "3c3156d50ce7eefa875843e30067eb68189cef047207b060d805d569bab6c4ff",
+    "kind": "video"
+  },
+  "caption": "Netflix says Gabby's Dollhouse: Makers and Bakers starts December 9. Are there toys tied to it? We found none, so nothing here is a tie-in. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-budget?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Gabby's Dollhouse Makers and Bakers on Netflix: any toys tied to it?",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-28T00:00:00Z"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "2026-W48-answer-deluxe-rooms-fit-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W48",
+  "media": {
+    "file": "2026-W48-answer-deluxe-rooms-fit.mp4",
+    "sha256": "b2bf00812907614f58d57ab0ec70bc626ee2347d5e778524a6c1156025432910",
+    "kind": "video"
+  },
+  "caption": "Will the Deluxe Rooms made for the Purrfect Dollhouse fit the Meow-mazing? We looked, and the listings don't say. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Do Purrfect Deluxe Rooms fit the Meow-mazing dollhouse?",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-25T00:00:00Z"
+}
