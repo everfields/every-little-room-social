@@ -354,14 +354,14 @@
    "ai": {"generated": false, "realistic": false}
   },
   {
-   "id": "2026-W49-answer-kitchen-or-cups",
+   "id": "2026-W49-answer-kitchen-four-picks",
    "format": "answer",
    "networks": ["youtube"],
-   "title": "Gabby's Dollhouse kitchen set or real cups? They do different jobs",
-   "caption": "Cakey Cat's Fairy Kitchen or the character tumblers? One is for play, the other for the real table. About what each costs, and when the cups are worth it. https://everylittleroom.com/room/kitchen?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "title": "Which Gabby's Dollhouse kitchen gift? Four picks, one needs a Toniebox",
+   "caption": "Four kitchen gifts: Cakey Cat's Fairy Kitchen for play, two kinds of character cups for the real table, and the Cakey Cat Tonie, which only works with a Toniebox. About what each costs. https://everylittleroom.com/room/kitchen?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
    "link": "https://everylittleroom.com/room/kitchen?utm_source=youtube&utm_medium=short&utm_campaign=answer",
    "earliest": "2026-11-29T05:00:00Z",
-   "script": "Toy kitchen set or real cups? / Cakey Cat's Fairy Kitchen, about seventeen, for play. / Four nesting tumblers, about eighteen, for the table. / Most homes have cups: they matter if your child wants the characters at meals. / The kitchen: every little room dot com.",
+   "script": "Which Gabby's Dollhouse kitchen gift? Four picks, one needs a Toniebox. / Cakey Cat's Fairy Kitchen, about seventeen, for play. / Four nesting cups, about eighteen, for the table. / Straw tumblers, about fourteen, for the car and the lunch bag. / The Cakey Cat Tonie, about twenty, only with a Toniebox. / All four, about sixty-nine. Most homes have cups: start with the kitchen set. / The kitchen: every little room dot com.",
    "prompts": {
     "voice": "af_heart",
     "speed": 1.1,
@@ -370,44 +370,43 @@
      "scenes": [
       {
        "type": "hook",
-       "kicker": "Two kitchen gifts",
-       "title": "Toy kitchen set or real cups?",
-       "sub": "They do different jobs.",
-       "say": "Toy kitchen set or real cups? They do different jobs."
+       "kicker": "Four kitchen gifts",
+       "title": "Which Gabby's Dollhouse kitchen gift?",
+       "sub": "Four picks. One needs a Toniebox.",
+       "say": "Which Gabby's Dollhouse kitchen gift? Four picks, and one needs a Toniebox."
       },
       {
-       "type": "compare",
+       "type": "list",
        "title": "About what each costs",
+       "totalLabel": "All four, about",
        "items": [
         {
-         "price": "$17",
+         "label": "For play",
          "name": "Cakey Cat's Fairy Kitchen",
-         "line": "A 10-piece room set",
-         "sound": "For play",
-         "tone": "purple",
+         "price": 16.88,
          "say": "Cakey Cat's Fairy Kitchen, about seventeen, for play."
         },
         {
-         "price": "$18",
+         "label": "For the table",
          "name": "4-Piece Tumbler Set",
-         "line": "Four 14.5 oz cups that nest",
-         "sound": "For the real table",
-         "tone": "green",
-         "say": "Four nesting tumblers, about eighteen, for the table."
-        }
-       ]
-      },
-      {
-       "type": "facts",
-       "title": "Before the cups",
-       "items": [
+         "price": 17.99,
+         "say": "Four nesting cups, about eighteen, for the table."
+        },
         {
-         "k": "Most homes have cups",
-         "v": "These matter if your child wants the characters at meals.",
-         "tone": "yellow",
-         "say": "Most homes have cups. These matter if your child wants the characters at meals."
+         "label": "For the car and lunch bag",
+         "name": "Straw Tumbler",
+         "price": 13.99,
+         "say": "Straw tumblers, about fourteen, for the car and the lunch bag."
+        },
+        {
+         "label": "Only with a Toniebox",
+         "name": "Cakey Cat Tonie",
+         "price": 19.94,
+         "say": "The Cakey Cat Tonie, about twenty, only with a Toniebox."
         }
-       ]
+       ],
+       "note": "Most homes have cups: start with the kitchen set.",
+       "outro": "All four, about sixty-nine. Most homes have cups, so start with the kitchen set."
       },
       {
        "type": "end",
