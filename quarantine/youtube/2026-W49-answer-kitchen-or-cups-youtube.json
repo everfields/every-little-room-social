@@ -17,5 +17,30 @@
     "realistic": false
   },
   "trial": false,
-  "earliest": "2026-11-29T05:00:00Z"
+  "earliest": "2026-11-29T05:00:00Z",
+  "intake": {
+    "ok": false,
+    "at": "2026-11-18T09:45:24Z",
+    "problems": [
+      "near-duplicate of 2026-W49-answer-first-book-youtube (distance 10.0)"
+    ],
+    "warnings": [],
+    "probe": {
+      "width": 1080,
+      "height": 1920,
+      "duration_s": 21.4,
+      "video_codec": "h264",
+      "pix_fmt": "yuv420p",
+      "fps": 30.0,
+      "audio_codec": "aac",
+      "bytes": 1998137
+    },
+    "phash": [
+      "78003b5b0c000080",
+      "5b4b080000000000",
+      "5b4b0f4f00000200",
+      "6c2a3e0000000000",
+      "78005a4a30002700"
+    ]
+  }
 }
