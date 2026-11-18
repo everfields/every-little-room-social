@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-kitchen-four-picks-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-kitchen-four-picks.mp4",
+    "sha256": "167ba8288a661c21df9f04b6d75b28141d130da4c7cf7bba846d7e9895c3d49b",
+    "kind": "video"
+  },
+  "caption": "Four kitchen gifts: Cakey Cat's Fairy Kitchen for play, two kinds of character cups for the real table, and the Cakey Cat Tonie, which only works with a Toniebox. About what each costs. https://everylittleroom.com/room/kitchen?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Which Gabby's Dollhouse kitchen gift? Four picks, one needs a Toniebox",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T05:00:00Z"
+}
