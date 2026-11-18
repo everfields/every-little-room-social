@@ -6,6 +6,11 @@
       "sent_at": "2026-11-17T09:36:07Z",
       "title": "the PC sent no heartbeat"
     },
+    "quarantine": {
+      "cleared": false,
+      "sent_at": "2026-11-18T09:45:33Z",
+      "title": "intake quarantined 1 post(s)"
+    },
     "runway-youtube": {
       "cleared": true,
       "cleared_at": "2026-11-17T14:37:17Z",
