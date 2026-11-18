@@ -1,0 +1,567 @@
+{
+ "week": "2026-W49",
+ "posts": [
+  {
+   "id": "2026-W49-answer-split-big-gift",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Relatives chipping in for one big Gabby's Dollhouse gift? Three to split",
+   "caption": "Several relatives chipping in for one big Gabby's Dollhouse gift? The three biggest buys in the house, about what each costs, and one list for the whole family so nobody buys it twice. https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T00:00:00Z",
+   "script": "Relatives chipping in for one big gift? / One big gift beats three small ones that overlap. / The dollhouse, about fifty. / The LEGO house, about eighty. / The bumper car, about one twenty-nine. / Send the family one list: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "One big gift",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Grandparents, aunts and uncles together",
+       "title": "Chipping in for one big gift?",
+       "sub": "Three worth splitting.",
+       "say": "Relatives chipping in for one big gift? Three worth splitting."
+      },
+      {
+       "type": "facts",
+       "title": "Why split one",
+       "items": [
+        {
+         "k": "One big gift",
+         "v": "Beats three small ones that overlap.",
+         "tone": "green",
+         "say": "One big gift beats three small ones that overlap."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$50",
+         "name": "Meow-mazing Dollhouse",
+         "line": "Seven themed rooms, per retailers",
+         "sound": "About two feet tall: measure the shelf",
+         "tone": "purple",
+         "say": "The Meow-mazing dollhouse, about fifty dollars."
+        },
+        {
+         "price": "$80",
+         "name": "LEGO Gabby's Dollhouse",
+         "line": "Set 10788, 498 pieces",
+         "sound": "Listed for ages 4 and up",
+         "tone": "yellow",
+         "say": "The LEGO house, about eighty."
+        },
+        {
+         "price": "$129",
+         "name": "6-Volt Bumper Car",
+         "line": "A battery ride-on",
+         "sound": "About 18 months to 4 years",
+         "tone": "green",
+         "say": "The bumper car, about one hundred twenty-nine."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "One list for the family, so nobody buys it twice.",
+       "cta": "everylittleroom.com",
+       "site": "The house checklist",
+       "say": "Send the family one list: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-doll-or-figures",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Gabby doll, plush or figures? Four to compare before you buy",
+   "caption": "A soft plush, a figure pack, a movie doll or the mermaid doll that goes in the bath: four Gabby's Dollhouse dolls and figures, about what each costs, and why figures are what relatives most often buy twice. https://everylittleroom.com/room/playroom?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/playroom?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T01:00:00Z",
+   "script": "Doll, plush or figures? / The plush, about sixteen, for kids too young for small figures. / Cakey Cat and Cookie Bobby, about eleven. / The Sweetest Treat doll, about twenty-five. / Mermaid Gabby, about thirty-five, and it can go in the bath. / Figures get bought twice: check the list at every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Dolls and figures",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Before you pick a Gabby doll",
+       "title": "Doll, plush or figures?",
+       "sub": "Four, side by side.",
+       "say": "Doll, plush or figures? Four, side by side."
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$16",
+         "name": "Gabby Girl Plush",
+         "line": "A soft 9-inch doll",
+         "sound": "For kids too young for small figures",
+         "tone": "green",
+         "say": "The plush, about sixteen, for kids too young for small figures."
+        },
+        {
+         "price": "$11",
+         "name": "Cakey Cat and Cookie Bobby",
+         "line": "A small figure pack",
+         "sound": "From the movie line",
+         "tone": "yellow",
+         "say": "Cakey Cat and Cookie Bobby, about eleven."
+        },
+        {
+         "price": "$25",
+         "name": "Sweetest Treat Gabby",
+         "line": "A movie-line doll",
+         "sound": "With snow gear and accessories",
+         "tone": "purple",
+         "say": "The Sweetest Treat doll, about twenty-five."
+        },
+        {
+         "price": "$35",
+         "name": "Sing & Shine Mermaid Gabby",
+         "line": "Waterproof, lights and sounds",
+         "sound": "It can go in the bath",
+         "tone": "red",
+         "say": "Mermaid Gabby, about thirty-five, and it can go in the bath."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Figures are what relatives most often buy twice.",
+       "sub": "Check the family's list first.",
+       "cta": "everylittleroom.com",
+       "site": "Room: playroom",
+       "say": "Figures get bought twice. Check the list at every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-bedroom-theme",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "A Gabby's Dollhouse bedroom: what to buy first, and what to skip",
+   "caption": "Turning a child's bedroom Gabby's Dollhouse themed? Four pieces, about what each costs, and the one thing to skip: a bed-in-a-bag already includes the sheets. https://everylittleroom.com/room/bedroom?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/bedroom?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T02:00:00Z",
+   "script": "A Gabby's Dollhouse bedroom? / Bed in a bag, about twenty-nine. / Wall decals, about fourteen. / The MerCat lamp, about twenty-five. / The cuddle pillow, about seventeen. / The bed in a bag already has sheets, so skip separate ones. / The bedroom list: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Bedroom",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Theming a child's room",
+       "title": "A Gabby's Dollhouse bedroom?",
+       "sub": "Start with the bed.",
+       "say": "A Gabby's Dollhouse bedroom? Start with the bed."
+      },
+      {
+       "type": "list",
+       "title": "About what each costs",
+       "totalLabel": "All four, about",
+       "items": [
+        {"label": "The big change", "name": "Bed in a Bag, Twin", "price": 28.81, "say": "Bed in a bag, about twenty-nine."},
+        {"label": "Renter-friendly", "name": "Peel and Stick Wall Decals", "price": 14.13, "say": "Wall decals, about fourteen."},
+        {"label": "15-inch lamp", "name": "MerCat Plush Shade Lamp", "price": 24.98, "say": "The MerCat lamp, about twenty-five."},
+        {"label": "Pillow and plush", "name": "Plush Cuddle Pillow Buddy", "price": 16.88, "say": "The cuddle pillow, about seventeen."}
+       ],
+       "outro": "All four, about eighty-five dollars."
+      },
+      {
+       "type": "facts",
+       "title": "Skip this one",
+       "items": [
+        {
+         "k": "Separate sheets",
+         "v": "The bed-in-a-bag already includes sheets and a pillowcase.",
+         "tone": "red",
+         "say": "The bed in a bag already has sheets, so skip separate ones."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "The bedroom, with what overlaps.",
+       "cta": "everylittleroom.com",
+       "site": "Room: bedroom",
+       "say": "The bedroom list: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-first-book",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Which Gabby's Dollhouse book? Three at about $5, $10 and $13",
+   "caption": "The reading nook is the cheapest room in the house to fill. Three Gabby's Dollhouse books at about $5, $10 and $13, and two to think twice about. https://everylittleroom.com/room/reading-nook?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/reading-nook?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T03:00:00Z",
+   "script": "Which Gabby's Dollhouse book? / A first reader, about five. / Five-minute stories, about ten. / The fold-out board book, about thirteen. / The sound book has buttons. / The Tonie needs a Toniebox. / Every book: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Books",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "The cheapest room to fill",
+       "title": "Which Gabby's Dollhouse book?",
+       "sub": "One new title beats a stack.",
+       "say": "Which Gabby's Dollhouse book? One new title beats a stack."
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$5",
+         "name": "Kitty School",
+         "line": "A Scholastic Level 1 reader",
+         "sound": "For kids starting to read alone",
+         "tone": "green",
+         "say": "A first reader, about five dollars."
+        },
+        {
+         "price": "$10",
+         "name": "5-Minute Stories",
+         "line": "A hardcover collection",
+         "sound": "One story at bedtime",
+         "tone": "purple",
+         "say": "Five-minute stories, about ten."
+        },
+        {
+         "price": "$13",
+         "name": "Goodnight Fold-Out Book",
+         "line": "A board book that opens out",
+         "sound": "Sturdy for younger kids",
+         "tone": "yellow",
+         "say": "The fold-out board book, about thirteen."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "Think twice",
+       "items": [
+        {
+         "k": "The Groove-Along sound book",
+         "v": "It has sound buttons. You have been warned.",
+         "tone": "red",
+         "say": "The sound book has buttons. You have been warned."
+        },
+        {
+         "k": "The Gabby Tonie",
+         "v": "Works only with a Toniebox, sold separately.",
+         "tone": "yellow",
+         "say": "And the Tonie only works with a Toniebox."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Every book in the reading nook.",
+       "cta": "everylittleroom.com",
+       "site": "Room: reading nook",
+       "say": "Every book: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-dress-up-sizes",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Buying Gabby's Dollhouse clothes? Check the size first",
+   "caption": "Gabby's Dollhouse clothes as a gift: check the size chart first, because character shoes rarely fit like the pair at home. Three outfits and about what each costs. https://everylittleroom.com/room/dress-up-closet?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/dress-up-closet?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T04:00:00Z",
+   "script": "Buying Gabby's Dollhouse clothes? Check the size first. / Character shoes rarely fit like the pair at home. / The tee comes in 12 months to 5T. / The tee, about seven. / The tulle dress, about twenty. / Shirt, tutu and scrunchie, about twenty-eight. / The closet: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Clothes",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Before you wrap an outfit",
+       "title": "Buying Gabby's Dollhouse clothes?",
+       "sub": "Check the size first.",
+       "say": "Buying Gabby's Dollhouse clothes? Check the size first."
+      },
+      {
+       "type": "facts",
+       "title": "Sizes",
+       "items": [
+        {
+         "k": "Character shoes",
+         "v": "Rarely fit like the pair at home. Read the size chart.",
+         "tone": "red",
+         "say": "Character shoes rarely fit like the pair at home."
+        },
+        {
+         "k": "The graphic tee",
+         "v": "Sold in sizes 12M to 5T.",
+         "tone": "green",
+         "say": "The tee comes in twelve months to five T."
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "title": "About what each costs",
+       "totalLabel": "All three, about",
+       "items": [
+        {"label": "Lowest cost", "name": "Toddler Graphic Tee", "price": 7.48, "say": "The tee, about seven."},
+        {"label": "Party-ready", "name": "Character Tulle Dress", "price": 19.99, "say": "The tulle dress, about twenty."},
+        {"label": "One outfit", "name": "T-Shirt and Tutu Set", "price": 27.99, "say": "Shirt, tutu and scrunchie, about twenty-eight."}
+       ],
+       "outro": "All three, about fifty-five dollars."
+      },
+      {
+       "type": "end",
+       "title": "The dress-up closet, with sizes.",
+       "cta": "everylittleroom.com",
+       "site": "Room: dress-up closet",
+       "say": "The closet: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-kitchen-or-cups",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Gabby's Dollhouse kitchen set or real cups? They do different jobs",
+   "caption": "Cakey Cat's Fairy Kitchen or the character tumblers? One is for play, the other for the real table. About what each costs, and when the cups are worth it. https://everylittleroom.com/room/kitchen?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/kitchen?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T05:00:00Z",
+   "script": "Toy kitchen set or real cups? / Cakey Cat's Fairy Kitchen, about seventeen, for play. / Four nesting tumblers, about eighteen, for the table. / Most homes have cups: they matter if your child wants the characters at meals. / The kitchen: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Kitchen",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Two kitchen gifts",
+       "title": "Toy kitchen set or real cups?",
+       "sub": "They do different jobs.",
+       "say": "Toy kitchen set or real cups? They do different jobs."
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$17",
+         "name": "Cakey Cat's Fairy Kitchen",
+         "line": "A 10-piece room set",
+         "sound": "For play",
+         "tone": "purple",
+         "say": "Cakey Cat's Fairy Kitchen, about seventeen, for play."
+        },
+        {
+         "price": "$18",
+         "name": "4-Piece Tumbler Set",
+         "line": "Four 14.5 oz cups that nest",
+         "sound": "For the real table",
+         "tone": "green",
+         "say": "Four nesting tumblers, about eighteen, for the table."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "Before the cups",
+       "items": [
+        {
+         "k": "Most homes have cups",
+         "v": "These matter if your child wants the characters at meals.",
+         "tone": "yellow",
+         "say": "Most homes have cups. These matter if your child wants the characters at meals."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "The kitchen, play and table.",
+       "cta": "everylittleroom.com",
+       "site": "Room: kitchen",
+       "say": "The kitchen: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-bathroom-or-spa",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "MerCat's Fairy Bathroom or the spa pack? Most families need one",
+   "caption": "MerCat's Fairy Bathroom and the Mermaid-lantis spa pack cover the same play, so most families need only one. About what each costs, side by side. https://everylittleroom.com/room/bathroom?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/bathroom?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T06:00:00Z",
+   "script": "Bathroom set or spa pack? / They cover the same play, so most families need one. / MerCat's Fairy Bathroom, about seventeen. / The spa figure pack, about eleven. / The bathroom: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Bathroom",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Two room sets, one job",
+       "title": "Bathroom set or spa pack?",
+       "sub": "Most families need only one.",
+       "say": "Bathroom set or spa pack? Most families need only one."
+      },
+      {
+       "type": "facts",
+       "title": "Same play",
+       "items": [
+        {
+         "k": "Bathroom and spa",
+         "v": "Both sets cover the same play.",
+         "tone": "yellow",
+         "say": "They cover the same play."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$17",
+         "name": "MerCat's Fairy Bathroom",
+         "line": "A 12-piece room set",
+         "sound": "With MerCat",
+         "tone": "purple",
+         "say": "MerCat's Fairy Bathroom, about seventeen."
+        },
+        {
+         "price": "$11",
+         "name": "Mermaid-lantis Spa Pack",
+         "line": "A figure and furniture pack",
+         "sound": "Adds to the spa scene",
+         "tone": "green",
+         "say": "The spa figure pack, about eleven."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "The bathroom, and what overlaps.",
+       "cta": "everylittleroom.com",
+       "site": "Room: bathroom",
+       "say": "The bathroom: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-movie-disc",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "The Gabby's Dollhouse movie on DVD or Blu-ray? Same film",
+   "caption": "The Gabby's Dollhouse movie on DVD or Blu-ray: the same film, and the Blu-ray adds a digital copy. Where it streams is unclear, so a disc avoids the question. https://everylittleroom.com/room/cozy-den?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/cozy-den?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-29T07:00:00Z",
+   "script": "The movie: DVD or Blu-ray? / The DVD, about seven fifty. / The Blu-ray, about ten, with a digital copy. / Same film, so pick one. / Where it streams is unclear, so a disc avoids the question. / Movie night: every little room dot com.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "The movie",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "A stocking stuffer for the whole family",
+       "title": "The movie: DVD or Blu-ray?",
+       "sub": "Same film.",
+       "say": "The movie: DVD or Blu-ray? Same film."
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$7.50",
+         "name": "The Movie on DVD",
+         "line": "The cheapest way to own it",
+         "sound": "No subscription needed",
+         "tone": "green",
+         "say": "The DVD, about seven fifty."
+        },
+        {
+         "price": "$10",
+         "name": "The Movie on Blu-ray",
+         "line": "The same film",
+         "sound": "Adds a digital copy",
+         "tone": "purple",
+         "say": "The Blu-ray, about ten, with a digital copy."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "Pick one",
+       "items": [
+        {
+         "k": "Both discs",
+         "v": "The same film. One is enough.",
+         "tone": "yellow",
+         "say": "Same film, so pick one."
+        },
+        {
+         "k": "Streaming",
+         "v": "Where it streams is unclear. A disc avoids the question.",
+         "tone": "red",
+         "say": "Where it streams is unclear, so a disc avoids the question."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Movie night and the big extras.",
+       "cta": "everylittleroom.com",
+       "site": "Room: cozy den",
+       "say": "Movie night: every little room dot com."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  }
+ ]
+}
