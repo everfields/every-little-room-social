@@ -15,8 +15,18 @@
   },
   "brake_reason": {},
   "brake_until": {},
-  "failures": {},
-  "first_post": {},
-  "seen": {},
+  "failures": {
+    "youtube": 0
+  },
+  "first_post": {
+    "youtube": "2026-11-17"
+  },
+  "seen": {
+    "BjGQOZCIrQA": {
+      "first_seen": "2026-11-18T01:38:00Z",
+      "item": "2026-W47-answer-already-have-youtube",
+      "network": "youtube"
+    }
+  },
   "stopped": {}
 }
