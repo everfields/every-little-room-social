@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-split-big-gift-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-split-big-gift.mp4",
+    "sha256": "b42a685c4607e15b8ee22d8e33b1829449d63f26c1f0d04a8af06a6882ede49e",
+    "kind": "video"
+  },
+  "caption": "Several relatives chipping in for one big Gabby's Dollhouse gift? The three biggest buys in the house, about what each costs, and one list for the whole family so nobody buys it twice. https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Relatives chipping in for one big Gabby's Dollhouse gift? Three to split",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T00:00:00Z"
+}

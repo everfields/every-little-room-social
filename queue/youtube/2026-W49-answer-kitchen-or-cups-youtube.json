@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-kitchen-or-cups-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-kitchen-or-cups.mp4",
+    "sha256": "be888e79727d14f62472f8447a3555614a41420696e1d33cf9562de83f21e989",
+    "kind": "video"
+  },
+  "caption": "Cakey Cat's Fairy Kitchen or the character tumblers? One is for play, the other for the real table. About what each costs, and when the cups are worth it. https://everylittleroom.com/room/kitchen?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Gabby's Dollhouse kitchen set or real cups? They do different jobs",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T05:00:00Z"
+}

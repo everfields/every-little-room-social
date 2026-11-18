@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-dress-up-sizes-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-dress-up-sizes.mp4",
+    "sha256": "b6620af74ba857910e86f665d356f3b5cdc00fd0fafa1be85d3878be3c19a2a4",
+    "kind": "video"
+  },
+  "caption": "Gabby's Dollhouse clothes as a gift: check the size chart first, because character shoes rarely fit like the pair at home. Three outfits and about what each costs. https://everylittleroom.com/room/dress-up-closet?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Buying Gabby's Dollhouse clothes? Check the size first",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T04:00:00Z"
+}

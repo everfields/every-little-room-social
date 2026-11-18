@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-first-book-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-first-book.mp4",
+    "sha256": "d892d11ff4305b8695596744895c68e8c86c3529be87775893b97a95d1e6eec6",
+    "kind": "video"
+  },
+  "caption": "The reading nook is the cheapest room in the house to fill. Three Gabby's Dollhouse books at about $5, $10 and $13, and two to think twice about. https://everylittleroom.com/room/reading-nook?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Which Gabby's Dollhouse book? Three at about $5, $10 and $13",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T03:00:00Z"
+}

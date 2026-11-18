@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-movie-disc-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-movie-disc.mp4",
+    "sha256": "dd8dd0c94e5075aec430c0eb7b23b3910dd7422f35ab4687b199dbf6deb379d9",
+    "kind": "video"
+  },
+  "caption": "The Gabby's Dollhouse movie on DVD or Blu-ray: the same film, and the Blu-ray adds a digital copy. Where it streams is unclear, so a disc avoids the question. https://everylittleroom.com/room/cozy-den?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "The Gabby's Dollhouse movie on DVD or Blu-ray? Same film",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-29T07:00:00Z"
+}
