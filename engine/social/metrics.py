@@ -73,6 +73,7 @@ class Collection:
     posts: list[PostNumbers] = field(default_factory=list)
     accounts: list[dict] = field(default_factory=list)
     removed: list[tuple[str, str, str]] = field(default_factory=list)  # (network, remote id, why)
+    kids: list[tuple[str, str]] = field(default_factory=list)  # (network, remote id) a network marked made for kids
     problems: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
 
@@ -127,6 +128,8 @@ def collect_youtube(c: _Client, rows: list[dict], now: datetime, col: Collection
         if not it or (it.get("status") or {}).get("uploadStatus") in ("rejected", "deleted", "failed"):
             col.removed.append(("youtube", vid, (it or {}).get("status", {}).get("rejectionReason", "not found")))
             continue
+        if (it.get("status") or {}).get("madeForKids") is True:
+            col.kids.append(("youtube", vid))
         s, a = it.get("statistics") or {}, analytics.get(vid) or {}
         col.posts.append(PostNumbers("youtube", vid, r["url"], r["id"], r["format"], r["posted_at"],
                                      views=_int(s.get("viewCount")), likes=_int(s.get("likeCount")),
@@ -441,6 +444,14 @@ def react(state_dir: Path, cfg: Config, col: Collection, alarms: Alarms, now: da
             alarms.raise_(f"removed-{net}-{rid}", f"{net}: a post was removed",
                           f"{r['url']} ({r['id']}, format {r['format']}) is gone: {why}. Read the network's notice; "
                           f"repeated removals mean the format breaks a rule.", "high")
+    # YouTube can mark a video "made for kids" by itself. For an adults-only affiliate that reads as child-directed
+    # content (Amazon Associates bars it) and it turns off comments and links, so every published Short is checked.
+    for net, rid in col.kids:
+        r = final.get((rid, net)) or {}
+        alarms.raise_(f"kids-{net}-{rid}", f"{net}: a post is marked made for kids",
+                      f"{r.get('url') or rid} ({r.get('id', '?')}, format {r.get('format', '?')}) reads madeForKids=true. "
+                      f"The upload declared it not made for kids, so the network reclassified it. Review it in YouTube "
+                      f"Studio (appeal or remove it) and check the format for what reads as aimed at children.", "high")
     board = scoreboard(read_csv(state_dir / "metrics" / "posts.csv"))
     posts = latest_posts(read_csv(state_dir / "metrics" / "posts.csv"))
     for net, b in board["networks"].items():

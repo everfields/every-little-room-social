@@ -876,6 +876,31 @@ class TestMetrics(TmpCase):
         self.assertEqual(self.r.log.latest()[("a", "youtube")]["status"], "removed")
         self.assertEqual(a.sent[0]["key"], "removed-youtube-v1")
 
+    def test_a_video_marked_made_for_kids_raises_an_alarm(self):
+        self.posted("youtube", "v1", "a")
+        self.posted("youtube", "v2", "b")
+
+        def fn(q):
+            if "oauth2" in q.url:
+                return HttpResponse.of_json(200, {"access_token": "t"})
+            if q.url.endswith("/videos"):
+                return HttpResponse.of_json(200, {"items": [
+                    {"id": "v1", "statistics": {"viewCount": "9"}, "status": {"uploadStatus": "processed", "madeForKids": True}},
+                    {"id": "v2", "statistics": {"viewCount": "9"}, "status": {"uploadStatus": "processed", "madeForKids": False}}]})
+            if "youtubeanalytics" in q.url:
+                return HttpResponse.of_json(200, {})
+            return HttpResponse.of_json(200, {"items": [{"statistics": {"subscriberCount": "40"}}]})
+
+        env = {"YOUTUBE_CLIENT_ID": "i", "YOUTUBE_CLIENT_SECRET": "s", "YOUTUBE_REFRESH_TOKEN": "r", "COS_EVENT_TOKEN": "t"}
+        now = et(2026, 11, 12, 12)
+        col = metrics.collect(self.r.state, self.r.cfg, env, now=now, live=True, transport=Stub(fn))
+        self.assertEqual(col.kids, [("youtube", "v1")])
+        self.assertEqual(len(col.posts), 2)
+        st = GuardState.load(self.r.state / "state.json")
+        a = alarms_mod.Alarms(st, env, live=True, company_repo="o/c", transport=Stub(lambda q: HttpResponse(204)), now=now)
+        metrics.react(self.r.state, self.r.cfg, col, a, now)
+        self.assertEqual([x["key"] for x in a.sent], ["kids-youtube-v1"])
+
     def test_instagram_insights(self):
         self.posted("instagram", "m1", "a")
 
