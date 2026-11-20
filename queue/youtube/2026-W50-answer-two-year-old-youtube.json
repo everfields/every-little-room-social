@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-two-year-old-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-two-year-old.mp4",
+    "sha256": "3fe852bf03135999433d10081cbafc65e45e7885872db43c8b036f8ae4c92266",
+    "kind": "video"
+  },
+  "caption": "Most Gabby's Dollhouse toys are listed for 3 and up. For a 2-year-old: a soft plush, a sturdy fold-out board book, a tee sold from 12 months, and a battery bumper car listed from about 18 months. About what each costs. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "A Gabby's Dollhouse gift for a 2-year-old? Most of the line says 3 and up",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-24T12:00:00Z"
+}

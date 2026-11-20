@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-cozy-corner-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-cozy-corner.mp4",
+    "sha256": "7eb3d7643af2b9b2861aa72554a5580c68f953dcaada55585f605ad86efa07ce",
+    "kind": "video"
+  },
+  "caption": "The Gabby's Dollhouse beanbag, faux fur rug and kid chair cost about the same and overlap in a small room, so pick one. Plus the slumber bag and a fleece throw for sleepovers, about what each costs. https://everylittleroom.com/room/cozy-den?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "A cozy corner for a Gabby's Dollhouse fan? Pick one seat, not three",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-27T12:00:00Z"
+}

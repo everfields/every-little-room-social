@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-six-year-old-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-six-year-old.mp4",
+    "sha256": "379a1b36c30b19e104600773494f13495318cdb87bc61d1ceede2758e2aebf8b",
+    "kind": "video"
+  },
+  "caption": "For a 6-year-old Gabby's Dollhouse fan: LEGO Cat Friends listed for 6 and up, the 498-piece LEGO house a LEGO builder may do mostly alone, a digital watch and a first reader. About what each costs, and the one toy that may not last at 6. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "A Gabby's Dollhouse gift for a 6-year-old? Build, read or tell time",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-25T12:00:00Z"
+}

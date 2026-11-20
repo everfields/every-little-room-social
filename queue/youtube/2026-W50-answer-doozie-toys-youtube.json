@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-doozie-toys-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-doozie-toys.mp4",
+    "sha256": "bb76bea4fe60bf45258374b221b3e2111677cda37878b3de15e4d54c12ab4692",
+    "kind": "video"
+  },
+  "caption": "Doozie's Doghouse is on Netflix, and the toys are mostly not in stores yet: a figure pack that is hard to find, a Puggie Paws plush on pre-order, a LEGO set listed for January 1, 2027. About what each costs, and three Gabby's Dollhouse toys on sale now instead. https://everylittleroom.com/guides/doozies-doghouse-toys?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Doozie's Doghouse toys for Christmas? Almost nothing is on shelves yet",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-15T06:00:00Z"
+}

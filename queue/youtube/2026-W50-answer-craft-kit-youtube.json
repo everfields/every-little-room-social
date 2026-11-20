@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-craft-kit-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-craft-kit.mp4",
+    "sha256": "3cfc8b3e067a07a64e80fb845f7d8c3c50c267b0b97c1017f1b98a10e5615e9d",
+    "kind": "video"
+  },
+  "caption": "A Gabby's Dollhouse craft gift for a rainy afternoon: the 500-piece activity set and the simple Pop-Eeze bracelets, about what each costs, and two to think twice about: a coloring book that overlaps the set, and a bead kit with 170 small beads. https://everylittleroom.com/room/craft-room?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Which Gabby's Dollhouse craft kit? One big set, and two to think twice about",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-23T12:00:00Z"
+}

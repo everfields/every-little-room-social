@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-batteries-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-batteries.mp4",
+    "sha256": "10790d428d0e1bf96c74d406c82033e86b3388f08c9762477d448861ade7b599",
+    "kind": "video"
+  },
+  "caption": "Christmas morning and no batteries: the light-up Gabby's Dollhouse doll and plush, the musical cat ears, and the battery bumper car. What each needs, about what each costs, and which one already has batteries in the box. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Which Gabby's Dollhouse gifts need batteries? Check before you wrap",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-15T07:00:00Z"
+}

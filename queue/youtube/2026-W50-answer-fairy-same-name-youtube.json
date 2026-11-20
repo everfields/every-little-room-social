@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-fairy-same-name-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-fairy-same-name.mp4",
+    "sha256": "02390bd4db885e661816cef272902085c9c9bb59c45cab5f8ad2fc17d31f04bc",
+    "kind": "video"
+  },
+  "caption": "Flutter-Riffic Tea Party or Kitty Fairy's Flutter-riffic Playset? Fairy Magic Reveal Fashion Set or Fairy Magic Reveal Playset? Four Gabby's Dollhouse Fairylandia boxes with near-identical names, about what each costs, and where the listings disagree. https://everylittleroom.com/room/fairy-loft?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Two Fairylandia sets with almost the same name? They're different boxes",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-22T00:00:00Z"
+}

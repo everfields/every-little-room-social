@@ -1,0 +1,21 @@
+{
+  "id": "2026-W50-answer-needs-a-device-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-needs-a-device.mp4",
+    "sha256": "f983b21b7b0a86f28e01091d47c5041856f31577aef1a0777b06e158e38db882",
+    "kind": "video"
+  },
+  "caption": "The Gabby's Dollhouse Switch game and the two Tonies cost about $20 each, and each one works only with a device the family must already own: a Nintendo Switch or a Toniebox, sold separately. One text to the parents saves a return. https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Three Gabby's Dollhouse gifts that only work with something at home",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-15T08:00:00Z"
+}
