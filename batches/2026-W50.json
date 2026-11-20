@@ -1,0 +1,639 @@
+{
+ "week": "2026-W50",
+ "posts": [
+  {
+   "id": "2026-W50-answer-doozie-toys",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Doozie's Doghouse toys for Christmas? Almost nothing is on shelves yet",
+   "caption": "Doozie's Doghouse is on Netflix, and the toys are mostly not in stores yet: a figure pack that is hard to find, a Puggie Paws plush on pre-order, a LEGO set listed for January 1, 2027. About what each costs, and three Gabby's Dollhouse toys on sale now instead. https://everylittleroom.com/guides/doozies-doghouse-toys?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/doozies-doghouse-toys?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-15T06:00:00Z",
+   "script": "Doozie's Doghouse toys for Christmas? Almost nothing is on shelves yet. / The figure pack, about twenty. Walmart listed it until November eleventh. / The Puggie Paws plush, about fifteen, on pre-order, said to arrive in December. / The LEGO set, about twenty, listed for January first. / On sale now instead: six figures, about twenty. / A Gabby plush, about thirteen. / Cakey Cat and Cookie Bobby, about eleven. / All three, about forty-four. / What's on shelves now: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Doozie's Doghouse",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "The new Netflix spin-off",
+       "title": "Doozie's Doghouse toys for Christmas?",
+       "sub": "Almost nothing is on shelves yet.",
+       "say": "Doozie's Doghouse toys for Christmas? Almost nothing is on shelves yet."
+      },
+      {
+       "type": "compare",
+       "title": "Announced, about what each costs",
+       "items": [
+        {
+         "price": "$20",
+         "name": "Sister Fun Pack",
+         "line": "6 figures, with Doozie's dogs",
+         "sound": "Walmart listed it until Nov 11",
+         "tone": "yellow",
+         "say": "The figure pack, about twenty. Walmart listed it until November eleventh."
+        },
+        {
+         "price": "$15",
+         "name": "Puggie Paws Plush",
+         "line": "11 inches, on pre-order",
+         "sound": "Said to arrive in December",
+         "tone": "purple",
+         "say": "The Puggie Paws plush, about fifteen, on pre-order, said to arrive in December."
+        },
+        {
+         "price": "$20",
+         "name": "LEGO Set 11227",
+         "line": "133 pieces, ages 4 and up",
+         "sound": "Listed for January 1, 2027",
+         "tone": "red",
+         "say": "The LEGO set, about twenty, listed for January first."
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "title": "On sale now instead, about",
+       "totalLabel": "All three, about",
+       "items": [
+        {"label": "Six figures", "name": "Fairy-riffic Friends 6-pack", "price": 19.97, "say": "On sale now instead: six figures, about twenty."},
+        {"label": "Soft, 9 inches", "name": "Gabby Girl Plush", "price": 12.99, "say": "A Gabby plush, about thirteen."},
+        {"label": "Small figure pack", "name": "Cakey Cat and Cookie Bobby", "price": 11.4, "say": "Cakey Cat and Cookie Bobby, about eleven."}
+       ],
+       "outro": "All three, about forty-four dollars."
+      },
+      {
+       "type": "end",
+       "title": "What's on shelves now, room by room.",
+       "cta": "everylittleroom.com/yt",
+       "site": "The house checklist",
+       "say": "What's on shelves now: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-batteries",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Which Gabby's Dollhouse gifts need batteries? Check before you wrap",
+   "caption": "Christmas morning and no batteries: the light-up Gabby's Dollhouse doll and plush, the musical cat ears, and the battery bumper car. What each needs, about what each costs, and which one already has batteries in the box. https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-christmas-gifts?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-15T07:00:00Z",
+   "script": "Which Gabby's Dollhouse gifts need batteries? Check before you wrap. / If it lights up or plays music, check for batteries. / The Dandelion doll, about thirty: light-up wings, so check the box. / The light-up plush, about twenty-five: same check. / The musical cat ears: batteries included, per the listing. / The bumper car is a six-volt battery ride-on: check how it charges. / Check the list: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Batteries",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Before Christmas morning",
+       "title": "Which gifts need batteries?",
+       "sub": "Check before you wrap.",
+       "say": "Which Gabby's Dollhouse gifts need batteries? Check before you wrap."
+      },
+      {
+       "type": "facts",
+       "title": "The rule",
+       "items": [
+        {
+         "k": "Lights or music",
+         "v": "If it lights up or plays music, check for batteries.",
+         "tone": "yellow",
+         "say": "If it lights up or plays music, check for batteries."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$30",
+         "name": "Dandelion Magic Gabby Doll",
+         "line": "Light-up wings",
+         "sound": "Batteries: check the box",
+         "tone": "purple",
+         "say": "The Dandelion doll, about thirty: light-up wings, so check the box."
+        },
+        {
+         "price": "$25",
+         "name": "Rainbow Light-Up Kitty Fairy Plush",
+         "line": "A soft toy that lights up",
+         "sound": "Batteries: check the box",
+         "tone": "green",
+         "say": "The light-up plush, about twenty-five: same check."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "Two more to know",
+       "items": [
+        {
+         "k": "Musical Ears",
+         "v": "Batteries included, per the listing.",
+         "tone": "green",
+         "say": "The musical cat ears: batteries included, per the listing."
+        },
+        {
+         "k": "6-Volt Bumper Car",
+         "v": "A battery ride-on. Check how it charges.",
+         "tone": "red",
+         "say": "The bumper car is a six-volt battery ride-on: check how it charges."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Every gift in the house, with what it needs.",
+       "cta": "everylittleroom.com/yt",
+       "site": "The house checklist",
+       "say": "Check the list: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-needs-a-device",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Three Gabby's Dollhouse gifts that only work with something at home",
+   "caption": "The Gabby's Dollhouse Switch game and the two Tonies cost about $20 each, and each one works only with a device the family must already own: a Nintendo Switch or a Toniebox, sold separately. One text to the parents saves a return. https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-15T08:00:00Z",
+   "script": "Three Gabby's Dollhouse gifts, about twenty dollars each, that need something at home. / Each works only with a device the family must already own. / The Switch game, about twenty, only if they own a Switch. / The Gabby Tonie, about twenty, only with a Toniebox. / The Cakey Cat Tonie, the same. / The Toniebox itself is sold separately. / So ask the parents: a Switch, or a Toniebox? / The family list: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Ask first",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Ask before you wrap",
+       "title": "Gifts that need something at home",
+       "sub": "Three, about $20 each.",
+       "say": "Three Gabby's Dollhouse gifts, about twenty dollars each, that need something at home."
+      },
+      {
+       "type": "facts",
+       "title": "The catch",
+       "items": [
+        {
+         "k": "A device first",
+         "v": "Each works only with a device the family must already own.",
+         "tone": "red",
+         "say": "Each works only with a device the family must already own."
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "title": "About what each costs",
+       "totalLabel": "All three, about",
+       "items": [
+        {"label": "Needs a Nintendo Switch", "name": "Ready to Party (Switch game)", "price": 19.99, "say": "The Switch game, about twenty, only if they own a Switch."},
+        {"label": "Needs a Toniebox", "name": "Gabby Tonie", "price": 19.94, "say": "The Gabby Tonie, about twenty, only with a Toniebox."},
+        {"label": "Needs a Toniebox", "name": "Cakey Cat Tonie", "price": 19.94, "say": "The Cakey Cat Tonie, the same."}
+       ],
+       "outro": "The Toniebox itself is sold separately."
+      },
+      {
+       "type": "facts",
+       "title": "Ask first",
+       "items": [
+        {
+         "k": "A Switch, or a Toniebox?",
+         "v": "One text to the parents saves a return.",
+         "tone": "green",
+         "say": "So ask the parents: a Switch, or a Toniebox?"
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Parents mark what's at home. Relatives see the list.",
+       "cta": "everylittleroom.com/yt",
+       "site": "The family list",
+       "say": "The family list: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-fairy-same-name",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Two Fairylandia sets with almost the same name? They're different boxes",
+   "caption": "Flutter-Riffic Tea Party or Kitty Fairy's Flutter-riffic Playset? Fairy Magic Reveal Fashion Set or Fairy Magic Reveal Playset? Four Gabby's Dollhouse Fairylandia boxes with near-identical names, about what each costs, and where the listings disagree. https://everylittleroom.com/room/fairy-loft?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/fairy-loft?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-22T00:00:00Z",
+   "script": "Two Fairylandia sets with almost the same name? They're different boxes. / The Tea Party set, about thirty. / Kitty Fairy's Flutter-riffic playset, about forty-six. Listings disagree on what's in it. / The Fairy Magic Reveal fashion set, about thirty, twenty-three pieces. / The Fairy Magic Reveal playset, about thirty-five. / Check the full name against the family's list. / Fairylandia, box by box: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Fairylandia",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Fairylandia boxes",
+       "title": "Almost the same name?",
+       "sub": "Different boxes.",
+       "say": "Two Fairylandia sets with almost the same name? They're different boxes."
+      },
+      {
+       "type": "compare",
+       "title": "Flutter-riffic, about",
+       "items": [
+        {
+         "price": "$30",
+         "name": "Flutter-Riffic Tea Party Playset",
+         "line": "A smaller set",
+         "sound": "A modest gift or an add-on",
+         "tone": "green",
+         "say": "The Tea Party set, about thirty."
+        },
+        {
+         "price": "$46",
+         "name": "Kitty Fairy's Flutter-riffic Playset",
+         "line": "A 12-piece playset",
+         "sound": "Listings disagree on the ring",
+         "tone": "yellow",
+         "say": "Kitty Fairy's Flutter-riffic playset, about forty-six. Listings disagree on what's in it."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "Fairy Magic Reveal, about",
+       "items": [
+        {
+         "price": "$30",
+         "name": "Fairy Magic Reveal Fashion Set",
+         "line": "23 pieces: doll and outfits",
+         "sound": "Tiny parts",
+         "tone": "purple",
+         "say": "The Fairy Magic Reveal fashion set, about thirty, twenty-three pieces."
+        },
+        {
+         "price": "$35",
+         "name": "Fairy Magic Reveal Playset",
+         "line": "A doll playset that transforms",
+         "sound": "With dollhouse accessories",
+         "tone": "red",
+         "say": "The Fairy Magic Reveal playset, about thirty-five."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "Before you buy",
+       "items": [
+        {
+         "k": "The full name",
+         "v": "Check it against the family's list.",
+         "tone": "green",
+         "say": "Check the full name against the family's list."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Fairylandia, box by box.",
+       "cta": "everylittleroom.com/yt",
+       "site": "Then open the fairy loft",
+       "say": "Fairylandia, box by box: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-craft-kit",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "Which Gabby's Dollhouse craft kit? One big set, and two to think twice about",
+   "caption": "A Gabby's Dollhouse craft gift for a rainy afternoon: the 500-piece activity set and the simple Pop-Eeze bracelets, about what each costs, and two to think twice about: a coloring book that overlaps the set, and a bead kit with 170 small beads. https://everylittleroom.com/room/craft-room?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/craft-room?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-23T12:00:00Z",
+   "script": "Which Gabby's Dollhouse craft kit? Start with one big set. / The activity set, over five hundred pieces, about fifteen. / The Pop-Eeze bracelets, about seven, listed for three and up. / Both, about twenty-two. / The coloring book, about six, overlaps the activity set. / The Cool Maker kit, about twenty-seven: small beads, so check the age on the box. / The craft room: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Crafts",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "A rainy afternoon",
+       "title": "Which craft kit?",
+       "sub": "Start with one big set.",
+       "say": "Which Gabby's Dollhouse craft kit? Start with one big set."
+      },
+      {
+       "type": "list",
+       "title": "A craft gift, about",
+       "totalLabel": "Both, about",
+       "items": [
+        {"label": "500+ pieces", "name": "Deluxe Creative Activity Set", "price": 14.99, "say": "The activity set, over five hundred pieces, about fifteen."},
+        {"label": "Listed for ages 3 and up", "name": "Pop-Eeze Bracelet Set", "price": 7.16, "say": "The Pop-Eeze bracelets, about seven, listed for three and up."}
+       ],
+       "outro": "Both, about twenty-two dollars."
+      },
+      {
+       "type": "compare",
+       "title": "Think twice, about",
+       "items": [
+        {
+         "price": "$6",
+         "name": "5-in-1 Coloring Book",
+         "line": "144 pages",
+         "sound": "Overlaps the activity set",
+         "tone": "yellow",
+         "say": "The coloring book, about six, overlaps the activity set."
+        },
+        {
+         "price": "$27",
+         "name": "Cool Maker Bracelet Maker",
+         "line": "170 beads",
+         "sound": "Small beads: check the age on the box",
+         "tone": "red",
+         "say": "The Cool Maker kit, about twenty-seven: small beads, so check the age on the box."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "The craft room, with what overlaps.",
+       "cta": "everylittleroom.com/yt",
+       "site": "Then open the craft room",
+       "say": "The craft room: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-two-year-old",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "A Gabby's Dollhouse gift for a 2-year-old? Most of the line says 3 and up",
+   "caption": "Most Gabby's Dollhouse toys are listed for 3 and up. For a 2-year-old: a soft plush, a sturdy fold-out board book, a tee sold from 12 months, and a battery bumper car listed from about 18 months. About what each costs. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-24T12:00:00Z",
+   "script": "A Gabby's Dollhouse gift for a two-year-old? / Most listings start at three. Small figures and bead kits can wait. / The nine-inch plush, about thirteen. / The fold-out board book, about thirteen. / Both, about twenty-six. / The tee, about seven fifty, from twelve months. / The bumper car, about one twenty-nine, listed from about eighteen months. / Ages by toy: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Age 2",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Most of the line says 3 and up",
+       "title": "A gift for a 2-year-old?",
+       "sub": "Four that suit younger kids.",
+       "say": "A Gabby's Dollhouse gift for a two-year-old?"
+      },
+      {
+       "type": "facts",
+       "title": "Before you pick",
+       "items": [
+        {
+         "k": "3 and up",
+         "v": "Most listings in the line start at 3.",
+         "tone": "yellow",
+         "say": "Most listings start at three."
+        },
+        {
+         "k": "Small parts",
+         "v": "Small figures and bead kits can wait.",
+         "tone": "red",
+         "say": "Small figures and bead kits can wait."
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "title": "To hold and to read, about",
+       "totalLabel": "Both, about",
+       "items": [
+        {"label": "Soft, 9 inches", "name": "Gabby Girl Plush", "price": 12.99, "say": "The nine-inch plush, about thirteen."},
+        {"label": "A sturdy board book", "name": "Goodnight Fold-Out Book", "price": 12.99, "say": "The fold-out board book, about thirteen."}
+       ],
+       "outro": "Both, about twenty-six dollars."
+      },
+      {
+       "type": "compare",
+       "title": "To wear or ride, about",
+       "items": [
+        {
+         "price": "$7.50",
+         "name": "Toddler Graphic Tee",
+         "line": "Sizes 12M to 5T",
+         "sound": "The lowest-cost piece",
+         "tone": "green",
+         "say": "The tee, about seven fifty, from twelve months."
+        },
+        {
+         "price": "$129",
+         "name": "6-Volt Bumper Car",
+         "line": "A battery ride-on",
+         "sound": "About 18 months to 4 years",
+         "tone": "purple",
+         "say": "The bumper car, about one twenty-nine, listed from about eighteen months."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Every toy, with the age on its listing.",
+       "cta": "everylittleroom.com/yt",
+       "site": "The house checklist",
+       "say": "Ages by toy: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-six-year-old",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "A Gabby's Dollhouse gift for a 6-year-old? Build, read or tell time",
+   "caption": "For a 6-year-old Gabby's Dollhouse fan: LEGO Cat Friends listed for 6 and up, the 498-piece LEGO house a LEGO builder may do mostly alone, a digital watch and a first reader. About what each costs, and the one toy that may not last at 6. https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-gifts-by-age?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-25T12:00:00Z",
+   "script": "A Gabby's Dollhouse gift for a six-year-old? Build, read, or tell time. / LEGO Cat Friends, about thirty-six, listed for six and up. / The LEGO house, about eighty. At six, a LEGO builder may do much of it alone. / The VTech book is listed for three to six. At six, it may not last. / A digital watch, about nine fifty. / A first reader, about five. / Both, about fourteen. / By age: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Age 6",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "For a 5 or 6-year-old",
+       "title": "A gift for a 6-year-old?",
+       "sub": "Build, read or tell time.",
+       "say": "A Gabby's Dollhouse gift for a six-year-old? Build, read, or tell time."
+      },
+      {
+       "type": "compare",
+       "title": "To build, about",
+       "items": [
+        {
+         "price": "$36",
+         "name": "LEGO Brick-Built Cat Friends",
+         "line": "Buildable cat characters",
+         "sound": "Listed for ages 6 and up",
+         "tone": "yellow",
+         "say": "LEGO Cat Friends, about thirty-six, listed for six and up."
+        },
+        {
+         "price": "$80",
+         "name": "LEGO Gabby's Dollhouse",
+         "line": "Set 10788, 498 pieces",
+         "sound": "At 6, may be built mostly alone",
+         "tone": "purple",
+         "say": "The LEGO house, about eighty. At six, a LEGO builder may do much of it alone."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "May not last at 6",
+       "items": [
+        {
+         "k": "VTech Cat-a-Vator book",
+         "v": "Listed for ages 3 to 6.",
+         "tone": "red",
+         "say": "The VTech book is listed for three to six. At six, it may not last."
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "title": "Small add-ons, about",
+       "totalLabel": "Both, about",
+       "items": [
+        {"label": "For telling time", "name": "Kids' LCD Watch", "price": 9.48, "say": "A digital watch, about nine fifty."},
+        {"label": "For reading alone", "name": "Kitty School, Level 1 Reader", "price": 4.79, "say": "A first reader, about five."}
+       ],
+       "outro": "Both, about fourteen dollars."
+      },
+      {
+       "type": "end",
+       "title": "Every toy, by the age on its listing.",
+       "cta": "everylittleroom.com/yt",
+       "site": "The house checklist",
+       "say": "By age: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-cozy-corner",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "A cozy corner for a Gabby's Dollhouse fan? Pick one seat, not three",
+   "caption": "The Gabby's Dollhouse beanbag, faux fur rug and kid chair cost about the same and overlap in a small room, so pick one. Plus the slumber bag and a fleece throw for sleepovers, about what each costs. https://everylittleroom.com/room/cozy-den?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/room/cozy-den?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-27T12:00:00Z",
+   "script": "A cozy corner for a Gabby's Dollhouse fan? Pick one seat, not three. / In a small room, the beanbag, rug and chair overlap. / The beanbag, about twenty-five. / The rug, about twenty-three, thirty by forty-six inches. / The Delta Children chair, about twenty-five. / The slumber bag and pillow, about thirty-seven. / A fleece throw, about fourteen. / Both, about fifty-one. / The cozy den and the bedroom: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Cozy den",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Movie nights and sleepovers",
+       "title": "A cozy corner?",
+       "sub": "Pick one seat, not three.",
+       "say": "A cozy corner for a Gabby's Dollhouse fan? Pick one seat, not three."
+      },
+      {
+       "type": "facts",
+       "title": "In a small room",
+       "items": [
+        {
+         "k": "Beanbag, rug, chair",
+         "v": "They overlap. One is enough.",
+         "tone": "yellow",
+         "say": "In a small room, the beanbag, rug and chair overlap."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "About what each costs",
+       "items": [
+        {
+         "price": "$25",
+         "name": "Square Beanbag",
+         "line": "Square",
+         "sound": "Kid-sized",
+         "tone": "purple",
+         "say": "The beanbag, about twenty-five."
+        },
+        {
+         "price": "$23",
+         "name": "Faux Fur Rug",
+         "line": "30 by 46 inches",
+         "sound": "Bedroom or playroom",
+         "tone": "green",
+         "say": "The rug, about twenty-three, thirty by forty-six inches."
+        },
+        {
+         "price": "$25",
+         "name": "Cozee Buddy Chair",
+         "line": "A small upholstered chair",
+         "sound": "By Delta Children",
+         "tone": "red",
+         "say": "The Delta Children chair, about twenty-five."
+        }
+       ]
+      },
+      {
+       "type": "list",
+       "title": "Sleepovers, from the bedroom, about",
+       "totalLabel": "Both, about",
+       "items": [
+        {"label": "Sleepovers", "name": "Slumber Bag and Squishy Pillow", "price": 37.47, "say": "The slumber bag and pillow, about thirty-seven."},
+        {"label": "46 by 60 inches", "name": "Fleece Throw Blanket", "price": 13.97, "say": "A fleece throw, about fourteen."}
+       ],
+       "outro": "Both, about fifty-one dollars."
+      },
+      {
+       "type": "end",
+       "title": "The cozy den and the bedroom, with what overlaps.",
+       "cta": "everylittleroom.com/yt",
+       "site": "The house checklist",
+       "say": "The cozy den and the bedroom: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {"generated": false, "realistic": false}
+  }
+ ]
+}
