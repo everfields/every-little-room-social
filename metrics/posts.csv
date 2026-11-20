@@ -17,3 +17,6 @@ ts_utc,network,item,remote_id,url,format,posted_at,views,likes,comments,shares,s
 2026-11-20T11:55:38Z,youtube,2026-W47-answer-already-have-youtube,BjGQOZCIrQA,https://www.youtube.com/shorts/BjGQOZCIrQA,answer,2026-11-18T01:38:00Z,44,0,0,,,,,youtube-api
 2026-11-20T11:55:38Z,youtube,2026-W48-answer-black-friday-prices-youtube,GnHWUJ71HIo,https://www.youtube.com/shorts/GnHWUJ71HIo,answer,2026-11-19T02:24:01Z,22,0,0,,,,,youtube-api
 2026-11-20T11:55:38Z,youtube,2026-W47-answer-purrfect-or-meowmazing-youtube,FB1o9Gf3tCE,https://www.youtube.com/shorts/FB1o9Gf3tCE,answer,2026-11-20T01:37:00Z,11,0,0,,,,,youtube-api
+2026-11-20T20:33:49Z,youtube,2026-W47-answer-already-have-youtube,BjGQOZCIrQA,https://www.youtube.com/shorts/BjGQOZCIrQA,answer,2026-11-18T01:38:00Z,44,0,0,0,,0,0,youtube-api
+2026-11-20T20:33:49Z,youtube,2026-W48-answer-black-friday-prices-youtube,GnHWUJ71HIo,https://www.youtube.com/shorts/GnHWUJ71HIo,answer,2026-11-19T02:24:01Z,24,0,0,0,,19,0,youtube-api
+2026-11-20T20:33:49Z,youtube,2026-W47-answer-purrfect-or-meowmazing-youtube,FB1o9Gf3tCE,https://www.youtube.com/shorts/FB1o9Gf3tCE,answer,2026-11-20T01:37:00Z,27,0,0,,,,,youtube-api
