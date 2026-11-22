@@ -797,6 +797,34 @@ class TestWatch(TmpCase):
         watch.check(self.r.dir, self.r.state, self.r.cfg, a, et(2026, 11, 12, 12))
         self.assertEqual([x["type"] for x in a.sent], ["social-clear"])
 
+    def _old_heartbeat(self, week: str):
+        for i in range(30):
+            self.r.add(id_=f"t-{i:03d}")
+            self.r.add(network="instagram", id_=f"i-{i:03d}")
+            self.r.add(network="youtube", id_=f"y-{i:03d}")
+        hb = self.r.dir / "pc"
+        hb.mkdir()
+        (hb / "heartbeat.json").write_text(json.dumps({"at": iso(et(2026, 11, 8, 3)), "week": week}), encoding="utf-8")
+        b = self.r.dir / "batches"
+        b.mkdir(exist_ok=True)
+        for w in ("2026-W46", "2026-W47"):
+            (b / f"{w}.json").write_text("{}", encoding="utf-8")
+        st = GuardState(self.r.state / "state.json")
+        a = alarms_mod.Alarms(st, {"COS_EVENT_TOKEN": "t"}, live=True, company_repo="o/c",
+                              transport=Stub(lambda q: HttpResponse(204)), now=et(2026, 11, 12, 12))
+        rep = watch.check(self.r.dir, self.r.state, self.r.cfg, a, et(2026, 11, 12, 12))
+        return rep, {x["key"] for x in a.sent}
+
+    def test_an_old_heartbeat_with_every_batch_rendered_is_quiet(self):
+        rep, keys = self._old_heartbeat("2026-W47")
+        self.assertNotIn("heartbeat", keys)
+        self.assertEqual(rep["unrendered"], [])
+
+    def test_an_old_heartbeat_with_a_batch_waiting_alarms(self):
+        rep, keys = self._old_heartbeat("2026-W46")
+        self.assertIn("heartbeat", keys)
+        self.assertEqual(rep["unrendered"], ["2026-W47"])
+
     def test_dry_run_raises_no_runway_alarm(self):
         r = Repo(env={"SOCIAL_CRON": "dry-run"})
         self.addCleanup(r.close)
