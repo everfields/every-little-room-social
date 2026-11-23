@@ -1,0 +1,21 @@
+{
+  "id": "2026-W49-answer-new-toys-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W49",
+  "media": {
+    "file": "2026-W49-answer-new-toys.mp4",
+    "sha256": "d878b07326f393f4193d7ec6fd2832630db9c8fd78c24b26cc057394de95cae4",
+    "kind": "video"
+  },
+  "caption": "Three new Gabby's Dollhouse and Doozie's Doghouse toys and one new show, as we read them on November 23: the Sister Fun Pack is out but Walmart had none in stock, the Puggie Paws plush is a December pre-order (our two sources disagree on the day), the LEGO set is due January 1, 2027, and Makers and Bakers reaches Netflix on December 9 with no toys we could find. Every date with its source: https://everylittleroom.com/guides/new-gabbys-dollhouse-toys?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "New Gabby's Dollhouse toys: what's out, and when? (checked Nov 23)",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-14T12:00:00Z"
+}
