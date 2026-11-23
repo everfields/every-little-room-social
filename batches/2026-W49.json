@@ -561,6 +561,92 @@
     }
    },
    "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W49-answer-new-toys",
+   "format": "answer",
+   "networks": ["youtube"],
+   "title": "New Gabby's Dollhouse toys: what's out, and when? (checked Nov 23)",
+   "caption": "Three new Gabby's Dollhouse and Doozie's Doghouse toys and one new show, as we read them on November 23: the Sister Fun Pack is out but Walmart had none in stock, the Puggie Paws plush is a December pre-order (our two sources disagree on the day), the LEGO set is due January 1, 2027, and Makers and Bakers reaches Netflix on December 9 with no toys we could find. Every date with its source: https://everylittleroom.com/guides/new-gabbys-dollhouse-toys?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/new-gabbys-dollhouse-toys?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-14T12:00:00Z",
+   "latest": "2026-12-09T00:00:00Z",
+   "script": "New Gabby's Dollhouse toys: what's out, and when? / Makers and Bakers: on Netflix December ninth, / four holiday episodes. / Toys tied to it: none we could find. / The Sister Fun Pack, about twenty: out, but Walmart had none in stock. / The Puggie Paws plush, about fifteen: a December pre-order. Our two sources disagree on the day. / The LEGO set, about twenty: coming January first, twenty twenty-seven. / Every date and its source: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "New toys",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "As we read it on November 23, 2026",
+       "title": "New Gabby's Dollhouse toys: what's out, and when?",
+       "sub": "Three new toys and one new show.",
+       "say": "New Gabby's Dollhouse toys: what's out, and when?"
+      },
+      {
+       "type": "facts",
+       "title": "Makers and Bakers",
+       "items": [
+        {
+         "k": "On Netflix",
+         "v": "From December 9",
+         "tone": "green",
+         "say": "Makers and Bakers: on Netflix December ninth,"
+        },
+        {
+         "k": "Episodes",
+         "v": "Four holiday episodes",
+         "tone": "purple",
+         "say": "four holiday episodes."
+        },
+        {
+         "k": "Toys tied to it",
+         "v": "None we could find on November 23",
+         "tone": "yellow",
+         "say": "Toys tied to it: none we could find."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "The three Doozie's Doghouse toys",
+       "items": [
+        {
+         "k": "Sister Fun Pack, about $20",
+         "v": "Out; Walmart had none in stock Nov 23",
+         "tone": "yellow",
+         "say": "The Sister Fun Pack, about twenty: out, but Walmart had none in stock."
+        },
+        {
+         "k": "Puggie Paws plush, about $15",
+         "v": "December pre-order; sources disagree on the day",
+         "tone": "purple",
+         "say": "The Puggie Paws plush, about fifteen: a December pre-order. Our two sources disagree on the day."
+        },
+        {
+         "k": "LEGO 11227, about $20",
+         "v": "Coming January 1, 2027",
+         "tone": "red",
+         "say": "The LEGO set, about twenty: coming January first, twenty twenty-seven."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Every date, and where it comes from.",
+       "cta": "everylittleroom.com/yt",
+       "site": "The house checklist",
+       "say": "Every date and its source: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
   }
  ]
 }
