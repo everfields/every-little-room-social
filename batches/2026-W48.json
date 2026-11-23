@@ -165,53 +165,80 @@
    }
   },
   {
-   "id": "2026-W48-answer-deluxe-rooms-fit",
+   "id": "2026-W48-answer-deluxe-room-gift-fit",
    "format": "answer",
    "networks": [
     "youtube"
    ],
-   "title": "Do Purrfect Deluxe Rooms fit the Meow-mazing dollhouse?",
-   "caption": "Will the Deluxe Rooms made for the Purrfect Dollhouse fit the Meow-mazing? We looked, and the listings don't say. https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
-   "link": "https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "title": "Buying a Deluxe Room as a gift? Which Gabby's Dollhouse it fits",
+   "caption": "Spin Master's support says Deluxe Rooms sit inside the Interactive Meow-mazing but don't clip on. They slide into the Purrfect and fit the Celebration. For the printed-eyes Meow-mazing nobody has said either way. https://everylittleroom.com/guides/which-gabbys-dollhouse-rooms-fit?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/which-gabbys-dollhouse-rooms-fit?utm_source=youtube&utm_medium=short&utm_campaign=answer",
    "earliest": "2026-11-25T00:00:00Z",
-   "script": "Will Purrfect Deluxe Rooms fit the Meow-mazing? / The Deluxe Rooms slide into the Purrfect's side. / Whether they fit the Meow-mazing: we couldn't confirm it. / Ask the seller first: every little room dot com.",
+   "script": "Buying a Deluxe Room? Check which dollhouse they have. / The Purrfect: it slides into the walls, the box says. / The Celebration: it fits, Spin Master's support says. / The Interactive Meow-mazing: it sits inside a room but doesn't clip on. / The Meow-mazing with printed eyes: nobody has said, so we couldn't confirm it. / MerCat's Primp and Pamper Bathroom, a Deluxe Room. / About twenty-one dollars at Walmart. / Every room set, house by house: every little room dot com slash Y T.",
    "prompts": {
     "voice": "af_heart",
     "speed": 1.1,
     "spec": {
-     "tag": "Does it fit?",
+     "tag": "Will it fit?",
      "scenes": [
       {
        "type": "hook",
-       "kicker": "Already own Deluxe Rooms?",
-       "title": "Will Purrfect Deluxe Rooms fit the Meow-mazing?",
-       "sub": "We looked.",
-       "say": "Will your Purrfect Deluxe Rooms fit the Meow-mazing? We looked."
+       "kicker": "Buying a Deluxe Room as a gift?",
+       "title": "Check which dollhouse they have first",
+       "sub": "Four houses, four answers.",
+       "say": "Buying a Deluxe Room? Check which dollhouse they have. Four houses, four answers."
       },
       {
        "type": "facts",
-       "title": "What we found",
+       "title": "Deluxe Rooms by house",
        "items": [
         {
          "k": "Purrfect",
-         "v": "Listed: Deluxe Rooms slide into its side. Sold separately.",
+         "v": "Slides into the walls (box text)",
          "tone": "green",
-         "say": "The Purrfect's listing says Deluxe Rooms slide into its side."
+         "say": "The Purrfect: it slides into the walls, the box says."
         },
         {
-         "k": "Meow-mazing",
-         "v": "Listings don't say. Not confirmed.",
+         "k": "Celebration",
+         "v": "Fits (Spin Master support)",
+         "tone": "green",
+         "say": "The Celebration: it fits, Spin Master's support says."
+        },
+        {
+         "k": "Meow-mazing Interactive",
+         "v": "Sits inside, won't clip on",
+         "tone": "yellow",
+         "say": "The Interactive Meow-mazing: it sits inside a room but doesn't clip on."
+        },
+        {
+         "k": "Meow-mazing, printed eyes",
+         "v": "Not confirmed yet",
          "tone": "red",
-         "say": "For the Meow-mazing, the listings don't say, so we couldn't confirm it."
+         "say": "The Meow-mazing with printed eyes: nobody has said, so we couldn't confirm it."
         }
        ]
       },
       {
+       "type": "list",
+       "title": "About what one costs",
+       "items": [
+        {
+         "label": "A Deluxe Room",
+         "name": "MerCat's Primp and Pamper Bathroom",
+         "price": 21.46,
+         "say": "MerCat's Primp and Pamper Bathroom, a Deluxe Room."
+        }
+       ],
+       "note": "Sold by Walmart itself. Checked Nov 23, 2026.",
+       "totalLabel": "At Walmart, about",
+       "outro": "About twenty-one dollars at Walmart."
+      },
+      {
        "type": "end",
-       "title": "If you're counting on reusing rooms, ask the seller first.",
-       "cta": "everylittleroom.com",
-       "site": "Guide: which dollhouse to buy",
-       "say": "The full comparison, and what we couldn't confirm: every little room dot com."
+       "title": "Every room set, house by house, with the maker's answers.",
+       "cta": "everylittleroom.com/yt",
+       "site": "Guide: which rooms fit which dollhouse",
+       "say": "Every room set, house by house: every little room dot com slash Y T."
       }
      ]
     }
