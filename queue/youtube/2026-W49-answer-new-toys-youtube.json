@@ -18,6 +18,7 @@
   },
   "trial": false,
   "earliest": "2026-11-14T12:00:00Z",
+  "latest": "2026-12-09T00:00:00Z",
   "intake": {
     "ok": true,
     "at": "2026-11-23T04:28:34Z",
