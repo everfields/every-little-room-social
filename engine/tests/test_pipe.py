@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import importlib.util
 import json
 import os
 import shutil
@@ -666,6 +667,32 @@ class TestPublishRun(TmpCase):
         self.assertIn("empty", self.go(Stub(lambda q: answers(q)))[0].detail)
         self.assertEqual(ready(self.r.dir, "tiktok", set(), et(2026, 12, 2, 12))[0].id, "post-001")
 
+    def test_latest_is_respected(self):
+        # a dated post (a premiere) is never published after its latest, even when it is the only one queued
+        self.seed()
+        self.r.add(earliest="2026-11-01T00:00:00Z", latest="2026-11-12T15:00:00Z")
+        self.assertEqual(ready(self.r.dir, "tiktok", set(), et(2026, 11, 12, 9))[0].id, "post-001")
+        self.assertEqual(ready(self.r.dir, "tiktok", set(), et(2026, 11, 12, 10)), [])
+        self.assertIn("empty", self.go(Stub(lambda q: answers(q)))[0].detail)
+        self.assertEqual(self.r.log.rows(), [])
+
+    def test_latest_is_checked_when_it_would_post_after_a_wait(self):
+        # woken at 10:15, the slot opens at 10:25 (inside the lookahead): the post would go out after its 10:20 latest
+        self.seed()
+        self.r.add(latest="2026-11-12T15:20:00Z")
+        slept = []
+        res = publish.run(self.r.dir, self.r.state, self.r.cfg, {**self.r.env, "BUFFER_API_KEY": "k", "BUFFER_CHANNEL_TIKTOK": "c"},
+                          now=et(2026, 11, 12, 10, 15), live=True, out=self.r.out, only="tiktok",
+                          transport=Stub(lambda q: answers(q)), wait=True, sleep=slept.append)
+        self.assertIn("empty", res[0].detail)
+        self.assertEqual((slept, self.r.log.rows()), ([], []))
+
+    def test_a_stale_post_does_not_hold_up_the_next(self):
+        self.seed()
+        self.r.add(id_="post-001", earliest="2026-11-01T00:00:00Z", latest="2026-11-05T00:00:00Z")
+        self.r.add(id_="post-002", earliest="2026-11-02T00:00:00Z")
+        self.assertEqual([i.id for i in ready(self.r.dir, "tiktok", set(), et(2026, 11, 12, 11))], ["post-002"])
+
     def test_unchecked_item_is_never_posted(self):
         self.seed()
         self.r.add(intake={"ok": False})
@@ -1131,6 +1158,32 @@ class TestCli(TmpCase):
         r = self.cli("validate")
         self.assertEqual(r.returncode, 1)
 
+    def test_validate_checks_latest(self):
+        self.assertIn("latest: an ISO date-time", shape_problems({**self.r.add().data, "latest": "next week"}))
+        self.assertIn("latest: after earliest", shape_problems({**self.r.add().data, "earliest": "2026-12-09T00:00:00Z",
+                                                               "latest": "2026-12-01T00:00:00Z"}))
+        self.assertNotIn("latest: after earliest", shape_problems({**self.r.add().data, "earliest": "2026-11-14T12:00:00Z",
+                                                                  "latest": "2026-12-09T00:00:00Z"}))
+
+    def test_archive_moves_an_unposted_post_past_its_latest(self):
+        past, future = "2020-01-01T00:00:00Z", "2099-01-01T00:00:00Z"
+        self.r.add(id_="stale", latest=past)
+        self.r.add(id_="fresh", latest=future)
+        self.r.add(id_="in-flight", latest=past)  # a post with no outcome may be live: watch settles it, not archive
+        self.r.add(id_="retried", latest=past)  # a retry never went out
+        self.r.log.append(PostRow(id="in-flight", network="tiktok", status=PENDING, at="2019-12-31T23:00:00Z", slot="s1"))
+        self.r.log.append(PostRow(id="retried", network="tiktok", status=RETRY, at="2019-12-31T23:00:00Z", slot="s2"))
+        r = self.cli("archive")
+        self.assertEqual(r.returncode, 0, r.stderr)
+        self.assertIn("2 unposted", r.stdout)
+        q, a = self.r.dir / "queue" / "tiktok", self.r.dir / "archive" / "tiktok"
+        self.assertEqual(sorted(f.stem for f in a.glob("*.json")), ["retried", "stale"])
+        self.assertEqual(sorted(f.stem for f in q.glob("*.json")), ["fresh", "in-flight"])
+        note = json.loads((a / "stale.json").read_text(encoding="utf-8"))["archived"]
+        self.assertTrue(note["unposted"])
+        self.assertIn(past, note["why"])
+        self.assertEqual(self.r.log.latest()[("in-flight", "tiktok")]["status"], PENDING)
+
     def test_resolve_settles_a_post_with_no_outcome(self):
         self.r.log.append(PostRow(id="p", network="tiktok", status=PENDING, at=iso(et(2026, 11, 12, 10)), slot="s"))
         r = self.cli("resolve", "tiktok", "p", "--url", "https://www.tiktok.com/@x/video/1")
@@ -1143,6 +1196,21 @@ class TestCli(TmpCase):
         st.save()
         self.assertEqual(self.cli("resume", "tiktok", "--reason", "Carlos checked").returncode, 0)
         self.assertEqual(GuardState.load(self.r.state / "state.json").stopped, {})
+
+
+
+@unittest.skipUnless(importlib.util.find_spec("PIL"), "the PC renderer needs Pillow")
+class TestRenderRows(unittest.TestCase):
+    def test_render_carries_earliest_and_latest_into_the_queue(self):
+        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pc"))
+        import render  # noqa: E402
+
+        post = {"id": "2026-W49-answer-x", "format": "answer", "networks": ["youtube"], "caption": "c",
+                "earliest": "2026-11-14T12:00:00Z", "latest": "2026-12-09T00:00:00Z"}
+        row = render.rows_for(post, "x.mp4", SHA, {"generated": False, "realistic": False}, "2026-W49")[0]
+        self.assertEqual((row["earliest"], row["latest"]), ("2026-11-14T12:00:00Z", "2026-12-09T00:00:00Z"))
+        self.assertEqual(shape_problems(row, "youtube"), [])
+        self.assertNotIn("latest", render.rows_for({**post, "latest": ""}, "x.mp4", SHA, {"generated": False}, "w")[0])
 
 
 if __name__ == "__main__":

@@ -8,7 +8,7 @@
     pages --out DIR                 build the Pages runway
     metrics                         collect the numbers, rebuild the summary and the scoreboard
     watch                           runway, heartbeat, posts with no outcome
-    archive                         move items posted over a week ago to archive/
+    archive                         move items posted over a week ago, and unposted items past their latest, to archive/
     resolve NETWORK ID (--url URL | --failed)   a person settles a post with no outcome
     resume NETWORK --reason TEXT    a person restarts a stopped network
     check-public URL                does this post show up for a logged-out viewer?
@@ -44,7 +44,7 @@ from .intake import check as intake_check, fetcher
 from .metrics import collect, react, write
 from .pages import build
 from .publish import LOOKAHEAD, adapter_for, run
-from .queue import items, move, shape_problems
+from .queue import items, move, shape_problems, stale
 from .schedule import due
 from .state import PENDING, PUBLISHED, FAILED, GuardState, PostLog, PostRow, iso, now_utc, parse_iso
 from .watch import check as watch_check
@@ -198,7 +198,15 @@ def cmd_archive(a, cfg: Config, root: Path, state: Path) -> int:
         if last and last["status"] not in (PENDING, "retry") and when and now - when > timedelta(days=7):
             move(it, root, "archive")
             moved += 1
-    print(f"archived {moved}")
+    # a dated post (a premiere, a sale) that never went out is stale after its latest: archived, never posted late.
+    # A row in flight or settled keeps it; only a retry leaves it as unposted.
+    tried = {k for k, r in final.items() if r["status"] != "retry"}
+    expired = 0
+    for it in stale(root, tried, now):
+        move(it, root, "archive", {"archived": {"at": iso(now), "unposted": True,
+                                                "why": f"latest {it.data.get('latest')} passed before it was posted"}})
+        expired += 1
+    print(f"archived {moved + expired} ({expired} unposted past their latest)")
     return 0
 
 

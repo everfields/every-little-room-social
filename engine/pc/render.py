@@ -85,6 +85,7 @@ def rows_for(post: dict, file: str, digest: str, ai: dict, week: str) -> list[di
             "caption": caption, "title": post.get("title", ""), "language": post.get("language", "en"),
             "tags": post.get("tags", []), "ai": ai, "trial": bool(post.get("trial")) and net == "instagram",
             **({"earliest": post["earliest"]} if post.get("earliest") else {}),
+            **({"latest": post["latest"]} if post.get("latest") else {}),
         })
     return out
 

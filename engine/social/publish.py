@@ -108,7 +108,9 @@ def run(root: Path, state_dir: Path, cfg: Config, env: Mapping[str, str], *, now
         if not verdict.due:
             results.append(Outcome(net.name, "skipped", verdict.reason))
             continue
-        queue = ready(root, net.name, log.used_ids(), now)
+        # latest is checked at the moment it would post: a wait for a slot must not carry a dated post past it
+        posts_at = verdict.slot.opens if wait and verdict.slot and verdict.slot.opens > now else now
+        queue = [i for i in ready(root, net.name, log.used_ids(), now) if not i.expired(posts_at)]
         if not queue:
             results.append(Outcome(net.name, "skipped", "the queue is empty: nothing is reposted to fill a gap"))
             continue

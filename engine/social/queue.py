@@ -1,9 +1,10 @@
 """The queue: ready posts, one JSON file each, in `queue/<network>/`, written by the PC and checked at intake.
 
 An item: id, network, format, batch, media {file, sha256, kind}, caption, title, language, tags, ai {generated,
-realistic}, trial, earliest, and the `intake` block the intake adds (ok, problems, probe, phash). Media are never in
-git: they are release assets (tag `media`) and the Pages runway serves them. Posted items move to `archive/` after a
-week (their hashes stay for the dedupe); failing items move to `quarantine/` with the reasons.
+realistic}, trial, earliest, latest, and the `intake` block the intake adds (ok, problems, probe, phash). Media are
+never in git: they are release assets (tag `media`) and the Pages runway serves them. Posted items move to `archive/`
+after a week (their hashes stay for the dedupe); an item whose `latest` has passed unposted is never published and moves
+to `archive/` with an `archived` note; failing items move to `quarantine/` with the reasons.
 """
 
 from __future__ import annotations
@@ -44,6 +45,14 @@ class Item:
         return parse_iso(str(self.data.get("earliest", "")))
 
     @property
+    def latest(self) -> datetime | None:
+        """After this time the post is stale (a premiere, a sale): it is archived unposted, never published late."""
+        return parse_iso(str(self.data.get("latest", "")))
+
+    def expired(self, now: datetime) -> bool:
+        return self.latest is not None and self.latest <= now
+
+    @property
     def checked(self) -> bool:
         return bool((self.data.get("intake") or {}).get("ok"))
 
@@ -74,6 +83,12 @@ def shape_problems(data: dict, folder_network: str = "") -> list[str]:
         p.append("format: the format that made it")
     if data.get("earliest") and not parse_iso(str(data["earliest"])):
         p.append("earliest: an ISO date-time")
+    if data.get("latest"):
+        latest, earliest = parse_iso(str(data["latest"])), parse_iso(str(data.get("earliest") or ""))
+        if not latest:
+            p.append("latest: an ISO date-time")
+        elif earliest and latest <= earliest:
+            p.append("latest: after earliest")
     if not isinstance(data.get("ai"), dict) or "generated" not in data["ai"]:
         p.append('ai: {"generated": true|false, "realistic": true|false}')
     return p
@@ -96,10 +111,15 @@ def items(root: Path, folder: str = "queue", network: str | None = None) -> list
 
 
 def ready(root: Path, network: str, used: set[str], now: datetime) -> list[Item]:
-    """Checked, unposted items whose earliest time has come, oldest first."""
+    """Checked, unposted items whose earliest time has come and whose latest has not passed, oldest first."""
     out = [i for i in items(root, network=network)
-           if i.checked and i.id not in used and (i.earliest is None or i.earliest <= now)]
+           if i.checked and i.id not in used and (i.earliest is None or i.earliest <= now) and not i.expired(now)]
     return sorted(out, key=lambda i: (i.earliest or datetime.min.replace(tzinfo=now.tzinfo), i.id))
+
+
+def stale(root: Path, used: set[tuple[str, str]], now: datetime) -> list[Item]:
+    """Queued items whose latest has passed with no post row on their network: archive them unposted."""
+    return [i for i in items(root) if i.expired(now) and (i.id, i.network) not in used]
 
 
 def move(item: Item, root: Path, folder: str, note: dict | None = None) -> Path:
