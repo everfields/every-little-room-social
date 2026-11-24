@@ -7,12 +7,12 @@
         "answer": {
           "posts": 6,
           "median_views": 46.0,
-          "best_views": 71,
-          "best_vs_floor": 1.54,
+          "best_views": 73,
+          "best_vs_floor": 1.59,
           "state": "trial"
         }
       }
     }
   },
-  "at": "2026-11-23T13:16:46Z"
+  "at": "2026-11-24T02:23:16Z"
 }
