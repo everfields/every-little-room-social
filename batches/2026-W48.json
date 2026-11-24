@@ -480,6 +480,120 @@
     "generated": false,
     "realistic": false
    }
+  },
+  {
+   "id": "2026-W48-answer-bluey-heeler-house",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "Which Bluey Heeler House is the right one? Three names, three heights",
+   "caption": "Bluey's big Heeler House shows up as the Light & Surprise Heeler House, the Deluxe Surprise House and the Light and Surprise Mega House, with heights from 21 inches to about 29 and list prices of $149.99 and $159.99. It is probably one toy; the maker has no page that confirms it. Our side-by-side with LEGO 11203 (about $70) and DUPLO 10459 (about $49), every source named: https://everylittleroom.com/guides/bluey-heeler-house?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with Bluey's makers. LEGO prices from our Nov 24 check. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/bluey-heeler-house?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-14T06:00:00Z",
+   "latest": "2026-12-24T00:00:00Z",
+   "script": "Buying the big Bluey house? It has three names. / Light and Surprise, two feet. / Deluxe Surprise, about one sixty list. / Mega House, about twenty-nine inches. / Walmart says twenty-one inches. / The maker has no page for any. / The Heeler House has all four Heelers. / Four and up who builds: LEGO, about seventy. / Age three: DUPLO, about forty-nine. / Side by side, link in the description.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Bluey's Heeler House",
+     "fine": "For parents and relatives. \"About\" prices are LEGO's US prices on Nov 24, 2026; list prices are the maker's suggested prices as The Toy Insider reported them. Independent site, not affiliated with Bluey's or the toys' makers. Synthetic voice. As an Amazon Associate we earn from qualifying purchases.",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Buying the big Bluey house?",
+       "title": "One house, three names?",
+       "sub": "Probably one toy. We couldn't confirm it.",
+       "say": "Buying the big Bluey house? It has three names."
+      },
+      {
+       "type": "facts",
+       "title": "Three names, as listed",
+       "items": [
+        {
+         "k": "Light & Surprise Heeler House",
+         "v": "The Toy Insider: 2 feet tall, $149.99 list",
+         "tone": "yellow",
+         "say": "Light and Surprise, two feet."
+        },
+        {
+         "k": "Deluxe Surprise House",
+         "v": "Its Toy Fair page: $159.99 list",
+         "tone": "purple",
+         "say": "Deluxe Surprise, about one sixty list."
+        },
+        {
+         "k": "Light and Surprise Mega House",
+         "v": "Smyths Toys Ireland: 73.5 cm (29 in)",
+         "tone": "red",
+         "say": "Mega House, about twenty-nine inches."
+        }
+       ]
+      },
+      {
+       "type": "facts",
+       "title": "What we couldn't confirm",
+       "items": [
+        {
+         "k": "Walmart's title",
+         "v": "21 inches tall, under the Light & Surprise name",
+         "tone": "yellow",
+         "say": "Walmart says twenty-one inches."
+        },
+        {
+         "k": "Moose Toys",
+         "v": "No maker page for any of the three",
+         "tone": "red",
+         "say": "The maker has no page for any."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "Which Bluey house, about",
+       "items": [
+        {
+         "price": "?",
+         "name": "Light & Surprise Heeler House",
+         "line": "All four Heelers, lights, 50+ sounds",
+         "sound": "Ages 3+, no store price read yet",
+         "tone": "yellow",
+         "say": "The Heeler House has all four Heelers."
+        },
+        {
+         "price": "$70",
+         "name": "LEGO Bluey's House 11203",
+         "line": "382 pieces to build",
+         "sound": "Listed for ages 4 and up",
+         "tone": "green",
+         "say": "Four and up who builds: LEGO, about seventy."
+        },
+        {
+         "price": "$49",
+         "name": "DUPLO Bluey's House 10459",
+         "line": "83 pieces and a memory game",
+         "sound": "Listed for ages 3 and up",
+         "tone": "purple",
+         "say": "Age three: DUPLO, about forty-nine."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Four Bluey houses, side by side.",
+       "sub": "Measure the shelf before you wrap it.",
+       "cta": "everylittleroom.com",
+       "site": "Guide: Bluey's Heeler House",
+       "say": "Side by side, link in the description."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
   }
  ]
 }
