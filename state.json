@@ -1,10 +1,9 @@
 {
   "alarms": {
     "heartbeat": {
-      "cleared": true,
-      "cleared_at": "2026-11-22T11:42:30Z",
-      "sent_at": "2026-11-22T00:39:47Z",
-      "title": "the PC sent no heartbeat"
+      "cleared": false,
+      "sent_at": "2026-11-25T19:26:46Z",
+      "title": "a batch is waiting to render"
     },
     "quarantine": {
       "cleared": true,
