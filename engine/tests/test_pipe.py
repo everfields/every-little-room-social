@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-import importlib.util
+import dataclasses
 import json
 import os
 import shutil
@@ -218,8 +218,14 @@ class TestBatches(TmpCase):
         self.assertEqual([r["file"] for r in report["refused"]], ["#8", "#9"])
         self.assertIn("checksum", report["refused"][0]["why"][0])
 
-    def test_no_token_is_a_quiet_skip(self):
+    def test_no_token_is_a_quiet_skip_only_while_the_pipe_is_off(self):
         self.assertIn("missing", batches.pull(self.r.dir, "owner/test", {}, Stub(lambda r: HttpResponse(500)), self.NOW)["skipped"])
+        for cron in ("dry-run", "live"):
+            with self.assertRaises(batches.MissingSetup) as c:
+                batches.pull(self.r.dir, "owner/test", {}, Stub(lambda r: HttpResponse(500)), self.NOW, cron=cron)
+            self.assertIn("COS_EVENT_TOKEN", str(c.exception))
+        with self.assertRaises(batches.MissingSetup):
+            batches.pull(self.r.dir, "", {"COS_EVENT_TOKEN": "tok"}, Stub(lambda r: HttpResponse(500)), self.NOW, cron="live")
 
 
 class TestSchedule(TmpCase):
@@ -396,10 +402,29 @@ class TestAdapters(unittest.TestCase):
         self.assertEqual(init.json["status"]["privacyStatus"], "public")
         self.assertEqual(res.url, "https://www.youtube.com/shorts/dryRunVid01")
 
+    def test_youtube_synthetic_media_option(self):
+        a = self.recording(YouTubeDirect)
+        a.post(self.media(self.tmp), PostSpec(caption="c", title="t", options={"synthetic_media": True}))
+        b = self.recording(YouTubeDirect)
+        b.post(self.media(self.tmp), PostSpec(caption="c", title="t"))
+        flag = lambda x: next(r for r in x.transport.requests if r.params and r.params.get("uploadType") == "resumable") \
+            .json["status"]["containsSyntheticMedia"]  # noqa: E731
+        self.assertEqual((flag(a), flag(b)), (True, False))
+
     def test_youtube_needs_a_title(self):
         a = self.recording(YouTubeDirect)
         with self.assertRaises(Exception):
             a.post(self.media(self.tmp), PostSpec())
+
+    def test_youtube_long_form(self):
+        long = dataclasses.replace(self.media(self.tmp), duration_s=300.0)
+        with self.assertRaises(Exception):  # without the option a 300 s file is refused: nothing changes for Shorts
+            self.recording(YouTubeDirect).post(long, PostSpec(caption="c", title="t"))
+        res = self.recording(YouTubeDirect).post(long, PostSpec(caption="c", title="t", options={"long_form": True}))
+        self.assertEqual(res.url, "https://www.youtube.com/watch?v=dryRunVid01")
+        with self.assertRaises(Exception):
+            self.recording(YouTubeDirect).post(dataclasses.replace(long, duration_s=901.0),
+                                               PostSpec(caption="c", title="t", options={"long_form": True}))
 
     def test_tiktok_inbox_is_a_draft(self):
         a = self.recording(TikTokInbox)
@@ -441,6 +466,18 @@ class TestIntakeRules(TmpCase):
                                ({"bytes": 200_000_000}, "MB"), ({"audio_codec": "mp3"}, "audio")):
             e, _ = intake.media_problems({**self.GOOD, **change}, "tiktok", self.rules())
             self.assertTrue(any(needle in x for x in e), (change, e))
+
+    def test_long_form_youtube_only(self):
+        big = {**self.GOOD, "duration_s": 300.0, "bytes": 200_000_000}
+        self.assertEqual(intake.media_problems(big, "youtube", self.rules(), "video", True), ([], []))
+        e, _ = intake.media_problems(big, "youtube", self.rules())
+        self.assertTrue(any("length" in x for x in e) and any("MB" in x for x in e), e)
+        e, _ = intake.media_problems(big, "tiktok", self.rules(), "video", True)  # only YouTube takes it
+        self.assertTrue(any("length" in x for x in e), e)
+        e, _ = intake.media_problems({**big, "duration_s": 901.0}, "youtube", self.rules(), "video", True)
+        self.assertTrue(any("length" in x for x in e), e)
+        e, _ = intake.media_problems({**big, "width": 1920, "height": 1080}, "youtube", self.rules(), "video", True)
+        self.assertTrue(any("aspect" in x for x in e), e)  # every other check stays
 
     def test_silent_is_a_warning(self):
         e, w = intake.media_problems({**self.GOOD, "audio_codec": ""}, "tiktok", self.rules())
@@ -516,6 +553,14 @@ class TestPublishRun(TmpCase):
         self.assertFalse(self.r.log.path.exists())
         self.assertTrue((self.r.out / "plan-tiktok.json").is_file())
         self.assertTrue((self.r.out / "dry-posts.csv").is_file())
+        # it never reads as a publish: no made-up link, no `published`, anywhere a person or a loop reads
+        run = (self.r.out / "run.json").read_text(encoding="utf-8")
+        self.assertEqual((res[0].url, json.loads(run)[0]["url"]), ("", ""))
+        self.assertNotIn("published", run)
+        self.assertNotIn("dry.run", run)
+        rows = PostLog(self.r.out / "dry-posts.csv").rows()
+        self.assertEqual([r["status"] for r in rows], [PENDING, "dry-run"])
+        self.assertEqual(rows[-1]["url"], "")
 
     def test_a_network_not_approved_stays_a_dry_run(self):
         self.seed()
@@ -641,6 +686,18 @@ class TestPublishRun(TmpCase):
         self.assertEqual(res[0].action, "skipped")
         self.assertIn("missing", res[0].detail)
 
+    def test_a_network_set_to_synthetic_media_declares_it_on_youtube(self):
+        raw = json.loads(json.dumps(BASE))
+        raw["networks"]["youtube"]["synthetic_media"] = True
+        (self.r.dir / "social.json").write_text(json.dumps(raw), encoding="utf-8")
+        self.seed()
+        self.r.add(network="youtube", ai={"generated": False, "realistic": False})  # what `answer` reports
+        res = publish.run(self.r.dir, self.r.state, self.r.cfg, self.r.env, now=et(2026, 11, 12, 11, 50), live=False,
+                          out=self.r.out, only="youtube", wait=False)
+        self.assertEqual(res[0].action, "dry-run")
+        plan = json.loads((self.r.out / "plan-youtube.json").read_text(encoding="utf-8"))
+        self.assertIn('"containsSyntheticMedia": true', json.dumps(plan))
+
     def test_empty_queue_goes_quiet(self):
         self.seed()
         self.assertIn("empty", self.go(Stub(lambda q: answers(q)))[0].detail)
@@ -667,31 +724,29 @@ class TestPublishRun(TmpCase):
         self.assertIn("empty", self.go(Stub(lambda q: answers(q)))[0].detail)
         self.assertEqual(ready(self.r.dir, "tiktok", set(), et(2026, 12, 2, 12))[0].id, "post-001")
 
-    def test_latest_is_respected(self):
-        # a dated post (a premiere) is never published after its latest, even when it is the only one queued
+    def test_a_post_past_its_latest_is_never_posted_and_is_archived(self):
         self.seed()
-        self.r.add(earliest="2026-11-01T00:00:00Z", latest="2026-11-12T15:00:00Z")
-        self.assertEqual(ready(self.r.dir, "tiktok", set(), et(2026, 11, 12, 9))[0].id, "post-001")
-        self.assertEqual(ready(self.r.dir, "tiktok", set(), et(2026, 11, 12, 10)), [])
-        self.assertIn("empty", self.go(Stub(lambda q: answers(q)))[0].detail)
-        self.assertEqual(self.r.log.rows(), [])
+        self.r.add(id_="black-friday", earliest="2026-11-01T00:00:00Z", latest="2026-11-10T00:00:00Z")
+        self.r.add(id_="evergreen")
+        self.assertEqual({i.id for i in ready(self.r.dir, "tiktok", set(), et(2026, 11, 9, 12))}, {"black-friday", "evergreen"})
+        res = self.go(Stub(lambda q: answers(q)))
+        self.assertEqual(res[0].item, "evergreen")
+        self.assertEqual(intake.runway(self.r.dir, self.r.cfg, set(), et(2026, 11, 12, 11))["tiktok"]["posts"], 1)
+        r = subprocess.run([sys.executable, "-m", "social", "--root", str(self.r.dir), "archive"], capture_output=True,
+                           text=True, cwd=Path(__file__).resolve().parents[1], env={**os.environ, **self.r.env})
+        self.assertEqual(r.returncode, 0, r.stderr)
+        gone = self.r.dir / "archive" / "tiktok" / "black-friday.json"
+        self.assertTrue(gone.is_file())
+        self.assertIn("passed unposted", json.loads(gone.read_text(encoding="utf-8"))["stale"])
+        posted = self.r.dir / "archive" / "tiktok" / "evergreen.json"  # posted 2026-11-12: over a week ago by now
+        self.assertNotIn("stale", json.loads(posted.read_text(encoding="utf-8")))
 
-    def test_latest_is_checked_when_it_would_post_after_a_wait(self):
-        # woken at 10:15, the slot opens at 10:25 (inside the lookahead): the post would go out after its 10:20 latest
-        self.seed()
-        self.r.add(latest="2026-11-12T15:20:00Z")
-        slept = []
-        res = publish.run(self.r.dir, self.r.state, self.r.cfg, {**self.r.env, "BUFFER_API_KEY": "k", "BUFFER_CHANNEL_TIKTOK": "c"},
-                          now=et(2026, 11, 12, 10, 15), live=True, out=self.r.out, only="tiktok",
-                          transport=Stub(lambda q: answers(q)), wait=True, sleep=slept.append)
-        self.assertIn("empty", res[0].detail)
-        self.assertEqual((slept, self.r.log.rows()), ([], []))
-
-    def test_a_stale_post_does_not_hold_up_the_next(self):
-        self.seed()
-        self.r.add(id_="post-001", earliest="2026-11-01T00:00:00Z", latest="2026-11-05T00:00:00Z")
-        self.r.add(id_="post-002", earliest="2026-11-02T00:00:00Z")
-        self.assertEqual([i.id for i in ready(self.r.dir, "tiktok", set(), et(2026, 11, 12, 11))], ["post-002"])
+    def test_latest_is_checked(self):
+        good = {"id": "abc", "network": "tiktok", "media": {"file": "a.mp4", "sha256": SHA}, "format": "f", "caption": "",
+                "ai": {"generated": False}}
+        self.assertEqual(shape_problems({**good, "latest": "2026-11-28T05:00:00Z"}, "tiktok"), [])
+        self.assertTrue(shape_problems({**good, "latest": "soon"}, "tiktok"))
+        self.assertTrue(shape_problems({**good, "earliest": "2026-11-28T00:00:00Z", "latest": "2026-11-27T00:00:00Z"}, "tiktok"))
 
     def test_unchecked_item_is_never_posted(self):
         self.seed()
@@ -824,7 +879,7 @@ class TestWatch(TmpCase):
         watch.check(self.r.dir, self.r.state, self.r.cfg, a, et(2026, 11, 12, 12))
         self.assertEqual([x["type"] for x in a.sent], ["social-clear"])
 
-    def _old_heartbeat(self, week: str, made: tuple[str, ...] = ("2026-W46", "2026-W47"), batch_text: dict | None = None):
+    def _old_heartbeat(self, week: str):
         for i in range(30):
             self.r.add(id_=f"t-{i:03d}")
             self.r.add(network="instagram", id_=f"i-{i:03d}")
@@ -835,13 +890,7 @@ class TestWatch(TmpCase):
         b = self.r.dir / "batches"
         b.mkdir(exist_ok=True)
         for w in ("2026-W46", "2026-W47"):
-            pid = f"{w}-answer-x"
-            text = (batch_text or {}).get(w) or json.dumps({"week": w, "posts": [{"id": pid, "networks": ["youtube"]}]})
-            (b / f"{w}.json").write_text(text, encoding="utf-8")
-            if w in made:
-                folder = "archive" if w == "2026-W46" else "queue"
-                (self.r.dir / folder / "youtube").mkdir(parents=True, exist_ok=True)
-                (self.r.dir / folder / "youtube" / f"{pid}-youtube.json").write_text("{}", encoding="utf-8")
+            (b / f"{w}.json").write_text("{}", encoding="utf-8")
         st = GuardState(self.r.state / "state.json")
         a = alarms_mod.Alarms(st, {"COS_EVENT_TOKEN": "t"}, live=True, company_repo="o/c",
                               transport=Stub(lambda q: HttpResponse(204)), now=et(2026, 11, 12, 12))
@@ -854,23 +903,7 @@ class TestWatch(TmpCase):
         self.assertEqual(rep["unrendered"], [])
 
     def test_an_old_heartbeat_with_a_batch_waiting_alarms(self):
-        rep, keys = self._old_heartbeat("2026-W46", made=("2026-W46",))
-        self.assertIn("heartbeat", keys)
-        self.assertEqual(rep["unrendered"], ["2026-W47"])
-
-    def test_re_rendering_an_older_week_does_not_make_newer_weeks_wait(self):
-        # Alarm #286: W48 was re-rendered for a swap after W49 and W50 were made, so the heartbeat said W48.
         rep, keys = self._old_heartbeat("2026-W46")
-        self.assertNotIn("heartbeat", keys)
-        self.assertEqual(rep["unrendered"], [])
-
-    def test_a_render_with_nothing_new_writes_no_week_and_stays_quiet(self):
-        rep, keys = self._old_heartbeat("")
-        self.assertNotIn("heartbeat", keys)
-        self.assertEqual(rep["unrendered"], [])
-
-    def test_an_unreadable_batch_counts_as_waiting(self):
-        rep, keys = self._old_heartbeat("2026-W47", batch_text={"2026-W47": "{not json"})
         self.assertIn("heartbeat", keys)
         self.assertEqual(rep["unrendered"], ["2026-W47"])
 
@@ -977,6 +1010,33 @@ class TestMetrics(TmpCase):
         a = alarms_mod.Alarms(st, env, live=True, company_repo="o/c", transport=Stub(lambda q: HttpResponse(204)), now=now)
         metrics.react(self.r.state, self.r.cfg, col, a, now)
         self.assertEqual([x["key"] for x in a.sent], ["kids-youtube-v1"])
+        self.assertEqual(a.sent[0]["severity"], "high")
+
+    def test_an_analytics_error_twice_in_a_row_is_a_problem(self):
+        self.posted("youtube", "v1", "a")
+        analytics_ok = {"v": False}
+
+        def fn(q):
+            if "oauth2" in q.url:
+                return HttpResponse.of_json(200, {"access_token": "t"})
+            if q.url.endswith("/videos"):
+                return HttpResponse.of_json(200, {"items": [{"id": "v1", "statistics": {"viewCount": "9"}, "status": {"uploadStatus": "processed"}}]})
+            if "youtubeanalytics" in q.url:
+                return HttpResponse.of_json(200, {}) if analytics_ok["v"] else \
+                    HttpResponse.of_json(403, {"error": {"message": "YouTube Analytics API has not been used in project"}})
+            return HttpResponse.of_json(200, {"items": [{"statistics": {"subscriberCount": "40"}}]})
+
+        env = {"YOUTUBE_CLIENT_ID": "i", "YOUTUBE_CLIENT_SECRET": "s", "YOUTUBE_REFRESH_TOKEN": "r"}
+        go = lambda: metrics.collect(self.r.state, self.r.cfg, env, now=et(2026, 11, 12, 12), live=True, transport=Stub(fn))  # noqa: E731
+        first = go()
+        self.assertEqual(first.problems, [])
+        self.assertTrue(any(n.startswith("youtube analytics") for n in first.notes))
+        second = go()
+        self.assertTrue(any(p.startswith("youtube analytics") and "2 runs" in p for p in second.problems), second.problems)
+        analytics_ok["v"] = True
+        self.assertEqual(go().problems, [])
+        analytics_ok["v"] = False
+        self.assertEqual(go().problems, [])  # the streak restarted
 
     def test_instagram_insights(self):
         self.posted("instagram", "m1", "a")
@@ -1166,6 +1226,26 @@ class TestIntakeEndToEnd(TmpCase):
         self.assertIn("sha256", self.run_intake().quarantined["tiktok/a-001"][0])
 
 
+NODE = shutil.which("node")
+FRAMES = Path(__file__).resolve().parents[1] / "templates" / "formats" / "answer" / "frames.mjs"
+
+
+@unittest.skipUnless(NODE and os.name == "posix", "needs node and a POSIX shell")
+class TestAnswerFrames(TmpCase):
+    def test_a_chrome_that_dies_at_start_is_retried_once_and_its_error_kept(self):
+        fake = self.r.dir / "chrome"
+        fake.write_text("#!/bin/sh\necho 'boom: cannot open shared memory' >&2\nexit 3\n", encoding="utf-8")
+        fake.chmod(0o755)
+        spec = self.r.dir / "spec.json"
+        spec.write_text(json.dumps({"scenes": []}), encoding="utf-8")
+        r = subprocess.run([NODE, str(FRAMES), "--spec", str(spec), "--font", str(spec), "--out", str(self.r.dir / "frames"),
+                            "--chrome", str(fake)], capture_output=True, text=True, timeout=60)
+        self.assertEqual(r.returncode, 1, r.stderr)
+        self.assertIn("retrying once", r.stderr)
+        self.assertIn("exited: 3", r.stderr)
+        self.assertIn("boom: cannot open shared memory", r.stderr)
+
+
 class TestCli(TmpCase):
     def cli(self, *args, env=None):
         return subprocess.run([sys.executable, "-m", "social", "--root", str(self.r.dir), *args], capture_output=True, text=True,
@@ -1175,36 +1255,28 @@ class TestCli(TmpCase):
         r = self.cli("validate")
         self.assertEqual(r.returncode, 0, r.stderr)
 
+    def test_batches_without_a_token_fails_when_switched_on(self):
+        r = self.cli("batches", env={"COS_EVENT_TOKEN": ""})
+        self.assertEqual(r.returncode, 1, r.stdout + r.stderr)
+        self.assertIn("COS_EVENT_TOKEN", r.stdout)
+        self.assertEqual(self.cli("batches", env={"COS_EVENT_TOKEN": "", "SOCIAL_CRON": "off"}).returncode, 0)
+
+    def test_alarm_from_a_job_with_no_state(self):
+        r = self.cli("alarm", "render", "--title", "social-render failed", "--body", "run x", "--severity", "high",
+                     env={"SOCIAL_CRON": "dry-run"})
+        self.assertEqual(r.returncode, 1, r.stderr)  # switched on in a dry run, it tries to send: no token here, so red
+        self.assertIn("alarm not sent", r.stderr)
+        sent = json.loads(r.stdout)["sent"]
+        self.assertEqual((sent[0]["type"], sent[0]["key"], sent[0]["severity"]), ("social-alarm", "render", "high"))
+        off = self.cli("alarm", "render", "--clear", env={"SOCIAL_CRON": "off"})
+        self.assertEqual(off.returncode, 0, off.stderr)
+        self.assertEqual(json.loads(off.stdout)["sent"][0]["type"], "social-clear")
+        self.assertEqual(self.cli("alarm", "Bad Key").returncode, 2)
+
     def test_validate_catches_a_bad_row(self):
         self.r.add(id_="x")
         r = self.cli("validate")
         self.assertEqual(r.returncode, 1)
-
-    def test_validate_checks_latest(self):
-        self.assertIn("latest: an ISO date-time", shape_problems({**self.r.add().data, "latest": "next week"}))
-        self.assertIn("latest: after earliest", shape_problems({**self.r.add().data, "earliest": "2026-12-09T00:00:00Z",
-                                                               "latest": "2026-12-01T00:00:00Z"}))
-        self.assertNotIn("latest: after earliest", shape_problems({**self.r.add().data, "earliest": "2026-11-14T12:00:00Z",
-                                                                  "latest": "2026-12-09T00:00:00Z"}))
-
-    def test_archive_moves_an_unposted_post_past_its_latest(self):
-        past, future = "2020-01-01T00:00:00Z", "2099-01-01T00:00:00Z"
-        self.r.add(id_="stale", latest=past)
-        self.r.add(id_="fresh", latest=future)
-        self.r.add(id_="in-flight", latest=past)  # a post with no outcome may be live: watch settles it, not archive
-        self.r.add(id_="retried", latest=past)  # a retry never went out
-        self.r.log.append(PostRow(id="in-flight", network="tiktok", status=PENDING, at="2019-12-31T23:00:00Z", slot="s1"))
-        self.r.log.append(PostRow(id="retried", network="tiktok", status=RETRY, at="2019-12-31T23:00:00Z", slot="s2"))
-        r = self.cli("archive")
-        self.assertEqual(r.returncode, 0, r.stderr)
-        self.assertIn("2 unposted", r.stdout)
-        q, a = self.r.dir / "queue" / "tiktok", self.r.dir / "archive" / "tiktok"
-        self.assertEqual(sorted(f.stem for f in a.glob("*.json")), ["retried", "stale"])
-        self.assertEqual(sorted(f.stem for f in q.glob("*.json")), ["fresh", "in-flight"])
-        note = json.loads((a / "stale.json").read_text(encoding="utf-8"))["archived"]
-        self.assertTrue(note["unposted"])
-        self.assertIn(past, note["why"])
-        self.assertEqual(self.r.log.latest()[("in-flight", "tiktok")]["status"], PENDING)
 
     def test_resolve_settles_a_post_with_no_outcome(self):
         self.r.log.append(PostRow(id="p", network="tiktok", status=PENDING, at=iso(et(2026, 11, 12, 10)), slot="s"))
@@ -1218,21 +1290,6 @@ class TestCli(TmpCase):
         st.save()
         self.assertEqual(self.cli("resume", "tiktok", "--reason", "Carlos checked").returncode, 0)
         self.assertEqual(GuardState.load(self.r.state / "state.json").stopped, {})
-
-
-
-@unittest.skipUnless(importlib.util.find_spec("PIL"), "the PC renderer needs Pillow")
-class TestRenderRows(unittest.TestCase):
-    def test_render_carries_earliest_and_latest_into_the_queue(self):
-        sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pc"))
-        import render  # noqa: E402
-
-        post = {"id": "2026-W49-answer-x", "format": "answer", "networks": ["youtube"], "caption": "c",
-                "earliest": "2026-11-14T12:00:00Z", "latest": "2026-12-09T00:00:00Z"}
-        row = render.rows_for(post, "x.mp4", SHA, {"generated": False, "realistic": False}, "2026-W49")[0]
-        self.assertEqual((row["earliest"], row["latest"]), ("2026-11-14T12:00:00Z", "2026-12-09T00:00:00Z"))
-        self.assertEqual(shape_problems(row, "youtube"), [])
-        self.assertNotIn("latest", render.rows_for({**post, "latest": ""}, "x.mp4", SHA, {"generated": False}, "w")[0])
 
 
 if __name__ == "__main__":

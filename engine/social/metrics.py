@@ -76,6 +76,7 @@ class Collection:
     kids: list[tuple[str, str]] = field(default_factory=list)  # (network, remote id) a network marked made for kids
     problems: list[str] = field(default_factory=list)
     notes: list[str] = field(default_factory=list)
+    analytics_error: str | None = None  # None: not asked; "": answered; text: failed (a second run in a row: a problem)
 
 
 class _Client(Adapter):
@@ -121,8 +122,9 @@ def collect_youtube(c: _Client, rows: list[dict], now: datetime, col: Collection
             heads = [h["name"] for h in rep.get("columnHeaders") or []]
             for row in rep.get("rows") or []:
                 analytics[row[0]] = dict(zip(heads, row))
+            col.analytics_error = ""
         except HttpError as e:
-            col.notes.append(f"youtube analytics: {redact_text(str(e))[:200]}")
+            col.analytics_error = f"youtube analytics: {redact_text(str(e))[:200]}"
     for vid, r in by_id.items():
         it = found.get(vid)
         if not it or (it.get("status") or {}).get("uploadStatus") in ("rejected", "deleted", "failed"):
@@ -305,6 +307,18 @@ def collect(state_dir: Path, cfg: Config, env: Mapping[str, str], *, now: dateti
             collect_youtube(c, mine, now, col) if name == "youtube" else collect_instagram(c, mine, col)
         except (HttpError, RuntimeError, KeyError, ValueError) as e:
             col.problems.append(f"{name}: {redact_text(str(e))[:300]}")
+    # An Analytics error once is a note; the same run after run is a problem, so the run turns red. At Every Little Room
+    # (2026-11-19) the Analytics API was never enabled and its 403 sat in the notes, unread, while views kept coming.
+    if col.analytics_error:
+        runs = int((st.alarms.get("_youtube_analytics") or {}).get("runs", 0)) + 1
+        st.alarms["_youtube_analytics"] = {"sent_at": iso(now), "cleared": True, "runs": runs}
+        if runs >= 2:
+            col.problems.append(f"{col.analytics_error} ({runs} runs in a row: is the YouTube Analytics API enabled on "
+                                f"the Google Cloud project, and does the consent include yt-analytics.readonly?)")
+        else:
+            col.notes.append(col.analytics_error)
+    elif col.analytics_error == "":
+        st.alarms.pop("_youtube_analytics", None)
     links: dict[str, str] = {}
     if (env.get("BUFFER_API_KEY") or "").strip():
         try:
