@@ -824,7 +824,7 @@ class TestWatch(TmpCase):
         watch.check(self.r.dir, self.r.state, self.r.cfg, a, et(2026, 11, 12, 12))
         self.assertEqual([x["type"] for x in a.sent], ["social-clear"])
 
-    def _old_heartbeat(self, week: str):
+    def _old_heartbeat(self, week: str, made: tuple[str, ...] = ("2026-W46", "2026-W47"), batch_text: dict | None = None):
         for i in range(30):
             self.r.add(id_=f"t-{i:03d}")
             self.r.add(network="instagram", id_=f"i-{i:03d}")
@@ -835,7 +835,13 @@ class TestWatch(TmpCase):
         b = self.r.dir / "batches"
         b.mkdir(exist_ok=True)
         for w in ("2026-W46", "2026-W47"):
-            (b / f"{w}.json").write_text("{}", encoding="utf-8")
+            pid = f"{w}-answer-x"
+            text = (batch_text or {}).get(w) or json.dumps({"week": w, "posts": [{"id": pid, "networks": ["youtube"]}]})
+            (b / f"{w}.json").write_text(text, encoding="utf-8")
+            if w in made:
+                folder = "archive" if w == "2026-W46" else "queue"
+                (self.r.dir / folder / "youtube").mkdir(parents=True, exist_ok=True)
+                (self.r.dir / folder / "youtube" / f"{pid}-youtube.json").write_text("{}", encoding="utf-8")
         st = GuardState(self.r.state / "state.json")
         a = alarms_mod.Alarms(st, {"COS_EVENT_TOKEN": "t"}, live=True, company_repo="o/c",
                               transport=Stub(lambda q: HttpResponse(204)), now=et(2026, 11, 12, 12))
@@ -848,7 +854,23 @@ class TestWatch(TmpCase):
         self.assertEqual(rep["unrendered"], [])
 
     def test_an_old_heartbeat_with_a_batch_waiting_alarms(self):
+        rep, keys = self._old_heartbeat("2026-W46", made=("2026-W46",))
+        self.assertIn("heartbeat", keys)
+        self.assertEqual(rep["unrendered"], ["2026-W47"])
+
+    def test_re_rendering_an_older_week_does_not_make_newer_weeks_wait(self):
+        # Alarm #286: W48 was re-rendered for a swap after W49 and W50 were made, so the heartbeat said W48.
         rep, keys = self._old_heartbeat("2026-W46")
+        self.assertNotIn("heartbeat", keys)
+        self.assertEqual(rep["unrendered"], [])
+
+    def test_a_render_with_nothing_new_writes_no_week_and_stays_quiet(self):
+        rep, keys = self._old_heartbeat("")
+        self.assertNotIn("heartbeat", keys)
+        self.assertEqual(rep["unrendered"], [])
+
+    def test_an_unreadable_batch_counts_as_waiting(self):
+        rep, keys = self._old_heartbeat("2026-W47", batch_text={"2026-W47": "{not json"})
         self.assertIn("heartbeat", keys)
         self.assertEqual(rep["unrendered"], ["2026-W47"])
 
