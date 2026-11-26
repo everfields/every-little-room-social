@@ -1,0 +1,22 @@
+{
+  "id": "2026-W50-answer-gabby-tonies-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W50",
+  "media": {
+    "file": "2026-W50-answer-gabby-tonies.mp4",
+    "sha256": "090109bc072f3644f145c4fadc2d9c0a4e2f6083bbfa5add5b2b1ac223eaed70",
+    "kind": "video"
+  },
+  "caption": "There are four Gabby's Dollhouse Tonies sold in the US: Gabby, Kitty Fairy, Cakey Cat and MerCat, each about $20, with 45 to 50 minutes of stories and songs. None plays without a Toniebox, sold separately: about $99.97 for a Toniebox 2 starter set sold by Walmart.com (it comes with a Ms. Rachel Tonie), about $129.99 for the box on its own at tonies.com. A Short of ours on Nov 22 said two Gabby Tonies; our Nov 26 check finds four. https://everylittleroom.com/guides/gabbys-dollhouse-tonies?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Gabby's Dollhouse Tonies: which four exist, and what you need first",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-14T00:00:00Z",
+  "latest": "2026-12-24T00:00:00Z"
+}
