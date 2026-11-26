@@ -634,6 +634,123 @@
     }
    },
    "ai": {"generated": false, "realistic": false}
+  },
+  {
+   "id": "2026-W50-answer-gabby-tonies",
+   "format": "answer",
+   "networks": [
+    "youtube"
+   ],
+   "title": "Gabby's Dollhouse Tonies: which four exist, and what you need first",
+   "caption": "There are four Gabby's Dollhouse Tonies sold in the US: Gabby, Kitty Fairy, Cakey Cat and MerCat, each about $20, with 45 to 50 minutes of stories and songs. None plays without a Toniebox, sold separately: about $99.97 for a Toniebox 2 starter set sold by Walmart.com (it comes with a Ms. Rachel Tonie), about $129.99 for the box on its own at tonies.com. A Short of ours on Nov 22 said two Gabby Tonies; our Nov 26 check finds four. https://everylittleroom.com/guides/gabbys-dollhouse-tonies?utm_source=youtube&utm_medium=short&utm_campaign=answer Independent parents' site, not affiliated with the show. Prices are typical US store prices from our dated checks. As an Amazon Associate we earn from qualifying purchases.",
+   "link": "https://everylittleroom.com/guides/gabbys-dollhouse-tonies?utm_source=youtube&utm_medium=short&utm_campaign=answer",
+   "earliest": "2026-11-14T00:00:00Z",
+   "latest": "2026-12-24T00:00:00Z",
+   "script": "Gabby's Dollhouse Tonies: which ones, and what first? / A Tonie plays only on a Toniebox, sold separately. / A Walmart starter set, about a hundred, with a Ms. Rachel Tonie. / The box alone at tonies dot com, about one thirty. / Four Tonies, about twenty each. Gabby: two stories. / Kitty Fairy: episodes and a game. / Cakey Cat: episodes and songs. / MerCat: episodes and a song. / Ages three and up. / Split it: one relative gives the box, one a Tonie. / The Tonies guide: every little room dot com slash Y T.",
+   "prompts": {
+    "voice": "af_heart",
+    "speed": 1.1,
+    "spec": {
+     "tag": "Tonies",
+     "scenes": [
+      {
+       "type": "hook",
+       "kicker": "Before you buy a Tonie",
+       "title": "Which Gabby's Dollhouse Tonies exist?",
+       "sub": "Four in the US. None plays alone.",
+       "say": "Gabby's Dollhouse Tonies: which ones, and what first?"
+      },
+      {
+       "type": "facts",
+       "title": "First, the box",
+       "items": [
+        {
+         "k": "No Toniebox, no sound",
+         "v": "A Tonie plays only on a Toniebox, sold separately.",
+         "tone": "red",
+         "say": "A Tonie plays only on a Toniebox, sold separately."
+        },
+        {
+         "k": "About $100: a Toniebox 2 starter set",
+         "v": "Sold by Walmart.com, with a Ms. Rachel Tonie.",
+         "tone": "green",
+         "say": "A Walmart starter set, about a hundred, with a Ms. Rachel Tonie."
+        },
+        {
+         "k": "About $130: the box on its own",
+         "v": "At tonies.com.",
+         "tone": "yellow",
+         "say": "The box alone at tonies dot com, about one thirty."
+        }
+       ]
+      },
+      {
+       "type": "compare",
+       "title": "Then the Tonies, about",
+       "items": [
+        {
+         "price": "$20",
+         "name": "Gabby Tonie",
+         "line": "Two stories",
+         "sound": "About 48 min",
+         "tone": "purple",
+         "say": "Four Tonies, about twenty each. Gabby: two stories."
+        },
+        {
+         "price": "$20",
+         "name": "Kitty Fairy Tonie",
+         "line": "Two episodes, a song, a guessing game",
+         "sound": "About 45 min",
+         "tone": "green",
+         "say": "Kitty Fairy: episodes and a game."
+        },
+        {
+         "price": "$20",
+         "name": "Cakey Cat Tonie",
+         "line": "Two episodes, two songs",
+         "sound": "About 50 min",
+         "tone": "yellow",
+         "say": "Cakey Cat: episodes and songs."
+        },
+        {
+         "price": "$20",
+         "name": "MerCat Tonie",
+         "line": "Two episodes, the Spa Science song",
+         "sound": "45 to 50 min",
+         "tone": "purple",
+         "say": "MerCat: episodes and a song."
+        }
+       ],
+       "note": "Each listed for ages 3 and up.",
+       "outro": "Ages three and up."
+      },
+      {
+       "type": "facts",
+       "title": "A gift to split",
+       "items": [
+        {
+         "k": "One gives the box, one a Tonie",
+         "v": "Ask the parents first: they may own a Toniebox already.",
+         "tone": "green",
+         "say": "Split it: one relative gives the box, one a Tonie."
+        }
+       ]
+      },
+      {
+       "type": "end",
+       "title": "Every Tonie, what it plays, every source",
+       "sub": "On the home page: Gabby's Dollhouse Tonies",
+       "cta": "everylittleroom.com/yt",
+       "site": "The Tonies guide",
+       "say": "The Tonies guide: every little room dot com slash Y T."
+      }
+     ]
+    }
+   },
+   "ai": {
+    "generated": false,
+    "realistic": false
+   }
   }
  ]
 }
