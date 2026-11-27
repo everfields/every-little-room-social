@@ -1,0 +1,503 @@
+{
+  "week": "2026-W51",
+  "posts": [
+    {
+      "id": "2026-W51-answer-long-check-the-name",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "options": {
+        "long_form": true
+      },
+      "title": "Meow-mazing or Meow-mazing Interactive? Two Gabby's Dollhouse houses, one name",
+      "caption": "Two different Gabby's Dollhouse houses are sold as \"Meow-mazing\". The one with printed eyes takes no batteries and was about $25 at Walmart in our November 27 check (about $50 before). The Interactive one has screen eyes, sounds and games, takes 3 AA batteries, had a $107.99 list price in 2025 (The Toy Insider), and on November 27 Walmart had it only from a marketplace seller, so we give no typical price. Spin Master support says Deluxe Rooms sit inside the Interactive house but don't clip on; for the printed-eyes house we could not confirm it. The Interactive Ears headband and Interactive Pandy Paws plush link up with the Interactive house only. Go by the full name and the eyes, not the model number.\n\nAll four houses compared, every source dated: https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=video&utm_campaign=long\n\nWe have not tested these houses ourselves; facts are from the maker's and the stores' listings. Independent parents' site, not affiliated with the show or its makers. Synthetic voice. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=video&utm_campaign=long",
+      "earliest": "2026-11-14T01:00:00Z",
+      "latest": "2026-12-24T00:00:00Z",
+      "script": "Two different Gabby's Dollhouse houses are sold under one name: Meow-mazing. One has printed eyes. The other, the Interactive, has screen eyes, sounds and games. They cost very different amounts, take different batteries, and take different add-ons. Here is how to tell them apart before you pay, from the maker's and the stores' own listings. We have not tested either house ourselves. / The first one has printed eyes. They seem to change as you walk past, but there is no screen and no sound. / The Interactive house has screen eyes. Walmart's listings give it more than sixty animations and six play modes. / The printed eyes house needs no batteries, by Walmart's listing. / The Interactive house takes three double A batteries, not included. That is what Target, Kohl's and Walmart say. One review also mentions two triple A, so the listings don't fully agree. / The printed eyes house was about twenty five dollars at Walmart in our November twenty seventh check. It was about fifty before. / The Interactive house had a list price of one oh seven ninety nine in 2025, from The Toy Insider. / On November twenty seventh, Walmart had the Interactive house only from a marketplace seller, so we give no typical price for it. / Spin Master's support gives the Interactive house as about twenty eight inches tall, twenty five wide and twelve deep with the doors closed. / Open the doors and it takes about thirty two by sixteen. Leave room for that. / For the printed eyes house we found no built width or depth, only that it is over two feet tall. Many listings give seventeen by twenty two inches, but that is the box, not the house. Measure your shelf with room to spare. / Balconies and portal rooms hook on to both houses, says Spin Master. / Deluxe Rooms can sit inside the Interactive house's rooms, but they don't clip or snap on. That is Spin Master's support, answering on Target in April 2026. / For the printed eyes house, we could not confirm Deluxe Rooms at all. Its listing names only balconies and portal rooms. / The Interactive Ears headband links up with the Interactive house only, and it is sold separately. / So does the Interactive Pandy Paws plush. The printed eyes house's listing mentions neither one, so don't buy them for it. / There is also a third box: an earlier Meow-mazing from the movie line, with printed eyes and a movie Gabby figure. Walmart showed it out of stock on November twenty third. / And the model numbers differ between Walmart, Amazon and the maker for the same house. So go by the full name and the eyes, not the number. / With no dollhouse at home yet, we would pick the printed eyes Meow-mazing, at about twenty five dollars, with no batteries to buy. / The Purrfect was about seventy at Kohl's, regular price, in November, and its Deluxe Rooms slide into its walls. It takes three triple A for its sounds. / If a Purrfect or a Celebration is already at home, skip a second house and spend the money on rooms and figures. / Starting from nothing: the printed eyes house. / If screen eyes, sounds and games matter to your child: the Interactive, but check who is selling it and the price. / And if there is a house already, rooms or figures go further than a second one. / All four houses, side by side, with every source and its date, are in our guide. The link is in the description.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1,
+        "spec": {
+          "tag": "Check the name",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "Before you pay for a Meow-mazing",
+              "title": "Meow-mazing or Meow-mazing Interactive?",
+              "sub": "Two different houses share one name.",
+              "say": "Two different Gabby's Dollhouse houses are sold under one name: Meow-mazing. One has printed eyes. The other, the Interactive, has screen eyes, sounds and games. They cost very different amounts, take different batteries, and take different add-ons. Here is how to tell them apart before you pay, from the maker's and the stores' own listings. We have not tested either house ourselves."
+            },
+            {
+              "type": "facts",
+              "title": "First, look at the eyes",
+              "items": [
+                {
+                  "k": "Printed eyes",
+                  "v": "Eyes printed on the house that change as you move. No screen, no sounds.",
+                  "tone": "green",
+                  "say": "The first one has printed eyes. They seem to change as you walk past, but there is no screen and no sound."
+                },
+                {
+                  "k": "Screen eyes: the Interactive",
+                  "v": "Over 60 animations and 6 play modes, by Walmart's listings.",
+                  "tone": "purple",
+                  "say": "The Interactive house has screen eyes. Walmart's listings give it more than sixty animations and six play modes."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Then the batteries",
+              "items": [
+                {
+                  "k": "Printed eyes: none",
+                  "v": "Walmart's listing names no batteries.",
+                  "tone": "green",
+                  "say": "The printed eyes house needs no batteries, by Walmart's listing."
+                },
+                {
+                  "k": "Interactive: 3 AA, not included",
+                  "v": "Target, Kohl's and Walmart. One review also mentions 2 AAA.",
+                  "tone": "yellow",
+                  "say": "The Interactive house takes three double A batteries, not included. That is what Target, Kohl's and Walmart say. One review also mentions two triple A, so the listings don't fully agree."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "What each costs, about",
+              "items": [
+                {
+                  "k": "About $25: printed eyes",
+                  "v": "Walmart, our Nov 27 check. About $50 before.",
+                  "tone": "green",
+                  "say": "The printed eyes house was about twenty five dollars at Walmart in our November twenty seventh check. It was about fifty before."
+                },
+                {
+                  "k": "$107.99 list: Interactive",
+                  "v": "The Toy Insider's list price, 2025.",
+                  "tone": "purple",
+                  "say": "The Interactive house had a list price of one oh seven ninety nine in 2025, from The Toy Insider."
+                },
+                {
+                  "k": "No typical price today",
+                  "v": "Walmart, Nov 27: only a marketplace seller.",
+                  "tone": "red",
+                  "say": "On November twenty seventh, Walmart had the Interactive house only from a marketplace seller, so we give no typical price for it."
+                }
+              ]
+            },
+            {
+              "type": "plan",
+              "title": "Room for the Interactive house",
+              "room": {
+                "w": 40,
+                "d": 24,
+                "label": "A 40 × 24 in shelf or corner, seen from above",
+                "fixed": []
+              },
+              "items": [
+                {
+                  "caption": "Doors closed: about 25 × 12 in",
+                  "detail": "About 28 in tall (Spin Master support)",
+                  "tone": "purple",
+                  "rects": [
+                    {
+                      "x": 7.5,
+                      "y": 6,
+                      "w": 25,
+                      "d": 12,
+                      "label": "25 × 12"
+                    }
+                  ],
+                  "say": "Spin Master's support gives the Interactive house as about twenty eight inches tall, twenty five wide and twelve deep with the doors closed."
+                },
+                {
+                  "caption": "Doors open: about 32 × 16 in",
+                  "detail": "Leave room to swing them",
+                  "tone": "yellow",
+                  "rects": [
+                    {
+                      "x": 4,
+                      "y": 6,
+                      "w": 32,
+                      "d": 16,
+                      "label": "32 × 16",
+                      "dashed": true
+                    }
+                  ],
+                  "say": "Open the doors and it takes about thirty two by sixteen. Leave room for that."
+                },
+                {
+                  "caption": "Printed eyes: no built size found",
+                  "detail": "Over 2 feet tall. Measure with room to spare",
+                  "tone": "green",
+                  "rects": [],
+                  "say": "For the printed eyes house we found no built width or depth, only that it is over two feet tall. Many listings give seventeen by twenty two inches, but that is the box, not the house. Measure your shelf with room to spare."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Which add-on rooms fit",
+              "items": [
+                {
+                  "k": "Balconies and portal rooms",
+                  "v": "Hook on to both, says Spin Master.",
+                  "tone": "green",
+                  "say": "Balconies and portal rooms hook on to both houses, says Spin Master."
+                },
+                {
+                  "k": "Deluxe Rooms, Interactive",
+                  "v": "Sit inside, don't clip on (Spin Master).",
+                  "tone": "yellow",
+                  "say": "Deluxe Rooms can sit inside the Interactive house's rooms, but they don't clip or snap on. That is Spin Master's support, answering on Target in April 2026."
+                },
+                {
+                  "k": "Deluxe Rooms, printed eyes",
+                  "v": "Unconfirmed: its listing names none.",
+                  "tone": "red",
+                  "say": "For the printed eyes house, we could not confirm Deluxe Rooms at all. Its listing names only balconies and portal rooms."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Add-ons for the Interactive only",
+              "items": [
+                {
+                  "k": "Interactive Ears headband",
+                  "v": "Links up with the Interactive house only. Sold separately.",
+                  "tone": "purple",
+                  "say": "The Interactive Ears headband links up with the Interactive house only, and it is sold separately."
+                },
+                {
+                  "k": "Interactive Pandy Paws plush",
+                  "v": "The same: Interactive house only. The printed-eyes listing names neither.",
+                  "tone": "purple",
+                  "say": "So does the Interactive Pandy Paws plush. The printed eyes house's listing mentions neither one, so don't buy them for it."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Two more traps on the listing",
+              "items": [
+                {
+                  "k": "A third Meow-mazing box",
+                  "v": "An earlier movie-line house with printed eyes. Walmart: out of stock, Nov 23.",
+                  "tone": "yellow",
+                  "say": "There is also a third box: an earlier Meow-mazing from the movie line, with printed eyes and a movie Gabby figure. Walmart showed it out of stock on November twenty third."
+                },
+                {
+                  "k": "Model numbers disagree",
+                  "v": "Walmart, Amazon and the maker differ. Go by the full name and the eyes.",
+                  "tone": "red",
+                  "say": "And the model numbers differ between Walmart, Amazon and the maker for the same house. So go by the full name and the eyes, not the number."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "No house yet? About",
+              "items": [
+                {
+                  "price": "$25",
+                  "name": "Meow-mazing, printed eyes",
+                  "line": "Walmart, Nov 27 check. No batteries. Balconies and portal rooms hook on.",
+                  "sound": "No sounds",
+                  "tone": "green",
+                  "say": "With no dollhouse at home yet, we would pick the printed eyes Meow-mazing, at about twenty five dollars, with no batteries to buy."
+                },
+                {
+                  "price": "$70",
+                  "name": "Purrfect Dollhouse",
+                  "line": "Regular price at Kohl's, Nov 2026. Deluxe Rooms slide into its walls.",
+                  "sound": "3 AAA",
+                  "tone": "yellow",
+                  "say": "The Purrfect was about seventy at Kohl's, regular price, in November, and its Deluxe Rooms slide into its walls. It takes three triple A for its sounds."
+                }
+              ],
+              "note": "Have a Purrfect or Celebration? Skip a second house.",
+              "outro": "If a Purrfect or a Celebration is already at home, skip a second house and spend the money on rooms and figures."
+            },
+            {
+              "type": "facts",
+              "title": "So, which one?",
+              "items": [
+                {
+                  "k": "No dollhouse yet",
+                  "v": "Printed eyes: the cheapest, no batteries.",
+                  "tone": "green",
+                  "say": "Starting from nothing: the printed eyes house."
+                },
+                {
+                  "k": "Screen eyes matter to them",
+                  "v": "Interactive: check seller and price.",
+                  "tone": "purple",
+                  "say": "If screen eyes, sounds and games matter to your child: the Interactive, but check who is selling it and the price."
+                },
+                {
+                  "k": "Purrfect or Celebration at home",
+                  "v": "Buy rooms or figures instead.",
+                  "tone": "yellow",
+                  "say": "And if there is a house already, rooms or figures go further than a second one."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "All four houses compared, every source dated",
+              "sub": "Which Gabby's Dollhouse to buy",
+              "cta": "Link in the description",
+              "site": "everylittleroom.com",
+              "say": "All four houses, side by side, with every source and its date, are in our guide. The link is in the description."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    },
+    {
+      "id": "2026-W51-answer-long-doozie-or-gabby-pack",
+      "format": "answer",
+      "networks": [
+        "youtube"
+      ],
+      "options": {
+        "long_form": true
+      },
+      "title": "Doozie's pack or the Gabby 6-pack for Christmas? About $20 each, one hard to find",
+      "caption": "The Gabby & Doozie Sister Fun Pack (Gabby, Pandy Paws, Cakey Cat, Doozie, Puggie Paws, Creampup) and the Fairylandia Fairy-riffic Friends 6-pack are both about $20 at Walmart in our November 27 check. The Doozie pack was out of stock at Walmart on November 23, and Amazon search results showed it as currently unavailable on November 23 and 24. Walmart's listings say both packs go with the Meow-mazing Dollhouse. The Puggie Paws plush (about $15) is a pre-order, due in December, and our two sources disagree on the day; the LEGO set 11227 (about $20) is listed for January 1, 2027.\n\nEvery Doozie's Doghouse toy, store by store, with the dates we checked: https://everylittleroom.com/guides/doozies-doghouse-toys?utm_source=youtube&utm_medium=video&utm_campaign=long\n\nIndependent parents' site, not affiliated with the show or its makers. Prices are typical US store prices from our dated checks, never Amazon's. Synthetic voice. As an Amazon Associate we earn from qualifying purchases.",
+      "link": "https://everylittleroom.com/guides/doozies-doghouse-toys?utm_source=youtube&utm_medium=video&utm_campaign=long",
+      "earliest": "2026-11-14T02:00:00Z",
+      "latest": "2026-12-24T00:00:00Z",
+      "script": "Doozie's figure pack, or a Gabby six pack, for Christmas? Both boxes hold six figures, and both cost about the same. One of them has been hard to find. Here is what each one holds, where each stood in the stores when we checked, and the other Doozie toys, with their dates. / Doozie's Doghouse is the Netflix spin-off about Gabby's sister, Doozie. It began on November ninth. / It has three toys so far: a six figure pack, a Puggie Paws plush, and a small LEGO set. Most are not easy to get before Christmas. / The Gabby and Doozie Sister Fun Pack is about twenty dollars at Walmart. Six figures: Gabby, Pandy Paws and Cakey Cat, with Doozie, Puggie Paws and Creampup. / The Fairylandia Fairy-riffic Friends six pack is about twenty too, at Walmart in our November twenty seventh check. It has Gabby and five other figures, but the listings we read name only Gabby. / Both are listed for ages three and up. / Walmart showed the Doozie pack out of stock on November twenty third. / Target lists it, but its page shows stock only for a store you choose. / Amazon lists it too. Its search results showed it as currently unavailable on November twenty third and twenty fourth, with no restock date. Check there before you count on it. / Walmart's listing says the Sister Fun Pack plays on its own or with the Meow-mazing Dollhouse. / And the Fairy-riffic Friends can go into the Meow-mazing Dollhouse too, and are scaled for the Flutter Magic Fairy Playset, by Walmart's listing. / Doozie's Puggie Paws plush, eleven inches tall, is about fifteen dollars at Walmart, as a pre-order. / The LEGO set, eleven two two seven, has a hundred and thirty three pieces and is about twenty at LEGO. LEGO lists it for January first, 2027, so it is a gift for after Christmas, unless a store shows you an earlier date. / Is there a Doozie doghouse playset, like the Gabby dollhouse? Not that we could find. On November twenty third we found none at Walmart, Target or LEGO, and none among Amazon listings in search results. / The nearest thing is the small brick-built doghouse inside the LEGO set. We add a toy to our house list as soon as a store lists it, so check the guide again before you buy. / When does the plush arrive? The Toy Insider said next month, on November thirteenth. / BSCKids said December first. Our two sources disagree, so we can't give you one date. / Amazon's model number for it differs from Walmart's, and we could not tell which is right. Check that it is the eleven inch Puggie Paws plush before you pay. / And check the delivery date the store shows. A pre-order may not be there by Christmas morning. / If it has to be under the tree: the Fairy-riffic Friends, listed at Walmart in our latest check. / For a Doozie fan: the Sister Fun Pack, if a store shows it in stock. / And if a six pack is at home already, a Doozie toy later in the year adds something new. / Two relatives can easily buy the same pack. Ask the parents first. Our free house list shows what a family already owns, so nobody buys it twice. / Every Doozie's Doghouse toy, store by store, with the dates we checked, is in our guide. The link is in the description.",
+      "prompts": {
+        "voice": "af_heart",
+        "speed": 1,
+        "spec": {
+          "tag": "Doozie or Gabby",
+          "scenes": [
+            {
+              "type": "hook",
+              "kicker": "A figure pack for Christmas?",
+              "title": "Doozie's pack or a Gabby 6‑pack?",
+              "sub": "About the same price. One is hard to find.",
+              "say": "Doozie's figure pack, or a Gabby six pack, for Christmas? Both boxes hold six figures, and both cost about the same. One of them has been hard to find. Here is what each one holds, where each stood in the stores when we checked, and the other Doozie toys, with their dates."
+            },
+            {
+              "type": "facts",
+              "title": "Doozie's Doghouse, in one line",
+              "items": [
+                {
+                  "k": "On Netflix since November 9, 2026",
+                  "v": "A spin-off about Gabby's sister, Doozie.",
+                  "tone": "purple",
+                  "say": "Doozie's Doghouse is the Netflix spin-off about Gabby's sister, Doozie. It began on November ninth."
+                },
+                {
+                  "k": "Three toys so far",
+                  "v": "A 6-figure pack, a Puggie Paws plush, a small LEGO set.",
+                  "tone": "yellow",
+                  "say": "It has three toys so far: a six figure pack, a Puggie Paws plush, and a small LEGO set. Most are not easy to get before Christmas."
+                }
+              ]
+            },
+            {
+              "type": "compare",
+              "title": "The two 6-packs, about",
+              "items": [
+                {
+                  "price": "$20",
+                  "name": "Gabby & Doozie Sister Fun Pack",
+                  "line": "Gabby, Pandy Paws, Cakey Cat, Doozie, Puggie Paws and Creampup.",
+                  "sound": "Hard to find",
+                  "tone": "purple",
+                  "say": "The Gabby and Doozie Sister Fun Pack is about twenty dollars at Walmart. Six figures: Gabby, Pandy Paws and Cakey Cat, with Doozie, Puggie Paws and Creampup."
+                },
+                {
+                  "price": "$20",
+                  "name": "Fairylandia Fairy-riffic Friends",
+                  "line": "Gabby and five others; the listings we read name only Gabby.",
+                  "sound": "Walmart, Nov 27",
+                  "tone": "green",
+                  "say": "The Fairylandia Fairy-riffic Friends six pack is about twenty too, at Walmart in our November twenty seventh check. It has Gabby and five other figures, but the listings we read name only Gabby."
+                }
+              ],
+              "note": "Both listed for ages 3 and up.",
+              "outro": "Both are listed for ages three and up."
+            },
+            {
+              "type": "facts",
+              "title": "Where the Doozie pack stood",
+              "items": [
+                {
+                  "k": "Walmart",
+                  "v": "Out of stock on Nov 23, about $20.",
+                  "tone": "red",
+                  "say": "Walmart showed the Doozie pack out of stock on November twenty third."
+                },
+                {
+                  "k": "Target",
+                  "v": "Listed. Stock shows only for a chosen store.",
+                  "tone": "yellow",
+                  "say": "Target lists it, but its page shows stock only for a store you choose."
+                },
+                {
+                  "k": "Amazon",
+                  "v": "Search showed it unavailable, Nov 23 and 24.",
+                  "tone": "red",
+                  "say": "Amazon lists it too. Its search results showed it as currently unavailable on November twenty third and twenty fourth, with no restock date. Check there before you count on it."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Both go with the Meow‑mazing house",
+              "items": [
+                {
+                  "k": "Sister Fun Pack",
+                  "v": "Walmart: plays alone or with the Meow-mazing Dollhouse.",
+                  "tone": "purple",
+                  "say": "Walmart's listing says the Sister Fun Pack plays on its own or with the Meow-mazing Dollhouse."
+                },
+                {
+                  "k": "Fairy-riffic Friends",
+                  "v": "Walmart: goes in the Meow-mazing; sized for the Flutter Magic Fairy Playset.",
+                  "tone": "green",
+                  "say": "And the Fairy-riffic Friends can go into the Meow-mazing Dollhouse too, and are scaled for the Flutter Magic Fairy Playset, by Walmart's listing."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "The other two Doozie toys, about",
+              "items": [
+                {
+                  "k": "About $15: Puggie Paws plush, 11 in",
+                  "v": "Walmart, as a pre-order.",
+                  "tone": "yellow",
+                  "say": "Doozie's Puggie Paws plush, eleven inches tall, is about fifteen dollars at Walmart, as a pre-order."
+                },
+                {
+                  "k": "About $20: LEGO 11227, 133 pieces",
+                  "v": "Two small brick-built houses. LEGO lists it for January 1, 2027.",
+                  "tone": "purple",
+                  "say": "The LEGO set, eleven two two seven, has a hundred and thirty three pieces and is about twenty at LEGO. LEGO lists it for January first, 2027, so it is a gift for after Christmas, unless a store shows you an earlier date."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Is there a Doozie doghouse toy?",
+              "items": [
+                {
+                  "k": "Not that we could find",
+                  "v": "None at Walmart, Target or LEGO, or in Amazon search, Nov 23.",
+                  "tone": "red",
+                  "say": "Is there a Doozie doghouse playset, like the Gabby dollhouse? Not that we could find. On November twenty third we found none at Walmart, Target or LEGO, and none among Amazon listings in search results."
+                },
+                {
+                  "k": "The nearest thing",
+                  "v": "The small brick-built doghouse in LEGO 11227.",
+                  "tone": "yellow",
+                  "say": "The nearest thing is the small brick-built doghouse inside the LEGO set. We add a toy to our house list as soon as a store lists it, so check the guide again before you buy."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "When does the plush come?",
+              "items": [
+                {
+                  "k": "Next month",
+                  "v": "The Toy Insider, November 13.",
+                  "tone": "yellow",
+                  "say": "When does the plush arrive? The Toy Insider said next month, on November thirteenth."
+                },
+                {
+                  "k": "December 1",
+                  "v": "BSCKids, November 16. Our two sources disagree.",
+                  "tone": "yellow",
+                  "say": "BSCKids said December first. Our two sources disagree, so we can't give you one date."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Before you pay for the plush",
+              "items": [
+                {
+                  "k": "Check the model number",
+                  "v": "Amazon's 6078593 differs from Walmart's 6077624.",
+                  "tone": "red",
+                  "say": "Amazon's model number for it differs from Walmart's, and we could not tell which is right. Check that it is the eleven inch Puggie Paws plush before you pay."
+                },
+                {
+                  "k": "Check the delivery date",
+                  "v": "A pre-order may not arrive before Christmas.",
+                  "tone": "yellow",
+                  "say": "And check the delivery date the store shows. A pre-order may not be there by Christmas morning."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "So, which pack?",
+              "items": [
+                {
+                  "k": "It must be under the tree",
+                  "v": "Fairy-riffic Friends, listed at Walmart.",
+                  "tone": "green",
+                  "say": "If it has to be under the tree: the Fairy-riffic Friends, listed at Walmart in our latest check."
+                },
+                {
+                  "k": "A Doozie fan",
+                  "v": "Sister Fun Pack, if a store shows stock.",
+                  "tone": "purple",
+                  "say": "For a Doozie fan: the Sister Fun Pack, if a store shows it in stock."
+                },
+                {
+                  "k": "A 6-pack is at home already",
+                  "v": "A Doozie toy later in the year.",
+                  "tone": "yellow",
+                  "say": "And if a six pack is at home already, a Doozie toy later in the year adds something new."
+                }
+              ]
+            },
+            {
+              "type": "facts",
+              "title": "Two relatives, one pack?",
+              "items": [
+                {
+                  "k": "Ask what is at home",
+                  "v": "Our house list shows what a family owns, so nobody buys it twice.",
+                  "tone": "green",
+                  "say": "Two relatives can easily buy the same pack. Ask the parents first. Our free house list shows what a family already owns, so nobody buys it twice."
+                }
+              ]
+            },
+            {
+              "type": "end",
+              "title": "Every Doozie toy, store by store",
+              "sub": "Doozie's Doghouse toys: where to buy",
+              "cta": "Link in the description",
+              "site": "everylittleroom.com",
+              "say": "Every Doozie's Doghouse toy, store by store, with the dates we checked, is in our guide. The link is in the description."
+            }
+          ]
+        }
+      },
+      "ai": {
+        "generated": false,
+        "realistic": false
+      }
+    }
+  ]
+}
