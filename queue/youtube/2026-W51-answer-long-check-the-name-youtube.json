@@ -1,0 +1,25 @@
+{
+  "id": "2026-W51-answer-long-check-the-name-youtube",
+  "network": "youtube",
+  "format": "answer",
+  "batch": "2026-W51",
+  "media": {
+    "file": "2026-W51-answer-long-check-the-name.mp4",
+    "sha256": "e580e5b0d1a8db2bc7396aa75e49da7405150b588f802f6bb4b24b2949bf2c4b",
+    "kind": "video"
+  },
+  "caption": "Two different Gabby's Dollhouse houses are sold as \"Meow-mazing\". The one with printed eyes takes no batteries and was about $25 at Walmart in our November 27 check (about $50 before). The Interactive one has screen eyes, sounds and games, takes 3 AA batteries, had a $107.99 list price in 2025 (The Toy Insider), and on November 27 Walmart had it only from a marketplace seller, so we give no typical price. Spin Master support says Deluxe Rooms sit inside the Interactive house but don't clip on; for the printed-eyes house we could not confirm it. The Interactive Ears headband and Interactive Pandy Paws plush link up with the Interactive house only. Go by the full name and the eyes, not the model number.\n\nAll four houses compared, every source dated: https://everylittleroom.com/guides/which-gabbys-dollhouse-to-buy?utm_source=youtube&utm_medium=video&utm_campaign=long\n\nWe have not tested these houses ourselves; facts are from the maker's and the stores' listings. Independent parents' site, not affiliated with the show or its makers. Synthetic voice. As an Amazon Associate we earn from qualifying purchases.",
+  "title": "Meow-mazing or Meow-mazing Interactive? Two Gabby's Dollhouse houses, one name",
+  "language": "en",
+  "tags": [],
+  "ai": {
+    "generated": false,
+    "realistic": false
+  },
+  "trial": false,
+  "earliest": "2026-11-14T01:00:00Z",
+  "latest": "2026-12-24T00:00:00Z",
+  "options": {
+    "long_form": true
+  }
+}
