@@ -142,7 +142,21 @@ def cmd_publish(a, cfg: Config, root: Path, state: Path) -> int:
     return alarm_status(alarms)
 
 
+def catch_up(root: Path) -> None:
+    """On the runner, move the checkout to main's real tip before checking. A dispatch made seconds after a push can
+    resolve main to the commit before it, and the posts that push brought sit unchecked until the next render
+    (Every Little Room, 2026-11-26: the Tonies Short was dispatched 3 s after its push, checked the commit before it,
+    and waited 28 h for the next render to call the intake again)."""
+    if os.environ.get("GITHUB_ACTIONS") != "true":
+        return
+    r = subprocess.run(["git", "pull", "--ff-only", "--quiet", "origin", "main"], cwd=root, capture_output=True,
+                       text=True)
+    if r.returncode != 0:
+        print(f"! intake could not catch up with origin/main: {(r.stderr or r.stdout).strip()[:300]}", file=sys.stderr)
+
+
 def cmd_intake(a, cfg: Config, root: Path, state: Path) -> int:
+    catch_up(root)
     repo = os.environ.get("GITHUB_REPOSITORY", "")
     rep = intake_check(root, cfg, fetcher(repo, root / ".media"), now_utc(), recheck=a.recheck)
     st = GuardState.load(state / "state.json")
